@@ -7,13 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Library_Management
+namespace Library_Management.src.ui
 {
-    public partial class Form1 : Form
+    public partial class SignUp : MetroFramework.Forms.MetroForm
     {
-        public Form1()
+        public SignUp()
         {
             InitializeComponent();
+        }
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
