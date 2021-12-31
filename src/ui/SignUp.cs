@@ -20,5 +20,20 @@ namespace Library_Management.src.ui
         {
 
         }
+
+        private void txtStudentID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblErrorPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblErrorMobile_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
