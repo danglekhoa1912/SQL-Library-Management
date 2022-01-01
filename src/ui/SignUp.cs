@@ -16,24 +16,5 @@ namespace Library_Management.src.ui
             InitializeComponent();
         }
 
-        private void SignUp_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtStudentID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblErrorPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblErrorMobile_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
