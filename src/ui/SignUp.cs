@@ -14,6 +14,10 @@ namespace Library_Management.src.ui
         public SignUp()
         {
             InitializeComponent();
+            txtName.TextChanged += new EventHandler(delegate(object sender,EventArgs e)
+            {
+                lblErrorUsername.Text = txtName.Text;
+            });
         }
 
     }
