@@ -30,21 +30,21 @@
         {
             this.lblErrorName = new MetroFramework.Controls.MetroLabel();
             this.lblErrorUsername = new MetroFramework.Controls.MetroLabel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblUserName = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUName = new System.Windows.Forms.TextBox();
+            this.lblUName = new System.Windows.Forms.Label();
+            this.txtRePassword = new System.Windows.Forms.TextBox();
             this.lblRePassword = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtStudentID = new System.Windows.Forms.TextBox();
             this.lblStudentID = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtBirthday = new System.Windows.Forms.TextBox();
             this.lblBirthday = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtMobile = new System.Windows.Forms.TextBox();
             this.lblMobile = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.cbAgree = new System.Windows.Forms.CheckBox();
             this.btnRegister = new System.Windows.Forms.Button();
@@ -52,13 +52,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblErrorFullname = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblErrorUName = new System.Windows.Forms.Label();
+            this.lblErrorPassword = new System.Windows.Forms.Label();
+            this.lblErrorRePassword = new System.Windows.Forms.Label();
+            this.lblErrorBirthday = new System.Windows.Forms.Label();
+            this.lblErrorStudentID = new System.Windows.Forms.Label();
             this.lblErrorMobile = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblErrorEmail = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,14 +78,14 @@
             this.lblErrorUsername.Size = new System.Drawing.Size(0, 0);
             this.lblErrorUsername.TabIndex = 22;
             // 
-            // label1
+            // lblName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 19);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Full Name";
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(30, 67);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(70, 19);
+            this.lblName.TabIndex = 38;
+            this.lblName.Text = "Full Name";
             // 
             // txtName
             // 
@@ -97,34 +97,34 @@
             this.txtName.Size = new System.Drawing.Size(269, 26);
             this.txtName.TabIndex = 39;
             // 
-            // textBox1
+            // txtUName
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox1.Location = new System.Drawing.Point(22, 157);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(269, 26);
-            this.textBox1.TabIndex = 41;
+            this.txtUName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtUName.Location = new System.Drawing.Point(22, 157);
+            this.txtUName.Name = "txtUName";
+            this.txtUName.Size = new System.Drawing.Size(269, 26);
+            this.txtUName.TabIndex = 41;
             // 
-            // lblUserName
+            // lblUName
             // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(31, 135);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(76, 19);
-            this.lblUserName.TabIndex = 40;
-            this.lblUserName.Text = "User Name";
+            this.lblUName.AutoSize = true;
+            this.lblUName.Location = new System.Drawing.Point(31, 135);
+            this.lblUName.Name = "lblUName";
+            this.lblUName.Size = new System.Drawing.Size(76, 19);
+            this.lblUName.TabIndex = 40;
+            this.lblUName.Text = "User Name";
             // 
-            // textBox2
+            // txtRePassword
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox2.Location = new System.Drawing.Point(21, 299);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(270, 26);
-            this.textBox2.TabIndex = 45;
+            this.txtRePassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRePassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRePassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtRePassword.Location = new System.Drawing.Point(21, 299);
+            this.txtRePassword.Name = "txtRePassword";
+            this.txtRePassword.Size = new System.Drawing.Size(270, 26);
+            this.txtRePassword.TabIndex = 45;
             // 
             // lblRePassword
             // 
@@ -135,15 +135,15 @@
             this.lblRePassword.TabIndex = 44;
             this.lblRePassword.Text = "Re-enter Password";
             // 
-            // textBox3
+            // txtPassword
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox3.Location = new System.Drawing.Point(21, 227);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(270, 26);
-            this.textBox3.TabIndex = 43;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtPassword.Location = new System.Drawing.Point(21, 227);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(270, 26);
+            this.txtPassword.TabIndex = 43;
             // 
             // lblPassword
             // 
@@ -154,15 +154,15 @@
             this.lblPassword.TabIndex = 42;
             this.lblPassword.Text = "Password";
             // 
-            // textBox4
+            // txtStudentID
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox4.Location = new System.Drawing.Point(22, 437);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(269, 26);
-            this.textBox4.TabIndex = 49;
+            this.txtStudentID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtStudentID.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStudentID.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtStudentID.Location = new System.Drawing.Point(22, 437);
+            this.txtStudentID.Name = "txtStudentID";
+            this.txtStudentID.Size = new System.Drawing.Size(269, 26);
+            this.txtStudentID.TabIndex = 49;
             // 
             // lblStudentID
             // 
@@ -173,15 +173,15 @@
             this.lblStudentID.TabIndex = 48;
             this.lblStudentID.Text = "Student ID";
             // 
-            // textBox5
+            // txtBirthday
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox5.Location = new System.Drawing.Point(22, 367);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(160, 26);
-            this.textBox5.TabIndex = 47;
+            this.txtBirthday.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBirthday.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBirthday.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtBirthday.Location = new System.Drawing.Point(22, 367);
+            this.txtBirthday.Name = "txtBirthday";
+            this.txtBirthday.Size = new System.Drawing.Size(160, 26);
+            this.txtBirthday.TabIndex = 47;
             // 
             // lblBirthday
             // 
@@ -192,15 +192,15 @@
             this.lblBirthday.TabIndex = 46;
             this.lblBirthday.Text = "Birthday";
             // 
-            // textBox6
+            // txtMobile
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox6.Location = new System.Drawing.Point(64, 506);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(227, 26);
-            this.textBox6.TabIndex = 51;
+            this.txtMobile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMobile.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMobile.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtMobile.Location = new System.Drawing.Point(64, 506);
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.Size = new System.Drawing.Size(227, 26);
+            this.txtMobile.TabIndex = 51;
             // 
             // lblMobile
             // 
@@ -211,15 +211,15 @@
             this.lblMobile.TabIndex = 50;
             this.lblMobile.Text = "Mobile";
             // 
-            // textBox7
+            // txtEmail
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox7.Location = new System.Drawing.Point(21, 572);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(270, 26);
-            this.textBox7.TabIndex = 53;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtEmail.Location = new System.Drawing.Point(21, 572);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(270, 26);
+            this.txtEmail.TabIndex = 53;
             // 
             // lblEmail
             // 
@@ -290,55 +290,55 @@
             this.lblErrorFullname.TabIndex = 59;
             this.lblErrorFullname.Text = "aaaaaa";
             // 
-            // label2
+            // lblErrorUName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 186);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 17);
-            this.label2.TabIndex = 60;
-            this.label2.Text = "aaaaaa";
+            this.lblErrorUName.AutoSize = true;
+            this.lblErrorUName.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorUName.Location = new System.Drawing.Point(32, 186);
+            this.lblErrorUName.Name = "lblErrorUName";
+            this.lblErrorUName.Size = new System.Drawing.Size(50, 17);
+            this.lblErrorUName.TabIndex = 60;
+            this.lblErrorUName.Text = "aaaaaa";
             // 
-            // label3
+            // lblErrorPassword
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 256);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 17);
-            this.label3.TabIndex = 61;
-            this.label3.Text = "aaaaaa";
+            this.lblErrorPassword.AutoSize = true;
+            this.lblErrorPassword.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPassword.Location = new System.Drawing.Point(32, 256);
+            this.lblErrorPassword.Name = "lblErrorPassword";
+            this.lblErrorPassword.Size = new System.Drawing.Size(50, 17);
+            this.lblErrorPassword.TabIndex = 61;
+            this.lblErrorPassword.Text = "aaaaaa";
             // 
-            // label4
+            // lblErrorRePassword
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(32, 328);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 17);
-            this.label4.TabIndex = 62;
-            this.label4.Text = "aaaaaa";
+            this.lblErrorRePassword.AutoSize = true;
+            this.lblErrorRePassword.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorRePassword.Location = new System.Drawing.Point(32, 328);
+            this.lblErrorRePassword.Name = "lblErrorRePassword";
+            this.lblErrorRePassword.Size = new System.Drawing.Size(50, 17);
+            this.lblErrorRePassword.TabIndex = 62;
+            this.lblErrorRePassword.Text = "aaaaaa";
             // 
-            // label5
+            // lblErrorBirthday
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(32, 396);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 17);
-            this.label5.TabIndex = 63;
-            this.label5.Text = "aaaaaa";
+            this.lblErrorBirthday.AutoSize = true;
+            this.lblErrorBirthday.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorBirthday.Location = new System.Drawing.Point(32, 396);
+            this.lblErrorBirthday.Name = "lblErrorBirthday";
+            this.lblErrorBirthday.Size = new System.Drawing.Size(50, 17);
+            this.lblErrorBirthday.TabIndex = 63;
+            this.lblErrorBirthday.Text = "aaaaaa";
             // 
-            // label6
+            // lblErrorStudentID
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(32, 466);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 17);
-            this.label6.TabIndex = 64;
-            this.label6.Text = "aaaaaa";
+            this.lblErrorStudentID.AutoSize = true;
+            this.lblErrorStudentID.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorStudentID.Location = new System.Drawing.Point(32, 466);
+            this.lblErrorStudentID.Name = "lblErrorStudentID";
+            this.lblErrorStudentID.Size = new System.Drawing.Size(50, 17);
+            this.lblErrorStudentID.TabIndex = 64;
+            this.lblErrorStudentID.Text = "aaaaaa";
             // 
             // lblErrorMobile
             // 
@@ -350,15 +350,15 @@
             this.lblErrorMobile.TabIndex = 65;
             this.lblErrorMobile.Text = "aaaaaa";
             // 
-            // label8
+            // lblErrorEmail
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(31, 601);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 17);
-            this.label8.TabIndex = 66;
-            this.label8.Text = "aaaaaa";
+            this.lblErrorEmail.AutoSize = true;
+            this.lblErrorEmail.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorEmail.Location = new System.Drawing.Point(31, 601);
+            this.lblErrorEmail.Name = "lblErrorEmail";
+            this.lblErrorEmail.Size = new System.Drawing.Size(50, 17);
+            this.lblErrorEmail.TabIndex = 66;
+            this.lblErrorEmail.Text = "aaaaaa";
             // 
             // SignUp
             // 
@@ -366,35 +366,35 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(317, 729);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblErrorEmail);
             this.Controls.Add(this.lblErrorMobile);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblErrorStudentID);
+            this.Controls.Add(this.lblErrorBirthday);
+            this.Controls.Add(this.lblErrorRePassword);
+            this.Controls.Add(this.lblErrorPassword);
+            this.Controls.Add(this.lblErrorUName);
             this.Controls.Add(this.lblErrorFullname);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.cbAgree);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.lblMobile);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtStudentID);
             this.Controls.Add(this.lblStudentID);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtBirthday);
             this.Controls.Add(this.lblBirthday);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtRePassword);
             this.Controls.Add(this.lblRePassword);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.txtUName);
+            this.Controls.Add(this.lblUName);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblErrorUsername);
             this.Controls.Add(this.lblErrorName);
             this.Font = new System.Drawing.Font("Segoe UI Semilight", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -413,21 +413,21 @@
         #endregion
         private MetroFramework.Controls.MetroLabel lblErrorName;
         private MetroFramework.Controls.MetroLabel lblErrorUsername;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblUserName;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUName;
+        private System.Windows.Forms.Label lblUName;
+        private System.Windows.Forms.TextBox txtRePassword;
         private System.Windows.Forms.Label lblRePassword;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtStudentID;
         private System.Windows.Forms.Label lblStudentID;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtBirthday;
         private System.Windows.Forms.Label lblBirthday;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtMobile;
         private System.Windows.Forms.Label lblMobile;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.CheckBox cbAgree;
         private System.Windows.Forms.Button btnRegister;
@@ -435,12 +435,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblErrorFullname;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblErrorUName;
+        private System.Windows.Forms.Label lblErrorPassword;
+        private System.Windows.Forms.Label lblErrorRePassword;
+        private System.Windows.Forms.Label lblErrorBirthday;
+        private System.Windows.Forms.Label lblErrorStudentID;
         private System.Windows.Forms.Label lblErrorMobile;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblErrorEmail;
     }
 }
