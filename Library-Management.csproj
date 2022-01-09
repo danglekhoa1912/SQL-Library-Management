@@ -160,6 +160,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\services\isInvalidInput.cs" />
     <Compile Include="src\ui\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,7 +203,6 @@
   <ItemGroup>
     <Folder Include="src\configs\" />
     <Folder Include="src\pojo\" />
-    <Folder Include="src\services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Readme.txt" />
