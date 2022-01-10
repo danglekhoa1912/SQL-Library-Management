@@ -49,7 +49,7 @@
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
             this.lblErrorFullname = new System.Windows.Forms.Label();
             this.lblErrorUName = new System.Windows.Forms.Label();
             this.lblErrorPassword = new System.Windows.Forms.Label();
@@ -273,15 +273,18 @@
             this.pictureBox1.TabIndex = 57;
             this.pictureBox1.TabStop = false;
             // 
-            // dateTimePicker1
+            // dtpBirthday
             // 
-            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(21, 367);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(149, 30);
-            this.dateTimePicker1.TabIndex = 58;
-            this.dateTimePicker1.Value = new System.DateTime(2022, 1, 5, 18, 2, 35, 0);
+            this.dtpBirthday.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpBirthday.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dtpBirthday.Location = new System.Drawing.Point(21, 367);
+            this.dtpBirthday.MaxDate = new System.DateTime(2004, 12, 31, 0, 0, 0, 0);
+            this.dtpBirthday.MinDate = new System.DateTime(1922, 1, 1, 0, 0, 0, 0);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(149, 30);
+            this.dtpBirthday.TabIndex = 58;
+            this.dtpBirthday.Value = new System.DateTime(1997, 12, 1, 0, 0, 0, 0);
             // 
             // lblErrorFullname
             // 
@@ -385,7 +388,7 @@
             this.Controls.Add(this.lblErrorPassword);
             this.Controls.Add(this.lblErrorUName);
             this.Controls.Add(this.lblErrorFullname);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpBirthday);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnRegister);
@@ -445,7 +448,7 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpBirthday;
         private System.Windows.Forms.Label lblErrorFullname;
         private System.Windows.Forms.Label lblErrorUName;
         private System.Windows.Forms.Label lblErrorPassword;

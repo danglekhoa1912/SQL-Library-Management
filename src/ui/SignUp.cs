@@ -15,6 +15,24 @@ namespace Library_Management.src.ui
     public partial class SignUp : MetroFramework.Forms.MetroForm
     {
         services.isValidInput valid=new services.isValidInput();
+        private bool validSignUp()
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is Label)
+                {
+                    if ((c as Label).ForeColor == Color.Red)
+                        if ((c as Label).Text != "") return false; 
+                }
+                else if (c is TextBox)
+                {
+                    if ((c as TextBox).Text == "")
+                        return false;
+                }
+            }
+            // Them check du lieu
+            return true;
+        }
         public SignUp()
         {
             InitializeComponent();
@@ -85,6 +103,19 @@ namespace Library_Management.src.ui
                     }
                 }
                 cbAgree.Checked = false;
+            });
+            btnRegister.Click += new EventHandler(delegate (object sender, EventArgs e)
+            {
+                if (validSignUp())
+                {
+                    //do something
+                    MessageBox.Show("Sign up sucessfully! You can use account for sign in");  
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid information! Please check again.");
+                }
             });
         }
     }
