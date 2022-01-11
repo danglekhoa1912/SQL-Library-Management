@@ -7,14 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
-
+using Library_Management.src.services;
+using Library_Management.src.pojo;
 
 namespace Library_Management.src.ui
 {
     public partial class SignUp : MetroFramework.Forms.MetroForm
     {
         services.isValidInput valid=new services.isValidInput();
+        private UserServices us = new UserServices(); 
         private bool validSignUp()
         {
             foreach (Control c in this.Controls)
@@ -106,11 +107,21 @@ namespace Library_Management.src.ui
             });
             btnRegister.Click += new EventHandler(delegate (object sender, EventArgs e)
             {
-                if (validSignUp())
-                {
+                    MessageBox.Show(txtMobile.Text);
+            if (validSignUp())
+            {
                     //do something
-                    MessageBox.Show("Sign up sucessfully! You can use account for sign in");  
-                    this.Close();
+                User user = new User( txtName.Text, txtEmail.Text, txtStudentID.Text, dtpBirthday.Value, txtMobile.Text);
+                    AccountUser accountUser = new AccountUser(txtUName.Text, txtPassword.Text, true);
+                    if (us.addUser(user, accountUser))
+                    {
+                        MessageBox.Show("Sign up sucessfully! You can use account for sign in");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid information! Please check again.");
+                    }
                 }
                 else
                 {

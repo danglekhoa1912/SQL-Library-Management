@@ -147,6 +147,7 @@
       <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -158,9 +159,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="libraryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>libraryDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\configs\Connectdb.cs" />
+    <Compile Include="src\pojo\AccountAdmin.cs" />
+    <Compile Include="src\pojo\AccountUser.cs" />
+    <Compile Include="src\pojo\Admin.cs" />
+    <Compile Include="src\pojo\Book.cs" />
+    <Compile Include="src\pojo\Issue.cs" />
+    <Compile Include="src\pojo\IssueDetail.cs" />
+    <Compile Include="src\pojo\User.cs" />
     <Compile Include="src\services\isInvalidInput.cs" />
+    <Compile Include="src\services\UserServices.cs" />
     <Compile Include="src\ui\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +204,18 @@
     <EmbeddedResource Include="src\ui\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="libraryDataSet.xsc">
+      <DependentUpon>libraryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="libraryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>libraryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="libraryDataSet.xss">
+      <DependentUpon>libraryDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -200,10 +227,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\configs\" />
-    <Folder Include="src\pojo\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Readme.txt" />
     <None Include="Resources\Mobile.png" />
