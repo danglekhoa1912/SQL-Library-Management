@@ -107,11 +107,10 @@ namespace Library_Management.src.ui
             });
             btnRegister.Click += new EventHandler(delegate (object sender, EventArgs e)
             {
-                    MessageBox.Show(txtMobile.Text);
-            if (validSignUp())
-            {
+                if (validSignUp())
+                {
                     //do something
-                User user = new User( txtName.Text, txtEmail.Text, txtStudentID.Text, dtpBirthday.Value, txtMobile.Text);
+                    User user = new User( txtName.Text, txtEmail.Text, txtStudentID.Text, dtpBirthday.Value, txtMobile.Text);
                     AccountUser accountUser = new AccountUser(txtUName.Text, txtPassword.Text, true);
                     if (us.addUser(user, accountUser))
                     {
@@ -119,7 +118,7 @@ namespace Library_Management.src.ui
                         this.Close();
                     }
                     else
-                    {
+                    { 
                         MessageBox.Show("Invalid information! Please check again.");
                     }
                 }
