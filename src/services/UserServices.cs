@@ -16,9 +16,10 @@ namespace Library_Management.src.services
         {
             SqlCommand sqlCommand = new SqlCommand();
             SqlConnection sqlConn = Connectdb.getConn();
+            int i = getQuanlityUser();
             String query = String.Format("insert into DOCGIA(MaDocGia,TenDocGia,Email,MSSV,NamSinh,SoDienThoai)  values('{0}',N'{1}','{2}','{3}','{4}','{5}')"+
-                "insert  into TAIKHOANDOCGIA(TaiKhoan,MatKhau,MaDocGia) values('{6}','{7}','{0}')"
-                , "N"+(getQuanlityUser()+1), user.UserName, user.Email, user.StudentId, user.BirthDay, user.PhoneNumber, accountUser.Account,accountUser.Password);
+                "insert  into TAIKHOANDOCGIA(TaiKhoan,MatKhau,MaDocGia) values('{6}','{7}','{8}')"
+                , "N"+(i+1), user.UserName, user.Email, user.StudentId, user.BirthDay, user.PhoneNumber, accountUser.Account,accountUser.Password,i+1);
             try
             {
                 sqlCommand.Connection = sqlConn;
@@ -37,6 +38,10 @@ namespace Library_Management.src.services
                 sqlConn.Close();
                 return false;
             }
+        }
+        public User checkUserExists(String s)
+        {
+            return null;
         }
         public int getQuanlityUser()
         {
