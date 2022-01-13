@@ -20,21 +20,24 @@ namespace Library_Management.src.services
             String query = String.Format("insert into DOCGIA(MaDocGia,TenDocGia,Email,MSSV,NamSinh,SoDienThoai)  values('{0}',N'{1}','{2}','{3}','{4}','{5}')"+
                 "insert  into TAIKHOANDOCGIA(TaiKhoan,MatKhau,MaDocGia) values('{6}','{7}','{0}')"
                 , "N"+(i+1), user.UserName, user.Email, user.StudentId, user.BirthDay, user.PhoneNumber, accountUser.Account,accountUser.Password);
+            sqlCommand.Connection = sqlConn;
+            sqlCommand.CommandText = query;
+            sqlCommand.CommandType = CommandType.Text;
+            sqlConn.Open();
+            SqlTransaction transaction = sqlConn.BeginTransaction();
+            sqlCommand.Transaction = transaction;
             try
-            {
-                sqlCommand.Connection = sqlConn;
-                sqlCommand.CommandText = query;
-                sqlCommand.CommandType = CommandType.Text;
-
-                sqlConn.Open();
+            {               
                 sqlCommand.ExecuteNonQuery();
+                transaction.Commit();
                 sqlConn.Close();
                 return true;
 
             }
             catch(SqlException ex)
             {
-                Console.Write(ex.Message);
+                Console.WriteLine(ex.Message);
+                transaction.Rollback();
                 sqlConn.Close();
                 return false;
             }
@@ -88,9 +91,10 @@ namespace Library_Management.src.services
             }
         }
 
-        public String checkPhoneNumber(String phone)
+        public String checkInforUser(String inforUser,int i)
         {
-            String query = String.Format("Select MaDocGia from DOCGIA where SoDienThoai='{0}'", phone);
+            String[] options = { "MSSV", "SoDienThoai", "Email" };
+            String query = String.Format("Select MaDocGia from DOCGIA where {0}='{1}'", options[i], inforUser);
             String userId = "";
             try
             {
@@ -115,59 +119,6 @@ namespace Library_Management.src.services
                 return userId;
             }
         }
-        public String checkStudentId(String studentId)
-        {
-            String query = String.Format("Select MaDocGia from DOCGIA where MSSV='{0}'", studentId);
-            String userId = "";
-            try
-            {
-                SqlCommand sqlCommand = new SqlCommand(query, sqlConn);
-                sqlConn.Open();
-                var reader = sqlCommand.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    // Đọc từng dòng tập kết quả
-                    while (reader.Read())
-                    {
-                        userId = reader.GetString(0);
-                    }
-                }
-                sqlConn.Close();
-                return userId;
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-                sqlConn.Close();
-                return userId;
-            }
-        }
-        public String checkEmail(String email)
-        {
-            String query = String.Format("Select MaDocGia from DOCGIA where Email='{0}'", email);
-            String userId = "";
-            try
-            {
-                SqlCommand sqlCommand = new SqlCommand(query, sqlConn);
-                sqlConn.Open();
-                var reader = sqlCommand.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    // Đọc từng dòng tập kết quả
-                    while (reader.Read())
-                    {
-                        userId = reader.GetString(0);
-                    }
-                }
-                sqlConn.Close();
-                return userId;
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-                sqlConn.Close();
-                return userId;
-            }
-        }
+        
     }
 }

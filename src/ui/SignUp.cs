@@ -107,6 +107,9 @@ namespace Library_Management.src.ui
             });
             btnRegister.Click += new EventHandler(delegate (object sender, EventArgs e)
             {
+                MessageBox.Show(us.checkInforUser("1111111111", 0));
+                MessageBox.Show(us.checkInforUser("1111111111", 1));
+                MessageBox.Show(us.checkInforUser("1@gmail.com", 2));
                 if (validSignUp())
                 {
                     //do something

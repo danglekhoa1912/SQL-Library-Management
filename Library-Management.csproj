@@ -159,9 +159,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="libraryDataSet.cs">
-      <DependentUpon>libraryDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="libraryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
