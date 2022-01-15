@@ -18,8 +18,8 @@ namespace Library_Management.src.services
             SqlCommand sqlCommand = new SqlCommand();
             int i = getQuanlityUser();
             String query = String.Format("insert into DOCGIA(MaDocGia,TenDocGia,Email,MSSV,NamSinh,SoDienThoai)  values('{0}',N'{1}','{2}','{3}','{4}','{5}')"+
-                "insert  into TAIKHOANDOCGIA(TaiKhoan,MatKhau,MaDocGia) values('{6}','{7}','{0}')"
-                , "N"+(i+1), user.UserName, user.Email, user.StudentId, user.BirthDay, user.PhoneNumber, accountUser.Account,accountUser.Password);
+                "insert  into TAIKHOANDOCGIA(MaTaiKhoanDocGia,TaiKhoan,MatKhau,MaDocGia) values('{6}','{7}','{8}','{0}')"
+                , "N"+(i+1), user.UserName, user.Email, user.StudentId, user.BirthDay, user.PhoneNumber,i+1 ,accountUser.Account,accountUser.Password);
             sqlCommand.Connection = sqlConn;
             sqlCommand.CommandText = query;
             sqlCommand.CommandType = CommandType.Text;

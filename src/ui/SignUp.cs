@@ -48,6 +48,11 @@ namespace Library_Management.src.ui
             });
             txtUName.TextChanged += new EventHandler(delegate (object sender, EventArgs e) { 
                 String s=txtUName.Text;
+                if (us.checkAccount(s) != "")
+                {
+                    lblErrorUName.Text = "Account already exists!";
+                }   
+                else
                 lblErrorUName.Text = valid.isValidUserName(s) && s != "" ? "Invalid User Name !" : (s == "" ? "You must enter this inforamtion!" : "");
             });
             txtPassword.TextChanged += new EventHandler(delegate (object sender, EventArgs e)
@@ -65,15 +70,30 @@ namespace Library_Management.src.ui
             txtStudentID.TextChanged += new EventHandler(delegate (object sender, EventArgs e)
             {
                 String s=txtStudentID.Text;
+                if (us.checkInforUser(s,0) != "")
+                {
+                    lblErrorStudentID.Text = "Student Id already exists!";  
+                }   
+                else
                 lblErrorStudentID.Text = !valid.isValidStdId(s) && s != "" ? "Student Id must have 10 numeric characters" : (s == "" ? "You must enter this information!" : "");
             });
             txtMobile.TextChanged += new EventHandler(delegate (object sender, EventArgs e) { 
                 String s= txtMobile.Text;
+                if (us.checkInforUser(s, 1) != "")
+                {
+                    lblErrorMobile.Text = "Moblie already exists!";
+                }
+                else
                 lblErrorMobile.Text=!valid.isValidMoblie(s) && s!="" ?"Invalid moblie !":(s==""?"You must enter this information !":"");
             });
             txtEmail.TextChanged += new EventHandler(delegate (object sender, EventArgs e)
             {
                 String s=txtEmail.Text;
+                if (us.checkInforUser(s, 2) != "")
+                {
+                    lblErrorEmail.Text = "Email already exists!";
+                }
+                else
                 lblErrorEmail.Text = !valid.isValidEmail(s) && s != "" ? "Invalid email !" : (s == "" ? "You must enter this information !" : "");
             });
             cbAgree.CheckedChanged += new EventHandler(delegate (object sender, EventArgs e) { 
@@ -81,7 +101,7 @@ namespace Library_Management.src.ui
             });
             btnClear.Click += new EventHandler(delegate (object sender, EventArgs e)
             {
-                foreach (Control mycontrols in this.Controls)
+                foreach (Control mycontrols in this.Controls)   
                 {
                     if (mycontrols is TextBox)
                     {
