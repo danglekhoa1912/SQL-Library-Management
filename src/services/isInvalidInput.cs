@@ -68,5 +68,18 @@ namespace Library_Management.src.services
             string temp = s.Normalize(NormalizationForm.FormD);
             return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
         }
+        public bool isValidYear(String s)
+        {
+            int i;
+            try
+            {
+                i = int.Parse(s);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return Regex.IsMatch(s,"[0-9]") && i>1000 && i<=DateTime.Now.Year;
+        }
     }
 }

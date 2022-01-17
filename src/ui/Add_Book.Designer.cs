@@ -32,16 +32,13 @@ namespace Library_Management.src.ui
             this.lblBookID = new System.Windows.Forms.Label();
             this.txtBookID = new System.Windows.Forms.TextBox();
             this.lblErrorBookID = new System.Windows.Forms.Label();
-            this.lblErrorBookTitle = new System.Windows.Forms.Label();
             this.txtBookTitle = new System.Windows.Forms.TextBox();
             this.lblBookTitle = new System.Windows.Forms.Label();
             this.lblErrorAuthor = new System.Windows.Forms.Label();
             this.txtBookAuthor = new System.Windows.Forms.TextBox();
             this.lblAuthor = new System.Windows.Forms.Label();
-            this.lblErrorGenre = new System.Windows.Forms.Label();
             this.txtGenre = new System.Windows.Forms.TextBox();
             this.lblGenre = new System.Windows.Forms.Label();
-            this.lblErrorSummary = new System.Windows.Forms.Label();
             this.txtSummary = new System.Windows.Forms.TextBox();
             this.lblSummary = new System.Windows.Forms.Label();
             this.lblErrorPublisher = new System.Windows.Forms.Label();
@@ -62,7 +59,7 @@ namespace Library_Management.src.ui
             this.lblBookID.AutoSize = true;
             this.lblBookID.Location = new System.Drawing.Point(26, 60);
             this.lblBookID.Name = "lblBookID";
-            this.lblBookID.Size = new System.Drawing.Size(57, 19);
+            this.lblBookID.Size = new System.Drawing.Size(68, 23);
             this.lblBookID.TabIndex = 0;
             this.lblBookID.Text = "Book ID";
             // 
@@ -71,35 +68,25 @@ namespace Library_Management.src.ui
             this.txtBookID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBookID.Location = new System.Drawing.Point(23, 82);
             this.txtBookID.Name = "txtBookID";
-            this.txtBookID.Size = new System.Drawing.Size(304, 25);
+            this.txtBookID.Size = new System.Drawing.Size(304, 30);
             this.txtBookID.TabIndex = 1;
             // 
             // lblErrorBookID
             // 
             this.lblErrorBookID.AutoSize = true;
             this.lblErrorBookID.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorBookID.ForeColor = System.Drawing.Color.Red;
             this.lblErrorBookID.Location = new System.Drawing.Point(26, 110);
             this.lblErrorBookID.Name = "lblErrorBookID";
-            this.lblErrorBookID.Size = new System.Drawing.Size(43, 15);
+            this.lblErrorBookID.Size = new System.Drawing.Size(0, 20);
             this.lblErrorBookID.TabIndex = 2;
-            this.lblErrorBookID.Text = "aaaaaa";
-            // 
-            // lblErrorBookTitle
-            // 
-            this.lblErrorBookTitle.AutoSize = true;
-            this.lblErrorBookTitle.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorBookTitle.Location = new System.Drawing.Point(27, 175);
-            this.lblErrorBookTitle.Name = "lblErrorBookTitle";
-            this.lblErrorBookTitle.Size = new System.Drawing.Size(43, 15);
-            this.lblErrorBookTitle.TabIndex = 5;
-            this.lblErrorBookTitle.Text = "aaaaaa";
             // 
             // txtBookTitle
             // 
             this.txtBookTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBookTitle.Location = new System.Drawing.Point(23, 147);
             this.txtBookTitle.Name = "txtBookTitle";
-            this.txtBookTitle.Size = new System.Drawing.Size(304, 25);
+            this.txtBookTitle.Size = new System.Drawing.Size(304, 30);
             this.txtBookTitle.TabIndex = 4;
             // 
             // lblBookTitle
@@ -107,7 +94,7 @@ namespace Library_Management.src.ui
             this.lblBookTitle.AutoSize = true;
             this.lblBookTitle.Location = new System.Drawing.Point(26, 125);
             this.lblBookTitle.Name = "lblBookTitle";
-            this.lblBookTitle.Size = new System.Drawing.Size(68, 19);
+            this.lblBookTitle.Size = new System.Drawing.Size(83, 23);
             this.lblBookTitle.TabIndex = 3;
             this.lblBookTitle.Text = "Book Title";
             // 
@@ -115,18 +102,18 @@ namespace Library_Management.src.ui
             // 
             this.lblErrorAuthor.AutoSize = true;
             this.lblErrorAuthor.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorAuthor.ForeColor = System.Drawing.Color.Red;
             this.lblErrorAuthor.Location = new System.Drawing.Point(26, 240);
             this.lblErrorAuthor.Name = "lblErrorAuthor";
-            this.lblErrorAuthor.Size = new System.Drawing.Size(43, 15);
+            this.lblErrorAuthor.Size = new System.Drawing.Size(0, 20);
             this.lblErrorAuthor.TabIndex = 8;
-            this.lblErrorAuthor.Text = "aaaaaa";
             // 
             // txtBookAuthor
             // 
             this.txtBookAuthor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBookAuthor.Location = new System.Drawing.Point(23, 212);
             this.txtBookAuthor.Name = "txtBookAuthor";
-            this.txtBookAuthor.Size = new System.Drawing.Size(304, 25);
+            this.txtBookAuthor.Size = new System.Drawing.Size(304, 30);
             this.txtBookAuthor.TabIndex = 7;
             // 
             // lblAuthor
@@ -134,26 +121,16 @@ namespace Library_Management.src.ui
             this.lblAuthor.AutoSize = true;
             this.lblAuthor.Location = new System.Drawing.Point(25, 190);
             this.lblAuthor.Name = "lblAuthor";
-            this.lblAuthor.Size = new System.Drawing.Size(86, 19);
+            this.lblAuthor.Size = new System.Drawing.Size(102, 23);
             this.lblAuthor.TabIndex = 6;
             this.lblAuthor.Text = "Book Author";
-            // 
-            // lblErrorGenre
-            // 
-            this.lblErrorGenre.AutoSize = true;
-            this.lblErrorGenre.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorGenre.Location = new System.Drawing.Point(26, 305);
-            this.lblErrorGenre.Name = "lblErrorGenre";
-            this.lblErrorGenre.Size = new System.Drawing.Size(43, 15);
-            this.lblErrorGenre.TabIndex = 11;
-            this.lblErrorGenre.Text = "aaaaaa";
             // 
             // txtGenre
             // 
             this.txtGenre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGenre.Location = new System.Drawing.Point(23, 277);
             this.txtGenre.Name = "txtGenre";
-            this.txtGenre.Size = new System.Drawing.Size(304, 25);
+            this.txtGenre.Size = new System.Drawing.Size(304, 30);
             this.txtGenre.TabIndex = 10;
             // 
             // lblGenre
@@ -161,26 +138,16 @@ namespace Library_Management.src.ui
             this.lblGenre.AutoSize = true;
             this.lblGenre.Location = new System.Drawing.Point(26, 255);
             this.lblGenre.Name = "lblGenre";
-            this.lblGenre.Size = new System.Drawing.Size(45, 19);
+            this.lblGenre.Size = new System.Drawing.Size(55, 23);
             this.lblGenre.TabIndex = 9;
             this.lblGenre.Text = "Genre";
-            // 
-            // lblErrorSummary
-            // 
-            this.lblErrorSummary.AutoSize = true;
-            this.lblErrorSummary.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorSummary.Location = new System.Drawing.Point(26, 370);
-            this.lblErrorSummary.Name = "lblErrorSummary";
-            this.lblErrorSummary.Size = new System.Drawing.Size(43, 15);
-            this.lblErrorSummary.TabIndex = 14;
-            this.lblErrorSummary.Text = "aaaaaa";
             // 
             // txtSummary
             // 
             this.txtSummary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSummary.Location = new System.Drawing.Point(23, 342);
             this.txtSummary.Name = "txtSummary";
-            this.txtSummary.Size = new System.Drawing.Size(304, 25);
+            this.txtSummary.Size = new System.Drawing.Size(304, 30);
             this.txtSummary.TabIndex = 13;
             // 
             // lblSummary
@@ -188,7 +155,7 @@ namespace Library_Management.src.ui
             this.lblSummary.AutoSize = true;
             this.lblSummary.Location = new System.Drawing.Point(25, 320);
             this.lblSummary.Name = "lblSummary";
-            this.lblSummary.Size = new System.Drawing.Size(68, 19);
+            this.lblSummary.Size = new System.Drawing.Size(80, 23);
             this.lblSummary.TabIndex = 12;
             this.lblSummary.Text = "Summary";
             // 
@@ -196,18 +163,18 @@ namespace Library_Management.src.ui
             // 
             this.lblErrorPublisher.AutoSize = true;
             this.lblErrorPublisher.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPublisher.ForeColor = System.Drawing.Color.Red;
             this.lblErrorPublisher.Location = new System.Drawing.Point(26, 435);
             this.lblErrorPublisher.Name = "lblErrorPublisher";
-            this.lblErrorPublisher.Size = new System.Drawing.Size(43, 15);
+            this.lblErrorPublisher.Size = new System.Drawing.Size(0, 20);
             this.lblErrorPublisher.TabIndex = 17;
-            this.lblErrorPublisher.Text = "aaaaaa";
             // 
             // txtPublisher
             // 
             this.txtPublisher.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPublisher.Location = new System.Drawing.Point(23, 407);
             this.txtPublisher.Name = "txtPublisher";
-            this.txtPublisher.Size = new System.Drawing.Size(304, 25);
+            this.txtPublisher.Size = new System.Drawing.Size(304, 30);
             this.txtPublisher.TabIndex = 16;
             // 
             // lblPulisher
@@ -215,7 +182,7 @@ namespace Library_Management.src.ui
             this.lblPulisher.AutoSize = true;
             this.lblPulisher.Location = new System.Drawing.Point(25, 385);
             this.lblPulisher.Name = "lblPulisher";
-            this.lblPulisher.Size = new System.Drawing.Size(65, 19);
+            this.lblPulisher.Size = new System.Drawing.Size(77, 23);
             this.lblPulisher.TabIndex = 15;
             this.lblPulisher.Text = "Publisher";
             // 
@@ -223,18 +190,18 @@ namespace Library_Management.src.ui
             // 
             this.lblErrorPublisherYear.AutoSize = true;
             this.lblErrorPublisherYear.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPublisherYear.ForeColor = System.Drawing.Color.Red;
             this.lblErrorPublisherYear.Location = new System.Drawing.Point(26, 500);
             this.lblErrorPublisherYear.Name = "lblErrorPublisherYear";
-            this.lblErrorPublisherYear.Size = new System.Drawing.Size(43, 15);
+            this.lblErrorPublisherYear.Size = new System.Drawing.Size(0, 20);
             this.lblErrorPublisherYear.TabIndex = 20;
-            this.lblErrorPublisherYear.Text = "aaaaaa";
             // 
             // txtPublisherYear
             // 
             this.txtPublisherYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPublisherYear.Location = new System.Drawing.Point(23, 472);
             this.txtPublisherYear.Name = "txtPublisherYear";
-            this.txtPublisherYear.Size = new System.Drawing.Size(131, 25);
+            this.txtPublisherYear.Size = new System.Drawing.Size(131, 30);
             this.txtPublisherYear.TabIndex = 19;
             // 
             // lblPublisherYear
@@ -242,7 +209,7 @@ namespace Library_Management.src.ui
             this.lblPublisherYear.AutoSize = true;
             this.lblPublisherYear.Location = new System.Drawing.Point(26, 450);
             this.lblPublisherYear.Name = "lblPublisherYear";
-            this.lblPublisherYear.Size = new System.Drawing.Size(95, 19);
+            this.lblPublisherYear.Size = new System.Drawing.Size(114, 23);
             this.lblPublisherYear.TabIndex = 18;
             this.lblPublisherYear.Text = "Publisher Year";
             // 
@@ -250,18 +217,18 @@ namespace Library_Management.src.ui
             // 
             this.lblErrorAmount.AutoSize = true;
             this.lblErrorAmount.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorAmount.ForeColor = System.Drawing.Color.Red;
             this.lblErrorAmount.Location = new System.Drawing.Point(26, 565);
             this.lblErrorAmount.Name = "lblErrorAmount";
-            this.lblErrorAmount.Size = new System.Drawing.Size(43, 15);
+            this.lblErrorAmount.Size = new System.Drawing.Size(0, 20);
             this.lblErrorAmount.TabIndex = 23;
-            this.lblErrorAmount.Text = "aaaaaa";
             // 
             // txtAmount
             // 
             this.txtAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAmount.Location = new System.Drawing.Point(23, 537);
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(131, 25);
+            this.txtAmount.Size = new System.Drawing.Size(131, 30);
             this.txtAmount.TabIndex = 22;
             // 
             // lblAmount
@@ -269,7 +236,7 @@ namespace Library_Management.src.ui
             this.lblAmount.AutoSize = true;
             this.lblAmount.Location = new System.Drawing.Point(25, 515);
             this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(58, 19);
+            this.lblAmount.Size = new System.Drawing.Size(68, 23);
             this.lblAmount.TabIndex = 21;
             this.lblAmount.Text = "Amount";
             // 
@@ -304,16 +271,13 @@ namespace Library_Management.src.ui
             this.Controls.Add(this.lblErrorPublisher);
             this.Controls.Add(this.txtPublisher);
             this.Controls.Add(this.lblPulisher);
-            this.Controls.Add(this.lblErrorSummary);
             this.Controls.Add(this.txtSummary);
             this.Controls.Add(this.lblSummary);
-            this.Controls.Add(this.lblErrorGenre);
             this.Controls.Add(this.txtGenre);
             this.Controls.Add(this.lblGenre);
             this.Controls.Add(this.lblErrorAuthor);
             this.Controls.Add(this.txtBookAuthor);
             this.Controls.Add(this.lblAuthor);
-            this.Controls.Add(this.lblErrorBookTitle);
             this.Controls.Add(this.txtBookTitle);
             this.Controls.Add(this.lblBookTitle);
             this.Controls.Add(this.lblErrorBookID);
@@ -334,16 +298,13 @@ namespace Library_Management.src.ui
         private System.Windows.Forms.Label lblBookID;
         private System.Windows.Forms.TextBox txtBookID;
         private System.Windows.Forms.Label lblErrorBookID;
-        private System.Windows.Forms.Label lblErrorBookTitle;
         private System.Windows.Forms.TextBox txtBookTitle;
         private System.Windows.Forms.Label lblBookTitle;
         private System.Windows.Forms.Label lblErrorAuthor;
         private System.Windows.Forms.TextBox txtBookAuthor;
         private System.Windows.Forms.Label lblAuthor;
-        private System.Windows.Forms.Label lblErrorGenre;
         private System.Windows.Forms.TextBox txtGenre;
         private System.Windows.Forms.Label lblGenre;
-        private System.Windows.Forms.Label lblErrorSummary;
         private System.Windows.Forms.TextBox txtSummary;
         private System.Windows.Forms.Label lblSummary;
         private System.Windows.Forms.Label lblErrorPublisher;
