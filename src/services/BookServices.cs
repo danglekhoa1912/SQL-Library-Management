@@ -1,4 +1,5 @@
-﻿using Library_Management.src.pojo;
+﻿using Library_Management.src.configs;
+using Library_Management.src.pojo;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -10,7 +11,7 @@ namespace Library_Management.src.services
 {
     class BookServices
     {
-        private SqlConnection sqlConn = new SqlConnection();
+        private SqlConnection sqlConn = Connectdb.getConn();
         public bool addBook(Book book)
         {
             int quanlityBook = getQuanlityBook();
@@ -34,22 +35,72 @@ namespace Library_Management.src.services
 
         public int getQuanlityBook()
         {
-            String query = String.Format("Select Count(MaSach) from SACH");
+            String query = "Select Count(MaSach) from SACH";
             int quanlity = 0;
             try
             {
                 SqlCommand sqlCommand = new SqlCommand(query, sqlConn);
                 sqlConn.Open();
-                quanlity = (int)sqlCommand.ExecuteScalar();
-                sqlConn.Close();
-                return quanlity;
+                quanlity = (int)sqlCommand.ExecuteScalar();               
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
-                sqlConn.Close();
-                return quanlity;
             }
+            sqlConn.Close();
+            return quanlity;
+        }
+
+        public Book getBookById(String id)
+        {
+            String query = String.Format("Select * from SACH where MaSach='{0}'", id);
+            Book book=null;
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConn);
+            try
+            {
+                sqlConn.Open();
+                var reader = sqlCommand.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        // Đọc từng dòng tập kết quả
+                        book = new Book(reader.GetString(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetInt32(4), reader.GetString(5));                   
+                    }
+                   }
+            }
+            catch(SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            sqlConn.Close();
+            return book;
+        }
+
+        public Book getBookByName(String name)
+        {
+            String query = String.Format("Select * from SACH where TenSach=N'{0}'", name);
+            Book book = null;
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConn);
+            try
+            {
+                sqlConn.Open();
+                var reader = sqlCommand.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        // Đọc từng dòng tập kết quả
+                        book = new Book(reader.GetString(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetInt32(4), reader.GetString(5));
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            sqlConn.Close();
+            return book;
         }
     }
 

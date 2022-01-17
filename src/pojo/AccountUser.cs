@@ -17,6 +17,14 @@ namespace Library_Management.src.pojo
             this.Status = status;
         }
 
+        public AccountUser(string account, string password, bool status,String userId)
+        {
+            this.Account = account;
+            this.Password = password;
+            this.Status = status;
+            this.userId = userId;
+        }
+
         public string Account { get => account; set => account = value; }
         public string Password { get => password; set => password = value; }
         public string UserId { get => userId; set => userId = value; }

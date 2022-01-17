@@ -13,6 +13,7 @@ namespace Library_Management.src.ui
     public partial class Add_Book : MetroFramework.Forms.MetroForm
     {
         isValidInput valid =new isValidInput();
+        private BookServices bs = new BookServices();
         private bool validAddBook()
         {
             foreach (Control c in this.Controls)

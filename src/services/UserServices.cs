@@ -44,29 +44,27 @@ namespace Library_Management.src.services
         {
             String query = String.Format("Select Count(MaDocGia) from DOCGIA");
             int quanlity = 0;
+            SqlCommand sqlCommand = new SqlCommand(query,sqlConn);
             try
             {
-                SqlCommand sqlCommand = new SqlCommand(query,sqlConn);
                 sqlConn.Open();
                 quanlity = (int)sqlCommand.ExecuteScalar();
-                sqlConn.Close();
-                return quanlity;
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
-                sqlConn.Close();
-                return quanlity;
             }
+            sqlConn.Close();
+            return quanlity;
         }
 
         public String checkAccount(String account)
         {
             String query = String.Format("Select MaDocGia from TAIKHOANDOCGIA where TaiKhoan='{0}'", account);
             String userId = "";
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConn);
             try
             {
-                SqlCommand sqlCommand = new SqlCommand(query, sqlConn);
                 sqlConn.Open();
                 var reader = sqlCommand.ExecuteReader();
                 if (reader.HasRows)
@@ -77,15 +75,13 @@ namespace Library_Management.src.services
                         userId = reader.GetString(0);
                     }
                 }
-                sqlConn.Close();
-                return userId;
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
-                sqlConn.Close();
-                return userId;
             }
+            sqlConn.Close();
+            return userId;
         }
 
         public String checkInforUser(String inforUser,int i)
@@ -106,15 +102,40 @@ namespace Library_Management.src.services
                         userId = reader.GetString(0);
                     }
                 }
-                sqlConn.Close();
-                return userId;
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
-                sqlConn.Close();
-                return userId;
             }
+            sqlConn.Close();
+            return userId;
+        }
+
+        public AccountUser checkUser(String account,String password)
+        {
+            String query = String.Format("select *  from TAIKHOANDOCGIA where TaiKhoan='{0}' and MatKhau='{1}'", account, password);
+            AccountUser user = null;
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConn);
+            try
+            {
+                sqlConn.Open();
+                var reader = sqlCommand.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        // Đọc từng dòng tập kết quả
+                        user = new AccountUser(reader.GetString(0), reader.GetString(1), reader.GetBoolean(2), reader.GetString(3));
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            sqlConn.Close();
+            return user;
+
         }
         
     }
