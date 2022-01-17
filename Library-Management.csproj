@@ -207,11 +207,23 @@
     <Compile Include="src\ui\Change_Password.Designer.cs">
       <DependentUpon>Change_Password.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\ui\Librarian\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\ui\Librarian\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\ui\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="src\ui\Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\ui\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\ui\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="src\ui\SignUp.cs">
       <SubType>Form</SubType>
@@ -244,8 +256,14 @@
     <EmbeddedResource Include="src\ui\Change_Password.resx">
       <DependentUpon>Change_Password.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\ui\Librarian\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\ui\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\ui\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\ui\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
@@ -273,12 +291,16 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="src\ui\Students\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Readme.txt" />
     <None Include="Resources\Mobile.png" />
     <None Include="Resources\download-removebg-preview.png" />
     <None Include="Resources\261368-200.png" />
+    <Content Include="Resources\Basic_Ui_%28185%29.jpg" />
+    <None Include="Resources\Basic_Ui_%28185%291.jpg" />
     <Content Include="Resources\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
