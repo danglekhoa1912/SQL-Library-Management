@@ -28,31 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.panelMain = new System.Windows.Forms.Panel();
             this.btnUser = new MetroFramework.Controls.MetroButton();
             this.btnBook = new MetroFramework.Controls.MetroButton();
             this.btnIssueBook = new MetroFramework.Controls.MetroButton();
-            this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
-            this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.laungueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.metroContextMenu1.SuspendLayout();
+            this.txtSearchBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelMain
-            // 
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelMain.Location = new System.Drawing.Point(20, 128);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1160, 652);
-            this.panelMain.TabIndex = 0;
             // 
             // btnUser
             // 
             this.btnUser.BackColor = System.Drawing.Color.White;
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUser.DisplayFocus = true;
             this.btnUser.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.btnUser.ForeColor = System.Drawing.Color.Black;
@@ -63,7 +52,7 @@
             this.btnUser.Size = new System.Drawing.Size(350, 34);
             this.btnUser.Style = MetroFramework.MetroColorStyle.Purple;
             this.btnUser.TabIndex = 1;
-            this.btnUser.Text = "USER";
+            this.btnUser.Text = "USER MANAGE";
             this.btnUser.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnUser.UseCustomBackColor = true;
             this.btnUser.UseCustomForeColor = true;
@@ -82,7 +71,7 @@
             this.btnBook.Size = new System.Drawing.Size(350, 34);
             this.btnBook.Style = MetroFramework.MetroColorStyle.Purple;
             this.btnBook.TabIndex = 2;
-            this.btnBook.Text = "BOOK";
+            this.btnBook.Text = "BOOK MANAGE";
             this.btnBook.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnBook.UseCustomBackColor = true;
             this.btnBook.UseCustomForeColor = true;
@@ -101,87 +90,76 @@
             this.btnIssueBook.Size = new System.Drawing.Size(350, 34);
             this.btnIssueBook.Style = MetroFramework.MetroColorStyle.Purple;
             this.btnIssueBook.TabIndex = 3;
-            this.btnIssueBook.Text = "ISSUE BOOK";
+            this.btnIssueBook.Text = "ISSUE BOOK MANAGE";
             this.btnIssueBook.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnIssueBook.UseCustomBackColor = true;
             this.btnIssueBook.UseCustomForeColor = true;
             this.btnIssueBook.UseSelectable = true;
             this.btnIssueBook.UseStyleColors = true;
             // 
-            // metroContextMenu1
+            // txtSearchBox
             // 
-            this.metroContextMenu1.AllowMerge = false;
-            this.metroContextMenu1.AutoSize = false;
-            this.metroContextMenu1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mENUToolStripMenuItem,
-            this.accountToolStripMenuItem,
-            this.laungueToolStripMenuItem,
-            this.logOutToolStripMenuItem});
-            this.metroContextMenu1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.metroContextMenu1.Name = "metroContextMenu1";
-            this.metroContextMenu1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.metroContextMenu1.ShowImageMargin = false;
-            this.metroContextMenu1.Size = new System.Drawing.Size(211, 128);
-            this.metroContextMenu1.Style = MetroFramework.MetroColorStyle.Purple;
-            this.metroContextMenu1.Text = "Content";
-            this.metroContextMenu1.UseCustomBackColor = true;
-            this.metroContextMenu1.UseCustomForeColor = true;
-            this.metroContextMenu1.UseStyleColors = true;
+            this.txtSearchBox.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchBox.Location = new System.Drawing.Point(71, 87);
+            this.txtSearchBox.Name = "txtSearchBox";
+            this.txtSearchBox.Size = new System.Drawing.Size(803, 34);
+            this.txtSearchBox.TabIndex = 4;
             // 
-            // mENUToolStripMenuItem
+            // pictureBox1
             // 
-            this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
-            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
-            this.mENUToolStripMenuItem.Text = "MENU";
+            this.pictureBox1.Image = global::Library_Management.Properties.Resources._5613;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 78);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 52);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
-            // accountToolStripMenuItem
+            // dataGridView
             // 
-            this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
-            this.accountToolStripMenuItem.Text = "Account";
-            // 
-            // laungueToolStripMenuItem
-            // 
-            this.laungueToolStripMenuItem.Name = "laungueToolStripMenuItem";
-            this.laungueToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
-            this.laungueToolStripMenuItem.Text = "Laungue";
-            // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
-            this.logOutToolStripMenuItem.Text = "Log out";
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView.Location = new System.Drawing.Point(20, 163);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.RowTemplate.Height = 24;
+            this.dataGridView.Size = new System.Drawing.Size(1160, 617);
+            this.dataGridView.TabIndex = 6;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtSearchBox);
             this.Controls.Add(this.btnIssueBook);
             this.Controls.Add(this.btnBook);
             this.Controls.Add(this.btnUser);
-            this.Controls.Add(this.panelMain);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Main";
             this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.Main_Load);
-            this.metroContextMenu1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelMain;
         private MetroFramework.Controls.MetroButton btnUser;
         private MetroFramework.Controls.MetroButton btnBook;
         private MetroFramework.Controls.MetroButton btnIssueBook;
-        private MetroFramework.Controls.MetroContextMenu metroContextMenu1;
-        private System.Windows.Forms.ToolStripMenuItem mENUToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem laungueToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtSearchBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }
