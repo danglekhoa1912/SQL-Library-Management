@@ -11,6 +11,11 @@ namespace Library_Management.src.services
 {
     class BookServices
     {
+        libraryEntities db;
+        public BookServices()
+        {
+            db = new libraryEntities();
+        }
         private SqlConnection sqlConn = Connectdb.getConn();
         public bool addBook(Book book)
         {
@@ -51,6 +56,18 @@ namespace Library_Management.src.services
             return quanlity;
         }
 
+        public dynamic getListBook()
+        {
+            var ds = db.SACHes.Select(s => new
+            {
+                s.TenSach,
+                s.TacGia,
+                s.NhaXuatBan,
+                s.SoLuong,
+                s.NamXuatBan
+            }).ToList();
+            return ds;
+        }
         public Book getBookById(String id)
         {
             String query = String.Format("Select * from SACH where MaSach='{0}'", id);

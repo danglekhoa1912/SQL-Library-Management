@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library_Management.src.services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Library_Management.src.ui
     public partial class Main : MetroFramework.Forms.MetroForm
     {
         int choice=0;
+        BookServices bs;
         public Main()
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace Library_Management.src.ui
               {
                   initBookIssue();
               });
+            bs = new BookServices();
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -40,7 +43,8 @@ namespace Library_Management.src.ui
         private void initBookTable()
         {
             choice = 1;
-            //Đổ dữ liệu vào grid view
+            dataGridView.DataSource = null;
+            dataGridView.DataSource = bs.getListBook();
         }
         private void initBookIssue()
         {

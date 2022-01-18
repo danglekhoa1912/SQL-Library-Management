@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4761a78b93c34871b0fc6becbd73bd82" Name="Diagram1">
+        <EntityTypeShape EntityType="libraryModel.CHITIETPHIEUMUON" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.DOCGIA" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.PHIEUMUON" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.SACH" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.sysdiagram" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.TAIKHOANDOCGIA" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.TAIKHOANTHUTHU" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="libraryModel.THUTHU" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="libraryModel.FK_CHITIETPHIEUMUON_PHIEUMUON" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK_CHITIETPHIEUMUON_SACH" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK_TAIKHOANDOCGIA_DOCGIA" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK_PHIEUMUON_TAIKHOANDOCGIA" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK_PHIEUMUON_TAIKHOANTHUTHU" ManuallyRouted="false" />
+        <AssociationConnector Association="libraryModel.FK_TAIKHOANTHUTHU_THUTHU" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
