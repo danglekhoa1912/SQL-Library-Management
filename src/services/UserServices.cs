@@ -128,6 +128,39 @@ namespace Library_Management.src.services
             return ds;
         }
         
+        public dynamic getUser(String id)
+        {
+            var ds=db.DOCGIAs.Find(id);
+            if (ds == null)
+            {
+                return null;
+            }
+            else return ds;
+        }
+
+        public void updateUser(dynamic user)
+        {
+            try
+            {
+                using (libraryEntities db = new libraryEntities())
+                {
+                    var u = db.DOCGIAs.Find(user.MaDocGia);
+                    if (u != null)
+                    {
+                        u.TenDocGia = user.TenDocGia;
+                        u.NamSinh = user.NamSinh;
+                        u.SoDienThoai = user.SoDienThoai;
+                        u.Email = user.Email;
+                        u.MSSV = user.MSSV;
+                        db.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         public bool checkUser(String account,String password)
         {
             return db.pr_KiemTraTKDG(account, password)==1;
