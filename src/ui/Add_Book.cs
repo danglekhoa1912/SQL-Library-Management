@@ -40,66 +40,92 @@ namespace Library_Management.src.ui
                  String s=txtBookID.Text;
                  lblErrorBookID.Text = valid.isValidUserName(s) && s != "" ? "Invalid Book ID!" : (s == "" ? "You must enter this inforamtion!" : "");
              });
+            addBook();
+            btnSave.Click += new EventHandler(delegate (object sender, EventArgs e)
+            {
+                if (validAddBook())
+                {
+                    //call add book in db
+                    MessageBox.Show("Succesfully!");
+                    this.Close();
+                }
+                else MessageBox.Show("Invalid input !");
+            });
+        }
+        public Add_Book(dynamic book)
+        {
+            InitializeComponent();
+            txtBookID.Text = book.MaSach;
+            txtBookID.Enabled = false;
+            lblErrorBookID.Enabled=false;
+            txtBookTitle.Text = book.TenSach;
+            txtBookAuthor.Text = book.TacGia;
+            txtAmount.Text = String.Format("{0}",book.SoLuong);
+            txtPublisher.Text = book.NhaXuatBan;
+            txtPublisherYear.Text = String.Format("{0}", book.NamXuatBan);
+            addBook();
+            btnSave.Click += new EventHandler(delegate (object sender, EventArgs e)
+            {
+                if (validAddBook())
+                {
+                    //call updatebook add book in db
+                    dynamic book2=bs.bookInfo(book.MaSach);
+                    book2.MaSach = book.MaSach;
+                    book2.TacGia = txtBookAuthor.Text;
+                    book2.TenSach = txtBookTitle.Text;
+                    book2.SoLuong= Int32.Parse(txtAmount.Text);
+                    book2.NhaXuatBan= txtPublisher.Text;
+                    book2.NamXuatBan = Int32.Parse(txtPublisherYear.Text);
+                    bs.updateBook(book2);
+                    MessageBox.Show("Succesfully!");
+                    this.Close();
+                }
+                else MessageBox.Show("Invalid input !");
+            });
+
+        }
+        private void addBook()
+        {
             txtBookTitle.Leave += new EventHandler(delegate (object sender, EventArgs e)
-             {
-                 String s = txtBookTitle.Text;
-                 s = s.Trim();
-                 while (s.IndexOf("  ") != -1)
-                 {
-                     s = isValidInput.removeCharAt(s, s.IndexOf("  ") + 1, 1);
-                 }
-                 txtBookTitle.Text=s;
-             });
+            {
+                String s = txtBookTitle.Text;
+                s = s.Trim();
+                while (s.IndexOf("  ") != -1)
+                {
+                    s = isValidInput.removeCharAt(s, s.IndexOf("  ") + 1, 1);
+                }
+                txtBookTitle.Text = s;
+            });
             txtBookAuthor.TextChanged += new EventHandler(delegate (object sender, EventArgs e)
-             {
-                 String s= txtBookAuthor.Text; 
-                 lblErrorAuthor.Text = valid.isValidName(s) && s != "" ? "Invalid full name !" : (s == "" ? "You must enter this information!" : "");
-             });
+            {
+                String s = txtBookAuthor.Text;
+                lblErrorAuthor.Text = valid.isValidName(s) && s != "" ? "Invalid full name !" : (s == "" ? "You must enter this information!" : "");
+            });
             txtBookAuthor.Leave += new EventHandler(delegate (object sender, EventArgs e)
-              {
-                  txtBookAuthor.Text = txtBookAuthor.Text != "" ? valid.styleString(txtBookAuthor.Text) : txtBookAuthor.Text;
-              });
-            txtGenre.Leave += new EventHandler(delegate (object sender, EventArgs e)
-              {
-                  String s=txtGenre.Text;
-                  s = s.Trim();
-                  while (s.IndexOf("  ") != -1)
-                  {
-                      s = isValidInput.removeCharAt(s, s.IndexOf("  ") + 1, 1);
-                  }
-                  txtGenre.Text=s;
-              });
-            txtSummary.Leave += new EventHandler(delegate (object sender, EventArgs e)
-              {
-                  String s=txtSummary.Text;
-                  s = s.Trim();
-                  while (s.IndexOf("  ") != -1)
-                  {
-                      s = isValidInput.removeCharAt(s, s.IndexOf("  ") + 1, 1);
-                  }
-                  txtSummary.Text=s;
-              });
+            {
+                txtBookAuthor.Text = txtBookAuthor.Text != "" ? valid.styleString(txtBookAuthor.Text) : txtBookAuthor.Text;
+            });
             txtPublisher.TextChanged += new EventHandler(delegate (object sender, EventArgs e)
-              {
-                  String s=txtPublisher.Text;
-                  lblErrorPublisher.Text = valid.isValidName(s) && s != "" ? "Invalid name !" : (s == "" ? "You must enter this information!" : "");
-              });
+            {
+                String s = txtPublisher.Text;
+                lblErrorPublisher.Text = valid.isValidName(s) && s != "" ? "Invalid name !" : (s == "" ? "You must enter this information!" : "");
+            });
             txtPublisher.Leave += new EventHandler(delegate (object sender, EventArgs e)
-              {
-                  txtPublisher.Text = txtPublisher.Text != "" ? valid.styleString(txtPublisher.Text) : txtPublisher.Text;
-              });
-            txtPublisherYear.TextChanged += new EventHandler(delegate (object sender, EventArgs e) 
+            {
+                txtPublisher.Text = txtPublisher.Text != "" ? valid.styleString(txtPublisher.Text) : txtPublisher.Text;
+            });
+            txtPublisherYear.TextChanged += new EventHandler(delegate (object sender, EventArgs e)
             {
                 String s = txtPublisherYear.Text;
-                lblErrorPublisherYear.Text = !valid.isValidYear(s) && s != "" ? "Invalid Year !" : (s == "" ? "You must enter this information!":"");
+                lblErrorPublisherYear.Text = !valid.isValidYear(s) && s != "" ? "Invalid Year !" : (s == "" ? "You must enter this information!" : "");
             });
-            txtAmount.TextChanged += new EventHandler(delegate (object sender, EventArgs e) 
+            txtAmount.TextChanged += new EventHandler(delegate (object sender, EventArgs e)
             {
-                String s= txtAmount.Text;
+                String s = txtAmount.Text;
                 int i;
                 try
                 {
-                    i=int.Parse(s);
+                    i = int.Parse(s);
                     lblErrorAmount.Text = String.Empty;
                 }
                 catch (Exception)
@@ -107,41 +133,32 @@ namespace Library_Management.src.ui
                     lblErrorAmount.Text = "Invalid Amount !";
                 }
             });
-            btnSave.Click += new EventHandler(delegate (object sender, EventArgs e)
-              {
-                  if (validAddBook())
-                  {
-                      //call add book in db
-                      MessageBox.Show("Succesfully!");
-                      this.Close();
-                  }
-                  else MessageBox.Show("Invalid input !");
-              });
             btnClear.Click += new EventHandler(delegate (object sender, EventArgs e)
-             {
-                 foreach (Control mycontrols in this.Controls)
-                 {
-                     if (mycontrols is TextBox)
-                     {
-                         (mycontrols as TextBox).Text = string.Empty;
+            {
+                foreach (Control mycontrols in this.Controls)
+                {
+                    if (mycontrols is TextBox)
+                    {
+                        (mycontrols as TextBox).Text = string.Empty;
 
-                     }
-                     else if (mycontrols is DateTimePicker)
-                     {
+                    }
+                    else if (mycontrols is DateTimePicker)
+                    {
 
-                         (mycontrols as DateTimePicker).Value = DateTime.Now;
+                        (mycontrols as DateTimePicker).Value = DateTime.Now;
 
-                     }
-                 }
-                 foreach (Control label in this.Controls)
-                 {
-                     if (label is Label)
-                     {
-                         if ((label as Label).ForeColor == Color.Red)
-                             (label as Label).Text = string.Empty;
-                     }
-                 }
-             });
+                    }
+                }
+                foreach (Control label in this.Controls)
+                {
+                    if (label is Label)
+                    {
+                        if ((label as Label).ForeColor == Color.Red)
+                            (label as Label).Text = string.Empty;
+                    }
+                }
+            });
+
         }
     }
 }

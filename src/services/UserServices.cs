@@ -96,7 +96,7 @@ namespace Library_Management.src.services
             return ds;
         }
         
-        public bool checkUserAcount(String account,String password)
+        public bool checkUserAccount(String account,String password)
         {
             return db.pr_KiemTraTKDG(account, password)==1;
         }
@@ -105,6 +105,44 @@ namespace Library_Management.src.services
         {
             MessageBox.Show(db.pr_KiemTraDG(id).ToString());
             return db.pr_KiemTraDG(id) == 1;
+        }
+
+        public void updateUser(dynamic user)
+        {
+            try
+            {
+                using (libraryEntities db = new libraryEntities())
+                {
+                    var b = db.DOCGIAs.Find();
+                    if (b != null)
+                    {
+                        b.MaDocGia = user.MaDocGia;
+                        b.TenDocGia = user.TenDocGia;
+                        b.NamSinh = user.NamSinh;
+                        b.SoDienThoai = user.SoDienThoai;
+                        b.Email = user.Email;
+                        b.MSSV = user.MSSV;
+                        db.SaveChanges();
+                    }
+                    else MessageBox.Show("Error");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        public DOCGIA getUser(String id)
+        {
+            var p = db.DOCGIAs.Find(id);
+            if (p != null)
+            {
+                return p;
+            }
+            else
+                return null;
         }
 
     }
