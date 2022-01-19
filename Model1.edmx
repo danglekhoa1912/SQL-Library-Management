@@ -160,6 +160,68 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="pr_KiemTraDG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="pr_KiemTraThuThu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="pr_KiemTraTKDG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ten" Type="varchar" Mode="In" />
+          <Parameter Name="pass" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="pr_KiemTraTKThuThu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ten" Type="varchar" Mode="In" />
+          <Parameter Name="pass" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="pr_KTSach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="masach" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="pr_ThemDG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="varchar" Mode="In" />
+          <Parameter Name="ten" Type="nvarchar" Mode="In" />
+          <Parameter Name="nam" Type="date" Mode="In" />
+          <Parameter Name="sdt" Type="varchar" Mode="In" />
+          <Parameter Name="email" Type="varchar" Mode="In" />
+          <Parameter Name="mssv" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="pr_ThemSach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="masach" Type="varchar" Mode="In" />
+          <Parameter Name="ten" Type="nvarchar" Mode="In" />
+          <Parameter Name="sl" Type="int" Mode="In" />
+          <Parameter Name="tacgia" Type="nvarchar" Mode="In" />
+          <Parameter Name="namXB" Type="int" Mode="In" />
+          <Parameter Name="nhaXB" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="pr_ThemTKDG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ten" Type="varchar" Mode="In" />
+          <Parameter Name="pass" Type="varchar" Mode="In" />
+          <Parameter Name="maTT" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="pr_ThemTKThuThu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ten" Type="varchar" Mode="In" />
+          <Parameter Name="pass" Type="varchar" Mode="In" />
+          <Parameter Name="maTT" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="pr_ThemTT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="varchar" Mode="In" />
+          <Parameter Name="ten" Type="nvarchar" Mode="In" />
+          <Parameter Name="nam" Type="date" Mode="In" />
+          <Parameter Name="sdt" Type="varchar" Mode="In" />
+          <Parameter Name="email" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="pr_XoaDG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="pr_XoaSach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="masach" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="pr_XoaTKDG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ten" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="pr_XoaTKThuThu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ten" Type="varchar" Mode="In" />
+        </Function>
         <EntityContainer Name="libraryModelStoreContainer">
           <EntitySet Name="CHITIETPHIEUMUON" EntityType="Self.CHITIETPHIEUMUON" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DOCGIA" EntityType="Self.DOCGIA" Schema="dbo" store:Type="Tables" />
@@ -398,6 +460,68 @@
             <End Role="THUTHU" EntitySet="THUTHUs" />
             <End Role="TAIKHOANTHUTHU" EntitySet="TAIKHOANTHUTHUs" />
           </AssociationSet>
+          <FunctionImport Name="pr_KiemTraDG">
+            <Parameter Name="ma" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pr_KiemTraThuThu">
+            <Parameter Name="ma" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pr_KiemTraTKDG">
+            <Parameter Name="ten" Mode="In" Type="String" />
+            <Parameter Name="pass" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pr_KiemTraTKThuThu">
+            <Parameter Name="ten" Mode="In" Type="String" />
+            <Parameter Name="pass" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pr_KTSach">
+            <Parameter Name="masach" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pr_ThemDG">
+            <Parameter Name="ma" Mode="In" Type="String" />
+            <Parameter Name="ten" Mode="In" Type="String" />
+            <Parameter Name="nam" Mode="In" Type="DateTime" />
+            <Parameter Name="sdt" Mode="In" Type="String" />
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="mssv" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pr_ThemSach">
+            <Parameter Name="masach" Mode="In" Type="String" />
+            <Parameter Name="ten" Mode="In" Type="String" />
+            <Parameter Name="sl" Mode="In" Type="Int32" />
+            <Parameter Name="tacgia" Mode="In" Type="String" />
+            <Parameter Name="namXB" Mode="In" Type="Int32" />
+            <Parameter Name="nhaXB" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pr_ThemTKDG">
+            <Parameter Name="ten" Mode="In" Type="String" />
+            <Parameter Name="pass" Mode="In" Type="String" />
+            <Parameter Name="maTT" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pr_ThemTKThuThu">
+            <Parameter Name="ten" Mode="In" Type="String" />
+            <Parameter Name="pass" Mode="In" Type="String" />
+            <Parameter Name="maTT" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pr_ThemTT">
+            <Parameter Name="ma" Mode="In" Type="String" />
+            <Parameter Name="ten" Mode="In" Type="String" />
+            <Parameter Name="nam" Mode="In" Type="DateTime" />
+            <Parameter Name="sdt" Mode="In" Type="String" />
+            <Parameter Name="email" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pr_XoaDG">
+            <Parameter Name="ma" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pr_XoaSach">
+            <Parameter Name="masach" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pr_XoaTKDG">
+            <Parameter Name="ten" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="pr_XoaTKThuThu">
+            <Parameter Name="ten" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -496,6 +620,20 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="pr_KiemTraDG" FunctionName="libraryModel.Store.pr_KiemTraDG" />
+          <FunctionImportMapping FunctionImportName="pr_KiemTraThuThu" FunctionName="libraryModel.Store.pr_KiemTraThuThu" />
+          <FunctionImportMapping FunctionImportName="pr_KiemTraTKDG" FunctionName="libraryModel.Store.pr_KiemTraTKDG" />
+          <FunctionImportMapping FunctionImportName="pr_KiemTraTKThuThu" FunctionName="libraryModel.Store.pr_KiemTraTKThuThu" />
+          <FunctionImportMapping FunctionImportName="pr_KTSach" FunctionName="libraryModel.Store.pr_KTSach" />
+          <FunctionImportMapping FunctionImportName="pr_ThemDG" FunctionName="libraryModel.Store.pr_ThemDG" />
+          <FunctionImportMapping FunctionImportName="pr_ThemSach" FunctionName="libraryModel.Store.pr_ThemSach" />
+          <FunctionImportMapping FunctionImportName="pr_ThemTKDG" FunctionName="libraryModel.Store.pr_ThemTKDG" />
+          <FunctionImportMapping FunctionImportName="pr_ThemTKThuThu" FunctionName="libraryModel.Store.pr_ThemTKThuThu" />
+          <FunctionImportMapping FunctionImportName="pr_ThemTT" FunctionName="libraryModel.Store.pr_ThemTT" />
+          <FunctionImportMapping FunctionImportName="pr_XoaDG" FunctionName="libraryModel.Store.pr_XoaDG" />
+          <FunctionImportMapping FunctionImportName="pr_XoaSach" FunctionName="libraryModel.Store.pr_XoaSach" />
+          <FunctionImportMapping FunctionImportName="pr_XoaTKDG" FunctionName="libraryModel.Store.pr_XoaTKDG" />
+          <FunctionImportMapping FunctionImportName="pr_XoaTKThuThu" FunctionName="libraryModel.Store.pr_XoaTKThuThu" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

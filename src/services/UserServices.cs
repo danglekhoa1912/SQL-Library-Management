@@ -12,6 +12,11 @@ namespace Library_Management.src.services
 {
     class UserServices
     {
+        libraryEntities db;
+        public UserServices()
+        {
+            db= new libraryEntities();
+        }
         private SqlConnection sqlConn = Connectdb.getConn();
         public bool addUser(User user,AccountUser accountUser)
         {
@@ -136,6 +141,17 @@ namespace Library_Management.src.services
             sqlConn.Close();
             return user;
 
+        }
+        public dynamic getListUser()
+        {
+            var ds = db.TAIKHOANDOCGIAs.Select(s => new
+            {
+                s.TaiKhoan,
+                s.MatKhau,
+                s.MaDocGia,
+                s.DOCGIA.TenDocGia
+            }).ToList();
+            return ds;
         }
         
     }

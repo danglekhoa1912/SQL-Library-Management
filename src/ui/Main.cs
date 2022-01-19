@@ -14,6 +14,8 @@ namespace Library_Management.src.ui
     {
         int choice=0;
         BookServices bs;
+        UserServices us;
+        IssueBookServices iss;
         public Main()
         {
             InitializeComponent();
@@ -30,15 +32,20 @@ namespace Library_Management.src.ui
                   initBookIssue();
               });
             bs = new BookServices();
+            us = new UserServices();
+            iss= new IssueBookServices();
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
+            initUserTable();
         }
         private void initUserTable()
         {
             choice=0;
             // Đổ dữ liệu vào grid view
+           dataGridView.DataSource = null;
+            dataGridView.DataSource = us.getListUser();
         }
         private void initBookTable()
         {
@@ -49,6 +56,8 @@ namespace Library_Management.src.ui
         private void initBookIssue()
         {
             choice = 2;
+            dataGridView.DataSource = null;
+            dataGridView.DataSource = iss.getIssueBook();
             // Đổ dữ liệu vào grid view
         }
     }
