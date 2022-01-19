@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library_Management.src.services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,12 +12,25 @@ namespace Library_Management.src.ui
 {
     public partial class Login : MetroFramework.Forms.MetroForm
     {
+        UserServices us = new UserServices();
+        AdminServices ads = new AdminServices();
         public Login()
         {
             InitializeComponent();
             btnLogin.Click += new EventHandler(delegate (object sender, EventArgs e)
               {
-                  //do some thing
+                  if (us.checkUser(txtAccount.Text, txtPassword.Text))
+                  {
+                      MessageBox.Show("User");
+                  }
+                  else if(ads.checkAdmin(txtAccount.Text, txtPassword.Text))
+                  {
+                      MessageBox.Show("Admin");
+                  }
+                  else
+                  {
+                      MessageBox.Show("Tài khoản không tồn tại");
+                  }
               });
             btnSignUp.Click += new EventHandler(delegate (object sender, EventArgs e)
               {

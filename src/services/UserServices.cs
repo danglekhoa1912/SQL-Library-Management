@@ -116,32 +116,6 @@ namespace Library_Management.src.services
             return userId;
         }
 
-        public AccountUser checkUser(String account,String password)
-        {
-            String query = String.Format("select *  from TAIKHOANDOCGIA where TaiKhoan='{0}' and MatKhau='{1}'", account, password);
-            AccountUser user = null;
-            SqlCommand sqlCommand = new SqlCommand(query, sqlConn);
-            try
-            {
-                sqlConn.Open();
-                var reader = sqlCommand.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        // Đọc từng dòng tập kết quả
-                        user = new AccountUser(reader.GetString(0), reader.GetString(1), reader.GetBoolean(2), reader.GetString(3));
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            sqlConn.Close();
-            return user;
-
-        }
         public dynamic getListUser()
         {
             var ds = db.TAIKHOANDOCGIAs.Select(s => new
@@ -154,5 +128,10 @@ namespace Library_Management.src.services
             return ds;
         }
         
+        public bool checkUser(String account,String password)
+        {
+            return db.pr_KiemTraTKDG(account, password)==1;
+        }
+
     }
 }

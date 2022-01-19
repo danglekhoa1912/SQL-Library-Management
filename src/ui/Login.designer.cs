@@ -33,8 +33,8 @@ namespace Library_Management.src.ui
             this.btnSignUp = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.txtPassword = new MetroFramework.Controls.MetroTextBox();
+            this.txtAccount = new MetroFramework.Controls.MetroTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -93,75 +93,75 @@ namespace Library_Management.src.ui
             this.metroLabel2.TabIndex = 4;
             this.metroLabel2.Text = "Password:";
             // 
-            // metroTextBox2
+            // txtPassword
             // 
             // 
             // 
             // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(243, 1);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.DisplayIcon = true;
-            this.metroTextBox2.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.metroTextBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.metroTextBox2.IconRight = true;
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(42, 243);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '*';
-            this.metroTextBox2.PromptText = "Enter your password";
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(265, 23);
-            this.metroTextBox2.TabIndex = 1;
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMark = "Enter your password";
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPassword.CustomButton.Image = null;
+            this.txtPassword.CustomButton.Location = new System.Drawing.Point(243, 1);
+            this.txtPassword.CustomButton.Name = "";
+            this.txtPassword.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPassword.CustomButton.TabIndex = 1;
+            this.txtPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPassword.CustomButton.UseSelectable = true;
+            this.txtPassword.CustomButton.Visible = false;
+            this.txtPassword.DisplayIcon = true;
+            this.txtPassword.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtPassword.IconRight = true;
+            this.txtPassword.Lines = new string[0];
+            this.txtPassword.Location = new System.Drawing.Point(42, 243);
+            this.txtPassword.MaxLength = 32767;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PromptText = "Enter your password";
+            this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.SelectionLength = 0;
+            this.txtPassword.SelectionStart = 0;
+            this.txtPassword.ShortcutsEnabled = true;
+            this.txtPassword.Size = new System.Drawing.Size(265, 23);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.UseSelectable = true;
+            this.txtPassword.WaterMark = "Enter your password";
+            this.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroTextBox1
-            // 
-            // 
+            // txtAccount
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(243, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.DisplayIcon = true;
-            this.metroTextBox1.IconRight = true;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(42, 184);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.PromptText = "Enter your username";
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(265, 23);
-            this.metroTextBox1.TabIndex = 0;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMark = "Enter your username";
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // 
+            this.txtAccount.CustomButton.Image = null;
+            this.txtAccount.CustomButton.Location = new System.Drawing.Point(243, 1);
+            this.txtAccount.CustomButton.Name = "";
+            this.txtAccount.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAccount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAccount.CustomButton.TabIndex = 1;
+            this.txtAccount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAccount.CustomButton.UseSelectable = true;
+            this.txtAccount.CustomButton.Visible = false;
+            this.txtAccount.DisplayIcon = true;
+            this.txtAccount.IconRight = true;
+            this.txtAccount.Lines = new string[0];
+            this.txtAccount.Location = new System.Drawing.Point(42, 184);
+            this.txtAccount.MaxLength = 32767;
+            this.txtAccount.Name = "txtAccount";
+            this.txtAccount.PasswordChar = '\0';
+            this.txtAccount.PromptText = "Enter your username";
+            this.txtAccount.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAccount.SelectedText = "";
+            this.txtAccount.SelectionLength = 0;
+            this.txtAccount.SelectionStart = 0;
+            this.txtAccount.ShortcutsEnabled = true;
+            this.txtAccount.Size = new System.Drawing.Size(265, 23);
+            this.txtAccount.TabIndex = 0;
+            this.txtAccount.UseSelectable = true;
+            this.txtAccount.WaterMark = "Enter your username";
+            this.txtAccount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAccount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // pictureBox1
             // 
@@ -182,8 +182,8 @@ namespace Library_Management.src.ui
             this.CancelButton = this.btnSignUp;
             this.ClientSize = new System.Drawing.Size(350, 400);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.metroTextBox2);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtAccount);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.btnSignUp);
@@ -208,8 +208,8 @@ namespace Library_Management.src.ui
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel LOGIN;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox txtAccount;
+        private MetroFramework.Controls.MetroTextBox txtPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroButton btnLogin;
     }
