@@ -8,7 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using Library_Management.src.services;
-using Library_Management.src.pojo;
 
 namespace Library_Management.src.ui
 {
@@ -130,9 +129,7 @@ namespace Library_Management.src.ui
                 if (validSignUp())
                 {
                     //do something
-                    User user = new User( txtName.Text, txtEmail.Text, txtStudentID.Text, dtpBirthday.Value, txtMobile.Text);
-                    AccountUser accountUser = new AccountUser(txtUName.Text, txtPassword.Text, true);
-                    if (us.addUser(user, accountUser))
+                    if (us.addUser(txtName.Text, dtpBirthday.Value, txtMobile.Text, txtEmail.Text, txtStudentID.Text, txtUName.Text, txtPassword.Text))
                     {
                         MessageBox.Show("Sign up sucessfully! You can use account for sign in");
                         this.Close();

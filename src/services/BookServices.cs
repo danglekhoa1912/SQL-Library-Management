@@ -1,5 +1,4 @@
-﻿using Library_Management.src.configs;
-using Library_Management.src.pojo;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -31,7 +30,16 @@ namespace Library_Management.src.services
             return ds;
         }
 
-
+        public String getBookName(String id)
+        {
+            var p = db.SACHes.Find(id);
+            if (p != null)
+            {
+                return p.TenSach;
+            }
+            else
+                return null;
+        }
 
 
 

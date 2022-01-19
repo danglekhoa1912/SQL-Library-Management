@@ -33,22 +33,24 @@ namespace Library_Management.src.ui
             this.lblErrorUserID = new System.Windows.Forms.Label();
             this.txtUserID = new System.Windows.Forms.TextBox();
             this.btnCheckUser = new System.Windows.Forms.Button();
-            this.txtIssueDate = new System.Windows.Forms.TextBox();
             this.lblErrorIssueDate = new System.Windows.Forms.Label();
             this.lblIssueDate = new System.Windows.Forms.Label();
-            this.txtReturnDueDate = new System.Windows.Forms.TextBox();
             this.lblErrorReturnDueDate = new System.Windows.Forms.Label();
             this.lblReturnDueDate = new System.Windows.Forms.Label();
-            this.txtBookID = new System.Windows.Forms.TextBox();
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
             this.lblButtonPlus = new System.Windows.Forms.Label();
             this.lblButtonMinus = new System.Windows.Forms.Label();
             this.lblBookQuantity = new System.Windows.Forms.Label();
-            this.lblBookID = new System.Windows.Forms.Label();
-            this.lblErrorBookID = new System.Windows.Forms.Label();
             this.btnDone = new System.Windows.Forms.Button();
             this.flpnBookQuantity = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblErrorBookID = new System.Windows.Forms.Label();
+            this.lblBookID = new System.Windows.Forms.Label();
+            this.txtBookID = new System.Windows.Forms.TextBox();
+            this.dpIssueDate = new System.Windows.Forms.DateTimePicker();
+            this.dpReturnDueDate = new System.Windows.Forms.DateTimePicker();
+            this.lbBookName = new System.Windows.Forms.Label();
+            this.flpnBookQuantity.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblUserID
@@ -56,7 +58,7 @@ namespace Library_Management.src.ui
             this.lblUserID.AutoSize = true;
             this.lblUserID.Location = new System.Drawing.Point(50, 33);
             this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(49, 17);
+            this.lblUserID.Size = new System.Drawing.Size(64, 23);
             this.lblUserID.TabIndex = 0;
             this.lblUserID.Text = "User ID";
             // 
@@ -66,7 +68,7 @@ namespace Library_Management.src.ui
             this.lblErrorUserID.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorUserID.Location = new System.Drawing.Point(50, 78);
             this.lblErrorUserID.Name = "lblErrorUserID";
-            this.lblErrorUserID.Size = new System.Drawing.Size(115, 15);
+            this.lblErrorUserID.Size = new System.Drawing.Size(153, 20);
             this.lblErrorUserID.TabIndex = 1;
             this.lblErrorUserID.Text = "aaaaaaaaaaaaaaaaaa";
             // 
@@ -74,7 +76,7 @@ namespace Library_Management.src.ui
             // 
             this.txtUserID.Location = new System.Drawing.Point(43, 53);
             this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(348, 25);
+            this.txtUserID.Size = new System.Drawing.Size(348, 29);
             this.txtUserID.TabIndex = 2;
             // 
             // btnCheckUser
@@ -85,13 +87,7 @@ namespace Library_Management.src.ui
             this.btnCheckUser.TabIndex = 3;
             this.btnCheckUser.Text = "Check User";
             this.btnCheckUser.UseVisualStyleBackColor = true;
-            // 
-            // txtIssueDate
-            // 
-            this.txtIssueDate.Location = new System.Drawing.Point(43, 154);
-            this.txtIssueDate.Name = "txtIssueDate";
-            this.txtIssueDate.Size = new System.Drawing.Size(348, 25);
-            this.txtIssueDate.TabIndex = 6;
+            this.btnCheckUser.Click += new System.EventHandler(this.btnCheckUser_Click);
             // 
             // lblErrorIssueDate
             // 
@@ -99,7 +95,7 @@ namespace Library_Management.src.ui
             this.lblErrorIssueDate.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorIssueDate.Location = new System.Drawing.Point(50, 182);
             this.lblErrorIssueDate.Name = "lblErrorIssueDate";
-            this.lblErrorIssueDate.Size = new System.Drawing.Size(115, 15);
+            this.lblErrorIssueDate.Size = new System.Drawing.Size(153, 20);
             this.lblErrorIssueDate.TabIndex = 5;
             this.lblErrorIssueDate.Text = "aaaaaaaaaaaaaaaaaa";
             // 
@@ -108,16 +104,9 @@ namespace Library_Management.src.ui
             this.lblIssueDate.AutoSize = true;
             this.lblIssueDate.Location = new System.Drawing.Point(50, 134);
             this.lblIssueDate.Name = "lblIssueDate";
-            this.lblIssueDate.Size = new System.Drawing.Size(66, 17);
+            this.lblIssueDate.Size = new System.Drawing.Size(86, 23);
             this.lblIssueDate.TabIndex = 4;
             this.lblIssueDate.Text = "Issue Date";
-            // 
-            // txtReturnDueDate
-            // 
-            this.txtReturnDueDate.Location = new System.Drawing.Point(43, 217);
-            this.txtReturnDueDate.Name = "txtReturnDueDate";
-            this.txtReturnDueDate.Size = new System.Drawing.Size(348, 25);
-            this.txtReturnDueDate.TabIndex = 9;
             // 
             // lblErrorReturnDueDate
             // 
@@ -125,7 +114,7 @@ namespace Library_Management.src.ui
             this.lblErrorReturnDueDate.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorReturnDueDate.Location = new System.Drawing.Point(50, 245);
             this.lblErrorReturnDueDate.Name = "lblErrorReturnDueDate";
-            this.lblErrorReturnDueDate.Size = new System.Drawing.Size(115, 15);
+            this.lblErrorReturnDueDate.Size = new System.Drawing.Size(153, 20);
             this.lblErrorReturnDueDate.TabIndex = 8;
             this.lblErrorReturnDueDate.Text = "aaaaaaaaaaaaaaaaaa";
             // 
@@ -134,16 +123,9 @@ namespace Library_Management.src.ui
             this.lblReturnDueDate.AutoSize = true;
             this.lblReturnDueDate.Location = new System.Drawing.Point(50, 197);
             this.lblReturnDueDate.Name = "lblReturnDueDate";
-            this.lblReturnDueDate.Size = new System.Drawing.Size(102, 17);
+            this.lblReturnDueDate.Size = new System.Drawing.Size(133, 23);
             this.lblReturnDueDate.TabIndex = 7;
             this.lblReturnDueDate.Text = "Return Due Date";
-            // 
-            // txtBookID
-            // 
-            this.txtBookID.Location = new System.Drawing.Point(43, 327);
-            this.txtBookID.Name = "txtBookID";
-            this.txtBookID.Size = new System.Drawing.Size(348, 25);
-            this.txtBookID.TabIndex = 10;
             // 
             // btnMinus
             // 
@@ -164,13 +146,14 @@ namespace Library_Management.src.ui
             this.btnPlus.Size = new System.Drawing.Size(27, 25);
             this.btnPlus.TabIndex = 11;
             this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
             // lblButtonPlus
             // 
             this.lblButtonPlus.AutoSize = true;
             this.lblButtonPlus.Location = new System.Drawing.Point(174, 267);
             this.lblButtonPlus.Name = "lblButtonPlus";
-            this.lblButtonPlus.Size = new System.Drawing.Size(44, 17);
+            this.lblButtonPlus.Size = new System.Drawing.Size(57, 23);
             this.lblButtonPlus.TabIndex = 13;
             this.lblButtonPlus.Text = "Button";
             // 
@@ -179,7 +162,7 @@ namespace Library_Management.src.ui
             this.lblButtonMinus.AutoSize = true;
             this.lblButtonMinus.Location = new System.Drawing.Point(257, 267);
             this.lblButtonMinus.Name = "lblButtonMinus";
-            this.lblButtonMinus.Size = new System.Drawing.Size(44, 17);
+            this.lblButtonMinus.Size = new System.Drawing.Size(57, 23);
             this.lblButtonMinus.TabIndex = 14;
             this.lblButtonMinus.Text = "Button";
             // 
@@ -188,66 +171,97 @@ namespace Library_Management.src.ui
             this.lblBookQuantity.AutoSize = true;
             this.lblBookQuantity.Location = new System.Drawing.Point(50, 267);
             this.lblBookQuantity.Name = "lblBookQuantity";
-            this.lblBookQuantity.Size = new System.Drawing.Size(87, 17);
+            this.lblBookQuantity.Size = new System.Drawing.Size(114, 23);
             this.lblBookQuantity.TabIndex = 15;
             this.lblBookQuantity.Text = "Book Quantity";
-            // 
-            // lblBookID
-            // 
-            this.lblBookID.AutoSize = true;
-            this.lblBookID.Location = new System.Drawing.Point(50, 307);
-            this.lblBookID.Name = "lblBookID";
-            this.lblBookID.Size = new System.Drawing.Size(51, 17);
-            this.lblBookID.TabIndex = 16;
-            this.lblBookID.Text = "Book ID";
-            // 
-            // lblErrorBookID
-            // 
-            this.lblErrorBookID.AutoSize = true;
-            this.lblErrorBookID.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorBookID.Location = new System.Drawing.Point(50, 355);
-            this.lblErrorBookID.Name = "lblErrorBookID";
-            this.lblErrorBookID.Size = new System.Drawing.Size(115, 15);
-            this.lblErrorBookID.TabIndex = 17;
-            this.lblErrorBookID.Text = "aaaaaaaaaaaaaaaaaa";
             // 
             // btnDone
             // 
             this.btnDone.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnDone.Location = new System.Drawing.Point(161, 373);
+            this.btnDone.Location = new System.Drawing.Point(162, 394);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(110, 40);
             this.btnDone.TabIndex = 18;
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // flpnBookQuantity
             // 
             this.flpnBookQuantity.AutoScroll = true;
+            this.flpnBookQuantity.Controls.Add(this.lblErrorBookID);
+            this.flpnBookQuantity.Controls.Add(this.lblBookID);
+            this.flpnBookQuantity.Controls.Add(this.txtBookID);
+            this.flpnBookQuantity.Controls.Add(this.lbBookName);
             this.flpnBookQuantity.Location = new System.Drawing.Point(37, 291);
             this.flpnBookQuantity.Name = "flpnBookQuantity";
-            this.flpnBookQuantity.Size = new System.Drawing.Size(353, 16);
+            this.flpnBookQuantity.Size = new System.Drawing.Size(354, 97);
             this.flpnBookQuantity.TabIndex = 19;
+            // 
+            // lblErrorBookID
+            // 
+            this.lblErrorBookID.AutoSize = true;
+            this.lblErrorBookID.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorBookID.Location = new System.Drawing.Point(3, 0);
+            this.lblErrorBookID.Name = "lblErrorBookID";
+            this.lblErrorBookID.Size = new System.Drawing.Size(0, 20);
+            this.lblErrorBookID.TabIndex = 20;
+            // 
+            // lblBookID
+            // 
+            this.lblBookID.AutoSize = true;
+            this.lblBookID.Location = new System.Drawing.Point(9, 0);
+            this.lblBookID.Name = "lblBookID";
+            this.lblBookID.Size = new System.Drawing.Size(68, 23);
+            this.lblBookID.TabIndex = 19;
+            this.lblBookID.Text = "Book ID";
+            // 
+            // txtBookID
+            // 
+            this.txtBookID.Location = new System.Drawing.Point(3, 26);
+            this.txtBookID.Name = "txtBookID";
+            this.txtBookID.Size = new System.Drawing.Size(348, 29);
+            this.txtBookID.TabIndex = 18;
+            this.txtBookID.TextChanged += new System.EventHandler(this.txtBookID_TextChanged);
+            // 
+            // dpIssueDate
+            // 
+            this.dpIssueDate.Location = new System.Drawing.Point(54, 160);
+            this.dpIssueDate.Name = "dpIssueDate";
+            this.dpIssueDate.Size = new System.Drawing.Size(200, 29);
+            this.dpIssueDate.TabIndex = 20;
+            // 
+            // dpReturnDueDate
+            // 
+            this.dpReturnDueDate.Location = new System.Drawing.Point(54, 223);
+            this.dpReturnDueDate.Name = "dpReturnDueDate";
+            this.dpReturnDueDate.Size = new System.Drawing.Size(200, 29);
+            this.dpReturnDueDate.TabIndex = 20;
+            // 
+            // lbBookName
+            // 
+            this.lbBookName.AutoSize = true;
+            this.lbBookName.Location = new System.Drawing.Point(3, 58);
+            this.lbBookName.Name = "lbBookName";
+            this.lbBookName.Size = new System.Drawing.Size(0, 23);
+            this.lbBookName.TabIndex = 21;
             // 
             // Add_Issue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 416);
+            this.ClientSize = new System.Drawing.Size(435, 450);
+            this.Controls.Add(this.dpReturnDueDate);
+            this.Controls.Add(this.dpIssueDate);
             this.Controls.Add(this.flpnBookQuantity);
             this.Controls.Add(this.btnDone);
-            this.Controls.Add(this.lblErrorBookID);
-            this.Controls.Add(this.lblBookID);
             this.Controls.Add(this.lblBookQuantity);
             this.Controls.Add(this.lblButtonMinus);
             this.Controls.Add(this.lblButtonPlus);
             this.Controls.Add(this.btnMinus);
             this.Controls.Add(this.btnPlus);
-            this.Controls.Add(this.txtBookID);
-            this.Controls.Add(this.txtReturnDueDate);
             this.Controls.Add(this.lblErrorReturnDueDate);
             this.Controls.Add(this.lblReturnDueDate);
-            this.Controls.Add(this.txtIssueDate);
             this.Controls.Add(this.lblErrorIssueDate);
             this.Controls.Add(this.lblIssueDate);
             this.Controls.Add(this.btnCheckUser);
@@ -258,6 +272,8 @@ namespace Library_Management.src.ui
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Add_Issue";
             this.Padding = new System.Windows.Forms.Padding(23, 78, 23, 26);
+            this.flpnBookQuantity.ResumeLayout(false);
+            this.flpnBookQuantity.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,21 +285,22 @@ namespace Library_Management.src.ui
         private System.Windows.Forms.Label lblErrorUserID;
         private System.Windows.Forms.TextBox txtUserID;
         private System.Windows.Forms.Button btnCheckUser;
-        private System.Windows.Forms.TextBox txtIssueDate;
         private System.Windows.Forms.Label lblErrorIssueDate;
         private System.Windows.Forms.Label lblIssueDate;
-        private System.Windows.Forms.TextBox txtReturnDueDate;
         private System.Windows.Forms.Label lblErrorReturnDueDate;
         private System.Windows.Forms.Label lblReturnDueDate;
-        private System.Windows.Forms.TextBox txtBookID;
         private System.Windows.Forms.Button btnPlus;
         private System.Windows.Forms.Button btnMinus;
         private System.Windows.Forms.Label lblButtonPlus;
         private System.Windows.Forms.Label lblButtonMinus;
         private System.Windows.Forms.Label lblBookQuantity;
-        private System.Windows.Forms.Label lblBookID;
-        private System.Windows.Forms.Label lblErrorBookID;
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.FlowLayoutPanel flpnBookQuantity;
+        private System.Windows.Forms.Label lblErrorBookID;
+        private System.Windows.Forms.Label lblBookID;
+        private System.Windows.Forms.TextBox txtBookID;
+        private System.Windows.Forms.DateTimePicker dpIssueDate;
+        private System.Windows.Forms.DateTimePicker dpReturnDueDate;
+        private System.Windows.Forms.Label lbBookName;
     }
 }

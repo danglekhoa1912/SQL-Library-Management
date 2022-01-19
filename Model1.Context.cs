@@ -147,7 +147,7 @@ namespace Library_Management
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pr_ThemSach", masachParameter, tenParameter, slParameter, tacgiaParameter, namXBParameter, nhaXBParameter);
         }
     
-        public virtual int pr_ThemTKDG(string ten, string pass, string maTT)
+        public virtual int pr_ThemTKDG(string ten, string pass, string maTT, Nullable<bool> trangThai)
         {
             var tenParameter = ten != null ?
                 new ObjectParameter("ten", ten) :
@@ -161,7 +161,11 @@ namespace Library_Management
                 new ObjectParameter("maTT", maTT) :
                 new ObjectParameter("maTT", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pr_ThemTKDG", tenParameter, passParameter, maTTParameter);
+            var trangThaiParameter = trangThai.HasValue ?
+                new ObjectParameter("trangThai", trangThai) :
+                new ObjectParameter("trangThai", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pr_ThemTKDG", tenParameter, passParameter, maTTParameter, trangThaiParameter);
         }
     
         public virtual int pr_ThemTKThuThu(string ten, string pass, string maTT)

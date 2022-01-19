@@ -203,14 +203,6 @@
     <Compile Include="sp_helpdiagrams_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="src\configs\Connectdb.cs" />
-    <Compile Include="src\pojo\AccountAdmin.cs" />
-    <Compile Include="src\pojo\AccountUser.cs" />
-    <Compile Include="src\pojo\Admin.cs" />
-    <Compile Include="src\pojo\Book.cs" />
-    <Compile Include="src\pojo\Issue.cs" />
-    <Compile Include="src\pojo\IssueDetail.cs" />
-    <Compile Include="src\pojo\User.cs" />
     <Compile Include="src\services\AdminServices.cs" />
     <Compile Include="src\services\BookServices.cs" />
     <Compile Include="src\services\isInvalidInput.cs" />

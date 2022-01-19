@@ -1,5 +1,4 @@
-﻿using Library_Management.src.configs;
-using Library_Management.src.pojo;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -17,103 +16,72 @@ namespace Library_Management.src.services
         {
             db= new libraryEntities();
         }
-        private SqlConnection sqlConn = Connectdb.getConn();
-        public bool addUser(User user,AccountUser accountUser)
+        public bool addUser(String UserName,DateTime BirthDay,String PhoneNumber,String Email,String StudentId,String account,String pass)
         {
             int i = getQuanlityUser();
-            String query = String.Format("insert into DOCGIA(MaDocGia,TenDocGia,Email,MSSV,NamSinh,SoDienThoai)  values('{0}',N'{1}','{2}','{3}','{4}','{5}')"+
-                "insert  into TAIKHOANDOCGIA(TaiKhoan,MatKhau,MaDocGia) values('{6}','{7}','{0}')"
-                , "N"+(i+1), user.UserName, user.Email, user.StudentId, user.BirthDay, user.PhoneNumber,accountUser.Account,accountUser.Password);
-            SqlCommand sqlCommand = new SqlCommand(query,sqlConn);
-            sqlConn.Open();
-            SqlTransaction transaction = sqlConn.BeginTransaction();
-            sqlCommand.Transaction = transaction;
             try
-            {               
-                sqlCommand.ExecuteNonQuery();
-                transaction.Commit();
-                sqlConn.Close();
+            {
+                db.pr_ThemDG("N" + (i + 1), UserName, BirthDay, PhoneNumber, Email, StudentId);
+                db.pr_ThemTKDG(account, pass, "N" + (i + 1),true);
                 return true;
-
             }
             catch(SqlException ex)
             {
                 Console.WriteLine(ex.Message);
-                transaction.Rollback();
-                sqlConn.Close();
                 return false;
             }
         }
 
         public int getQuanlityUser()
         {
-            String query = String.Format("Select Count(MaDocGia) from DOCGIA");
             int quanlity = 0;
-            SqlCommand sqlCommand = new SqlCommand(query,sqlConn);
             try
             {
-                sqlConn.Open();
-                quanlity = (int)sqlCommand.ExecuteScalar();
+                quanlity= db.DOCGIAs.Count();
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            sqlConn.Close();
             return quanlity;
         }
 
         public String checkAccount(String account)
         {
-            String query = String.Format("Select MaDocGia from TAIKHOANDOCGIA where TaiKhoan='{0}'", account);
             String userId = "";
-            SqlCommand sqlCommand = new SqlCommand(query, sqlConn);
             try
             {
-                sqlConn.Open();
-                var reader = sqlCommand.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    // Đọc từng dòng tập kết quả
-                    while (reader.Read())
-                    {
-                        userId = reader.GetString(0);
-                    }
-                }
+                var p = db.TAIKHOANDOCGIAs.Find(account);
+                if (p != null)
+                    userId = p.MaDocGia;
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            sqlConn.Close();
             return userId;
         }
 
         public String checkInforUser(String inforUser,int i)
         {
             String[] options = { "MSSV", "SoDienThoai", "Email" };
-            String query = String.Format("Select MaDocGia from DOCGIA where {0}='{1}'", options[i], inforUser);
-            String userId = "";
+            var us=new DOCGIA();
             try
             {
-                SqlCommand sqlCommand = new SqlCommand(query, sqlConn);
-                sqlConn.Open();
-                var reader = sqlCommand.ExecuteReader();
-                if (reader.HasRows)
+                if (i == 0)
                 {
-                    // Đọc từng dòng tập kết quả
-                    while (reader.Read())
-                    {
-                        userId = reader.GetString(0);
-                    }
+                     us = db.DOCGIAs.Where(s => s.MSSV == inforUser).FirstOrDefault<DOCGIA>();
                 }
+                else if (i == 1)
+                     us = db.DOCGIAs.Where(s => s.SoDienThoai == inforUser).FirstOrDefault<DOCGIA>();
+                else
+                     us = db.DOCGIAs.Where(s => s.Email == inforUser).FirstOrDefault<DOCGIA>();
             }
             catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            sqlConn.Close();
-            return userId;
+            return us!=null?us.MaDocGia:"";
         }
 
         public dynamic getListUser()
@@ -128,9 +96,15 @@ namespace Library_Management.src.services
             return ds;
         }
         
-        public bool checkUser(String account,String password)
+        public bool checkUserAcount(String account,String password)
         {
             return db.pr_KiemTraTKDG(account, password)==1;
+        }
+
+        public bool checkUser(String id)
+        {
+            MessageBox.Show(db.pr_KiemTraDG(id).ToString());
+            return db.pr_KiemTraDG(id) == 1;
         }
 
     }

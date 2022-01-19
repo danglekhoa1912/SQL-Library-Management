@@ -19,7 +19,7 @@ namespace Library_Management.src.ui
             InitializeComponent();
             btnLogin.Click += new EventHandler(delegate (object sender, EventArgs e)
               {
-                  if (us.checkUser(txtAccount.Text, txtPassword.Text))
+                  if (us.checkUserAcount(txtAccount.Text, txtPassword.Text))
                   {
                       MessageBox.Show("User");
                   }

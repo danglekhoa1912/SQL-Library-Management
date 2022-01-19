@@ -198,6 +198,7 @@
           <Parameter Name="ten" Type="varchar" Mode="In" />
           <Parameter Name="pass" Type="varchar" Mode="In" />
           <Parameter Name="maTT" Type="varchar" Mode="In" />
+          <Parameter Name="trangThai" Type="bit" Mode="In" />
         </Function>
         <Function Name="pr_ThemTKThuThu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ten" Type="varchar" Mode="In" />
@@ -531,6 +532,7 @@
             <Parameter Name="ten" Mode="In" Type="String" />
             <Parameter Name="pass" Mode="In" Type="String" />
             <Parameter Name="maTT" Mode="In" Type="String" />
+            <Parameter Name="trangThai" Mode="In" Type="Boolean" />
           </FunctionImport>
           <FunctionImport Name="pr_ThemTKThuThu">
             <Parameter Name="ten" Mode="In" Type="String" />
@@ -557,7 +559,7 @@
           <Parameter Name="ten" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="pr_XoaTT">
-            <Parameter Name="ma" Mode="In" Type="String" />
+          <Parameter Name="ma" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
