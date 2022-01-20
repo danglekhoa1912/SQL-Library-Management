@@ -96,16 +96,26 @@ namespace Library_Management.src.services
             }).ToList();
             return ds;
         }
-        
-        public bool checkUserAccount(String account,String password)
+
+        public String checkUserAccount(String account, String password)
         {
-            return db.pr_KiemTraTKDG(account, password)==1;
+            try
+            {
+                var us = db.TAIKHOANDOCGIAs.Where(s => s.TaiKhoan == account && s.MatKhau == password).FirstOrDefault<TAIKHOANDOCGIA>();
+                if (us != null)
+                    return us.MaDocGia;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return String.Empty;
         }
 
-        public bool checkUser(String id)
+        public TAIKHOANDOCGIA checkUser(String id)
         {
-            MessageBox.Show(db.pr_KiemTraDG(id).ToString());
-            return db.pr_KiemTraDG(id) == 1;
+            return db.TAIKHOANDOCGIAs.Where(s => s.MaDocGia == id).FirstOrDefault<TAIKHOANDOCGIA>();
+
         }
 
         public void updateUser(dynamic user)
@@ -133,6 +143,7 @@ namespace Library_Management.src.services
             }
         }
 
+
         public dynamic searchUser(String s)
         {
             dynamic ds;
@@ -145,7 +156,6 @@ namespace Library_Management.src.services
             }).ToList();
             return ds;
         } 
-
         public DOCGIA getUser(String id)
         {
             try { 

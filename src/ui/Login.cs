@@ -45,7 +45,7 @@ namespace Library_Management.src.ui
                 txtAccount.Focus();
                 return;
             }
-            if (us.checkUserAccount(txtAccount.Text, txtPassword.Text))
+            if (us.checkUserAccount(txtAccount.Text, txtPassword.Text) != String.Empty)
             {
                 MessageBox.Show("User");
             }
