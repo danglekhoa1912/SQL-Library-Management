@@ -27,7 +27,16 @@ namespace Library_Management.src.ui
 
         private void btnCheckUser_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(us.checkUser(txtUserID.Text).ToString());
+            var user = us.checkUser(txtUserID.Text);
+            if (user != null)
+            {
+                if ((bool)!user.TrangThai)
+                    lblErrorUserID.Text = "Tài khoản không đủ đk để mượn sách";
+                else
+                    lblErrorUserID.Text = "Tài khoản hợp lệ";
+            }
+            else
+                lblErrorUserID.Text = "Tài khoản không tồn tại";
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
@@ -35,9 +44,19 @@ namespace Library_Management.src.ui
 
         }
 
-        private void txtBookID_TextChanged(object sender, EventArgs e)
+        private void btAddIssueBook_Click(object sender, EventArgs e)
         {
-            lbBookName.Text = bs.getBookName(txtBookID.Text);
+            String name, quantity;
+            Add_IssueBook addIssueBook = new Add_IssueBook();
+            addIssueBook.ShowDialog();
+            name = addIssueBook.BookName;
+            quantity = addIssueBook.BookQuantity;
+            addIssueBook.Add_Issue = this;
+            if (name != "" && quantity != "0")
+            {
+                IssueBookUC ib = new IssueBookUC(name, quantity);
+                flpListIssueBook.Controls.Add(ib);
+            }
         }
     }
 }
