@@ -113,10 +113,9 @@ namespace Library_Management.src.services
             {
                 using (libraryEntities db = new libraryEntities())
                 {
-                    var b = db.DOCGIAs.Find();
+                    var b = db.DOCGIAs.Find(user.MaDocGia);
                     if (b != null)
-                    {
-                        b.MaDocGia = user.MaDocGia;
+                    {                        
                         b.TenDocGia = user.TenDocGia;
                         b.NamSinh = user.NamSinh;
                         b.SoDienThoai = user.SoDienThoai;

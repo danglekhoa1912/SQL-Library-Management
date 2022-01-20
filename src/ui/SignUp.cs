@@ -41,7 +41,7 @@ namespace Library_Management.src.ui
             txtPassword.Text = "********";
             txtPassword.Enabled = false;
             txtRePassword.Text=txtPassword.Text;
-            txtPassword.Enabled = false;
+            txtRePassword.Enabled = false;
             txtName.Text = user.TenDocGia;
             txtMobile.Text = user.SoDienThoai;
             txtStudentID.Text = user.MSSV;

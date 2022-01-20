@@ -23,49 +23,73 @@ namespace Library_Management.src.ui
             us = new UserServices();
             iss= new IssueBookServices();
             InitializeComponent();
+            lblManage.Text = btnUser.Text;
             btnUser.Click += new EventHandler(delegate (object sender, EventArgs e)
               {
                   initUserTable();
+                  lblManage.Text=btnUser.Text;
+                  btnUser.BackColor = Color.LightGray;
+                  btnBook.BackColor = Color.White;
+                  btnIssueBook.BackColor = Color.White;
               });
             btnBook.Click += new EventHandler(delegate (object sender, EventArgs e)
             {
                 initBookTable();
+                lblManage.Text=btnBook.Text;
+                btnUser.BackColor = Color.White;
+                btnBook.BackColor = Color.Gray;
+                btnIssueBook.BackColor = Color.White;
             });
             btnIssueBook.Click += new EventHandler(delegate (Object sender, EventArgs e)
               {
                   initBookIssue();
+                  lblManage.Text= btnIssueBook.Text;
+                  btnUser.BackColor = Color.White;
+                  btnBook.BackColor = Color.White;
+                  btnIssueBook.BackColor = Color.Gray;
               });
             
             dataGridView.CellClick += new DataGridViewCellEventHandler(delegate (object sender,DataGridViewCellEventArgs e)
              {
-                 switch (choice)
+                 try
                  {
-                     case 0:
-                         t=dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
-                         break;
-                     case 1:
-                         t=dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
-                         break;
-                     case 2:
-                         t=dataGridView.Rows[e.RowIndex ].Cells[0].Value.ToString();
-                         break;
+                     switch (choice)
+                     {
+                         case 0:
+                             t = dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
+                             break;
+                         case 1:
+                             t = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                             break;
+                         case 2:
+                             t = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                             break;
+                     }
+                 } catch (Exception ex)
+                 {
+                     t = null;
                  }
              });
             dataGridView.CellDoubleClick += new DataGridViewCellEventHandler(delegate (Object sender, DataGridViewCellEventArgs e)
              {
-                 switch (choice)
+                 try {
+                     switch (choice)
+                     {
+                         case 0:
+                             t = dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
+                             break;
+                         case 1:
+                             t = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                             break;
+                         case 2:
+                             t = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                             break;
+                     }
+                     edit();
+                 } catch (Exception ex)
                  {
-                     case 0:
-                         t = dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
-                         break;
-                     case 1:
-                         t = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
-                         break;
-                     case 2:
-                         t = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
-                         break;
+                     t = null;
                  }
-                 edit();
              });
         }
         private void edit()
@@ -78,6 +102,7 @@ namespace Library_Management.src.ui
                     SignUp change=new SignUp(user);
                     change.Text = "Change Information User";
                     change.Show();
+                    initUserTable();
                     break;
                 case 1:
                     dynamic ds;
@@ -85,6 +110,7 @@ namespace Library_Management.src.ui
                     Add_Book book = new Add_Book(ds);
                     book.Text = "Change Information Book";
                     book.Show();
+                    dataGridView.Refresh();
                     break;
                 case 2:
                     break;
@@ -114,6 +140,11 @@ namespace Library_Management.src.ui
             dataGridView.DataSource = null;
             dataGridView.DataSource = iss.getIssueBook();
             // Đổ dữ liệu vào grid view
+        }
+
+        private void initMenu()
+        {
+           
         }
     }
 }

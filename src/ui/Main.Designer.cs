@@ -34,23 +34,29 @@
             this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.lblManage = new System.Windows.Forms.Label();
+            this.MENU = new System.Windows.Forms.MenuStrip();
+            this.tsmAccount = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtsLanguage = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmsLogOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtsMenu = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.MENU.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnUser
             // 
             this.btnUser.BackColor = System.Drawing.Color.White;
             this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.DisplayFocus = true;
             this.btnUser.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.btnUser.ForeColor = System.Drawing.Color.Black;
+            this.btnUser.ForeColor = System.Drawing.Color.Green;
             this.btnUser.Highlight = true;
             this.btnUser.Location = new System.Drawing.Point(20, 32);
             this.btnUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(350, 34);
-            this.btnUser.Style = MetroFramework.MetroColorStyle.Purple;
             this.btnUser.TabIndex = 1;
             this.btnUser.Text = "USER MANAGE";
             this.btnUser.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -62,14 +68,13 @@
             // btnBook
             // 
             this.btnBook.BackColor = System.Drawing.Color.White;
-            this.btnBook.DisplayFocus = true;
             this.btnBook.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.btnBook.ForeColor = System.Drawing.Color.Green;
             this.btnBook.Highlight = true;
             this.btnBook.Location = new System.Drawing.Point(371, 32);
             this.btnBook.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
             this.btnBook.Name = "btnBook";
             this.btnBook.Size = new System.Drawing.Size(350, 34);
-            this.btnBook.Style = MetroFramework.MetroColorStyle.Purple;
             this.btnBook.TabIndex = 2;
             this.btnBook.Text = "BOOK MANAGE";
             this.btnBook.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -81,14 +86,13 @@
             // btnIssueBook
             // 
             this.btnIssueBook.BackColor = System.Drawing.Color.White;
-            this.btnIssueBook.DisplayFocus = true;
             this.btnIssueBook.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.btnIssueBook.ForeColor = System.Drawing.Color.Green;
             this.btnIssueBook.Highlight = true;
             this.btnIssueBook.Location = new System.Drawing.Point(722, 32);
             this.btnIssueBook.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
             this.btnIssueBook.Name = "btnIssueBook";
             this.btnIssueBook.Size = new System.Drawing.Size(350, 34);
-            this.btnIssueBook.Style = MetroFramework.MetroColorStyle.Purple;
             this.btnIssueBook.TabIndex = 3;
             this.btnIssueBook.Text = "ISSUE BOOK MANAGE";
             this.btnIssueBook.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -107,11 +111,14 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = global::Library_Management.Properties.Resources._5613;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 78);
+            this.pictureBox1.Location = new System.Drawing.Point(31, 87);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 52);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -121,25 +128,93 @@
             this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView.Location = new System.Drawing.Point(20, 163);
+            this.dataGridView.Location = new System.Drawing.Point(20, 186);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(1160, 617);
+            this.dataGridView.Size = new System.Drawing.Size(1200, 594);
             this.dataGridView.TabIndex = 6;
+            // 
+            // lblManage
+            // 
+            this.lblManage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblManage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblManage.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManage.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblManage.Location = new System.Drawing.Point(334, 131);
+            this.lblManage.Name = "lblManage";
+            this.lblManage.Size = new System.Drawing.Size(508, 46);
+            this.lblManage.TabIndex = 7;
+            this.lblManage.Text = "lblManage";
+            this.lblManage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MENU
+            // 
+            this.MENU.AutoSize = false;
+            this.MENU.Dock = System.Windows.Forms.DockStyle.None;
+            this.MENU.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.MENU.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mtsMenu});
+            this.MENU.Location = new System.Drawing.Point(1075, 34);
+            this.MENU.Name = "MENU";
+            this.MENU.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.MENU.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MENU.Size = new System.Drawing.Size(160, 32);
+            this.MENU.TabIndex = 8;
+            this.MENU.Text = "msMenu";
+            // 
+            // tsmAccount
+            // 
+            this.tsmAccount.Name = "tsmAccount";
+            this.tsmAccount.Size = new System.Drawing.Size(224, 26);
+            this.tsmAccount.Text = "Acount Info";
+            // 
+            // mtsLanguage
+            // 
+            this.mtsLanguage.Name = "mtsLanguage";
+            this.mtsLanguage.Size = new System.Drawing.Size(224, 26);
+            this.mtsLanguage.Text = "Language";
+            // 
+            // tmsLogOut
+            // 
+            this.tmsLogOut.Name = "tmsLogOut";
+            this.tmsLogOut.Size = new System.Drawing.Size(224, 26);
+            this.tmsLogOut.Text = "Log Out";
+            // 
+            // aboutProgramToolStripMenuItem
+            // 
+            this.aboutProgramToolStripMenuItem.Name = "aboutProgramToolStripMenuItem";
+            this.aboutProgramToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aboutProgramToolStripMenuItem.Text = "About Program";
+            // 
+            // mtsMenu
+            // 
+            this.mtsMenu.CheckOnClick = true;
+            this.mtsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmAccount,
+            this.mtsLanguage,
+            this.tmsLogOut,
+            this.aboutProgramToolStripMenuItem});
+            this.mtsMenu.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.mtsMenu.Name = "mtsMenu";
+            this.mtsMenu.Size = new System.Drawing.Size(65, 28);
+            this.mtsMenu.Text = "MENU";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.ClientSize = new System.Drawing.Size(1240, 800);
+            this.Controls.Add(this.lblManage);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtSearchBox);
             this.Controls.Add(this.btnIssueBook);
             this.Controls.Add(this.btnBook);
             this.Controls.Add(this.btnUser);
+            this.Controls.Add(this.MENU);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -149,6 +224,8 @@
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.MENU.ResumeLayout(false);
+            this.MENU.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,5 +238,12 @@
         private System.Windows.Forms.TextBox txtSearchBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Label lblManage;
+        private System.Windows.Forms.MenuStrip MENU;
+        private System.Windows.Forms.ToolStripMenuItem mtsMenu;
+        private System.Windows.Forms.ToolStripMenuItem tsmAccount;
+        private System.Windows.Forms.ToolStripMenuItem mtsLanguage;
+        private System.Windows.Forms.ToolStripMenuItem tmsLogOut;
+        private System.Windows.Forms.ToolStripMenuItem aboutProgramToolStripMenuItem;
     }
 }
