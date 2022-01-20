@@ -27,6 +27,25 @@ namespace Library_Management.src.services
             }
             return quanlity;
         }
+        public void addIssueDetail(String bookId,String issueId,int quantity)
+        {
+            try
+            {
+                    CHITIETPHIEUMUON issueDetail = new CHITIETPHIEUMUON();
+                issueDetail.MaChiTietPhieuMuon = getQuantityIssueDetail() + 1;
+                issueDetail.TienPhat = 0;
+                issueDetail.TinhTrang = "";
+                    issueDetail.MaSach = bookId;
+                    issueDetail.MaPhieuMuon = issueId;
+                    issueDetail.SoLuong = quantity;
+                    db.CHITIETPHIEUMUONs.Add(issueDetail);
+                    db.SaveChanges();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Thêm thất bại");
+            }
+        }
 
     }
 }

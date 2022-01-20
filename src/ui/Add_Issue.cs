@@ -14,6 +14,7 @@ namespace Library_Management.src.ui
     {
         UserServices us = new UserServices();
         BookServices bs = new BookServices();
+        IssueDetail id = new IssueDetail();
         public Add_Issue()
         {
             InitializeComponent();
@@ -22,7 +23,10 @@ namespace Library_Management.src.ui
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            
+            foreach(Control i in flpListIssueBook.Controls)
+            {
+                //id.addIssueDetail()
+            }    
         }
 
         private void btnCheckUser_Click(object sender, EventArgs e)
@@ -48,10 +52,10 @@ namespace Library_Management.src.ui
         {
             String name, quantity;
             Add_IssueBook addIssueBook = new Add_IssueBook();
+            addIssueBook.FlpIB = flpListIssueBook;
             addIssueBook.ShowDialog();
             name = addIssueBook.BookName;
             quantity = addIssueBook.BookQuantity;
-            addIssueBook.Add_Issue = this;
             if (name != "" && quantity != "0")
             {
                 IssueBookUC ib = new IssueBookUC(name, quantity);

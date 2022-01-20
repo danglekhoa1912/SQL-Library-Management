@@ -13,12 +13,12 @@ namespace Library_Management.src.ui
     public partial class Add_IssueBook : MetroFramework.Forms.MetroForm
     {
         BookServices bs = new BookServices();
-        private Add_Issue add_Issue = new Add_Issue();
+        private FlowLayoutPanel flpIB = new FlowLayoutPanel();
         private String bookName, bookQuantity;
 
         public string BookName { get => bookName; set => bookName = value; }
         public string BookQuantity { get => bookQuantity; set => bookQuantity = value; }
-        public Add_Issue Add_Issue { get => add_Issue; set => add_Issue = value; }
+        public FlowLayoutPanel FlpIB { get => flpIB; set => flpIB = value; }
 
         public Add_IssueBook()
         {
@@ -48,7 +48,14 @@ namespace Library_Management.src.ui
 
         private void btDone_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(add_Issue.Controls[add_Issue.Controls.IndexOfKey("flpListIssueBook")].ToString());
+            foreach (Control i in flpIB.Controls)
+            {
+                if (i.Controls[0].Controls[0].Text == lbBookName.Text)
+                {
+                    MessageBox.Show("Bạn đã mượn cuốn này");
+                    return;
+                }
+            }
             this.bookName = lbBookName.Text== "Sách không tồn tại"?"": lbBookName.Text;
             this.bookQuantity = lbBookQuantity.Text;
             this.Close();

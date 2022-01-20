@@ -7,5 +7,9 @@ namespace Library_Management.src.services
 {
     class IssueBook
     {
+        public void addIssueBook()
+        {
+
+        }
     }
 }

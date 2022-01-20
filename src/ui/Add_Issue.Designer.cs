@@ -42,6 +42,8 @@ namespace Library_Management.src.ui
             this.dpReturnDueDate = new System.Windows.Forms.DateTimePicker();
             this.btAddIssueBook = new System.Windows.Forms.Button();
             this.flpListIssueBook = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblUserID
@@ -156,16 +158,36 @@ namespace Library_Management.src.ui
             // flpListIssueBook
             // 
             this.flpListIssueBook.AutoScroll = true;
-            this.flpListIssueBook.Location = new System.Drawing.Point(27, 268);
+            this.flpListIssueBook.Location = new System.Drawing.Point(27, 296);
             this.flpListIssueBook.Name = "flpListIssueBook";
-            this.flpListIssueBook.Size = new System.Drawing.Size(390, 119);
+            this.flpListIssueBook.Size = new System.Drawing.Size(390, 91);
             this.flpListIssueBook.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(27, 273);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 23);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Book Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(313, 270);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 23);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Quantity";
             // 
             // Add_Issue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(435, 510);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.flpListIssueBook);
             this.Controls.Add(this.btAddIssueBook);
             this.Controls.Add(this.dpReturnDueDate);
@@ -203,5 +225,7 @@ namespace Library_Management.src.ui
         private System.Windows.Forms.DateTimePicker dpReturnDueDate;
         private System.Windows.Forms.Button btAddIssueBook;
         private System.Windows.Forms.FlowLayoutPanel flpListIssueBook;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
