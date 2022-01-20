@@ -19,11 +19,11 @@ namespace Library_Management.src.ui
             InitializeComponent();
             btnLogin.Click += new EventHandler(delegate (object sender, EventArgs e)
               {
-                  if (us.checkUserAccount(txtAccount.Text, txtPassword.Text)!="")
+                  if (us.checkUserAccount(txtAccount.Text, txtPassword.Text))
                   {
                       MessageBox.Show("User");
                   }
-                  else if(ads.checkAdmin(txtAccount.Text, txtPassword.Text)!="")
+                  else if(ads.checkAdmin(txtAccount.Text, txtPassword.Text))
                   {
                       MessageBox.Show("Admin");
                   }
