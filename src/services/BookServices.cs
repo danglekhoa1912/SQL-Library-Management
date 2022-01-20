@@ -79,6 +79,17 @@ namespace Library_Management.src.services
                 MessageBox.Show(ex.Message);    
             }
         }
+
+        public SACH getBookId(String name)
+        {
+            var p = db.SACHes.Where(s => s.TenSach == name).FirstOrDefault<SACH>();
+            if (p != null)
+            {
+                return p;
+            }
+            else
+                return null;
+        }
     }
 
 }

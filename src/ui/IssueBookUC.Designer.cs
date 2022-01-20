@@ -32,8 +32,8 @@ namespace Library_Management.src.ui
             this.flpnBookQuantity = new System.Windows.Forms.FlowLayoutPanel();
             this.lbBookName = new System.Windows.Forms.Label();
             this.lblBookName = new System.Windows.Forms.Label();
-            this.lblErrorBookID = new System.Windows.Forms.Label();
             this.lbQuantityBook = new System.Windows.Forms.Label();
+            this.lblErrorBookID = new System.Windows.Forms.Label();
             this.flpnBookQuantity.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,15 +67,6 @@ namespace Library_Management.src.ui
             this.lblBookName.Size = new System.Drawing.Size(0, 17);
             this.lblBookName.TabIndex = 22;
             // 
-            // lblErrorBookID
-            // 
-            this.lblErrorBookID.AutoSize = true;
-            this.lblErrorBookID.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorBookID.Location = new System.Drawing.Point(318, 17);
-            this.lblErrorBookID.Name = "lblErrorBookID";
-            this.lblErrorBookID.Size = new System.Drawing.Size(0, 20);
-            this.lblErrorBookID.TabIndex = 20;
-            // 
             // lbQuantityBook
             // 
             this.lbQuantityBook.AutoSize = true;
@@ -84,6 +75,15 @@ namespace Library_Management.src.ui
             this.lbQuantityBook.Name = "lbQuantityBook";
             this.lbQuantityBook.Size = new System.Drawing.Size(0, 17);
             this.lbQuantityBook.TabIndex = 22;
+            // 
+            // lblErrorBookID
+            // 
+            this.lblErrorBookID.AutoSize = true;
+            this.lblErrorBookID.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorBookID.Location = new System.Drawing.Point(318, 17);
+            this.lblErrorBookID.Name = "lblErrorBookID";
+            this.lblErrorBookID.Size = new System.Drawing.Size(0, 20);
+            this.lblErrorBookID.TabIndex = 20;
             // 
             // IssueBookUC
             // 

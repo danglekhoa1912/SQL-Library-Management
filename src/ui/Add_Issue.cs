@@ -14,7 +14,9 @@ namespace Library_Management.src.ui
     {
         UserServices us = new UserServices();
         BookServices bs = new BookServices();
-        IssueDetail id = new IssueDetail();
+        IssueDetailServices ids = new IssueDetailServices();
+        IssueBookServices ibs = new IssueBookServices();
+        private bool allowAccount=false;
         public Add_Issue()
         {
             InitializeComponent();
@@ -23,10 +25,18 @@ namespace Library_Management.src.ui
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            foreach(Control i in flpListIssueBook.Controls)
+            TAIKHOANDOCGIA user = us.getAccountUser(txtUserID.Text);
+            if (user!=null)
             {
-                //id.addIssueDetail()
-            }    
+                ibs.addIssueBook(dpIssueDate.Value, dpReturnDueDate.Value, user.TaiKhoan);
+                foreach (Control i in flpListIssueBook.Controls)
+                {
+                    String name = bs.getBookId(i.Controls[0].Controls[0].Text).MaSach;
+                    int quantity = int.Parse(i.Controls[0].Controls[2].Text);
+                    ids.addIssueDetail(name, "PM" + ibs.getQuantityIssue(), quantity);
+                }
+            }
+            this.Close();
         }
 
         private void btnCheckUser_Click(object sender, EventArgs e)

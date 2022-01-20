@@ -151,5 +151,16 @@ namespace Library_Management.src.services
                 return null;
         }
 
+        public TAIKHOANDOCGIA getAccountUser(String id)
+        {
+            var p = db.TAIKHOANDOCGIAs.Where(s=>s.MaDocGia==id).FirstOrDefault<TAIKHOANDOCGIA>();
+            if (p != null)
+            {
+                return p;
+            }
+            else
+                return null;
+        }
+
     }
 }

@@ -206,9 +206,8 @@
     <Compile Include="src\services\AdminServices.cs" />
     <Compile Include="src\services\BookServices.cs" />
     <Compile Include="src\services\isInvalidInput.cs" />
-    <Compile Include="src\services\IssueBook.cs" />
     <Compile Include="src\services\IssueBookServices.cs" />
-    <Compile Include="src\services\IssueDetail.cs" />
+    <Compile Include="src\services\IssueDetailServices.cs" />
     <Compile Include="src\services\UserServices.cs" />
     <Compile Include="src\ui\Acount_Info.cs">
       <SubType>Form</SubType>
