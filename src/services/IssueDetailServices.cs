@@ -7,10 +7,10 @@ using System.Windows.Forms;
 
 namespace Library_Management.src.services
 {
-    class IssueDetail
+    class IssueDetailServices
     {
         libraryEntities db;
-        public IssueDetail()
+        public IssueDetailServices()
         {
             db = new libraryEntities();
         }
@@ -31,18 +31,23 @@ namespace Library_Management.src.services
         {
             try
             {
-                CHITIETPHIEUMUON issueDetail = new CHITIETPHIEUMUON();
-                issueDetail.MaChiTietPhieuMuon = getQuantityIssueDetail() + 1;
-                issueDetail.TienPhat = 0;
-                issueDetail.TinhTrang = "";
-                issueDetail.MaSach = bookId;
-                issueDetail.MaPhieuMuon = issueId;
-                issueDetail.SoLuong = quantity;
-                db.CHITIETPHIEUMUONs.Add(issueDetail);
-                db.SaveChanges();
+                using (libraryEntities db = new libraryEntities())
+                {
+                    CHITIETPHIEUMUON issueDetail = new CHITIETPHIEUMUON();
+                    issueDetail.MaChiTietPhieuMuon = getQuantityIssueDetail() + 1;
+                    issueDetail.TienPhat = 0;
+                    issueDetail.TinhTrang = "";
+                    issueDetail.MaSach = bookId;
+                    issueDetail.MaPhieuMuon = issueId;
+                    issueDetail.SoLuong = quantity;
+                    db.CHITIETPHIEUMUONs.Add(issueDetail);
+                    db.SaveChanges();
+                }
+
             }
-            catch (Exception e)
+            catch (SqlException e)
             {
+                MessageBox.Show(e.Message);
                 MessageBox.Show("Thêm thất bại");
             }
         }
