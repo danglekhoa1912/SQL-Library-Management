@@ -14,20 +14,33 @@ namespace Library_Management.src.ui
     {
         UserServices us = new UserServices();
         BookServices bs = new BookServices();
+        IssueDetail id = new IssueDetail();
         public Add_Issue()
         {
             InitializeComponent();
-            dpReturnDueDate.Value= dpReturnDueDate.Value.AddDays(30);
+            dpReturnDueDate.Value = dpReturnDueDate.Value.AddDays(30);
         }
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            
+            foreach (Control i in flpListIssueBook.Controls)
+            {
+                //id.addIssueDetail()
+            }
         }
 
         private void btnCheckUser_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(us.checkUser(txtUserID.Text).ToString());
+            var user = us.checkUser(txtUserID.Text);
+            if (user != null)
+            {
+                if ((bool)!user.TrangThai)
+                    lblErrorUserID.Text = "Tài khoản không đủ đk để mượn sách";
+                else
+                    lblErrorUserID.Text = "Tài khoản hợp lệ";
+            }
+            else
+                lblErrorUserID.Text = "Tài khoản không tồn tại";
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
@@ -35,9 +48,19 @@ namespace Library_Management.src.ui
 
         }
 
-        private void txtBookID_TextChanged(object sender, EventArgs e)
+        private void btAddIssueBook_Click(object sender, EventArgs e)
         {
-            lbBookName.Text = bs.getBookName(txtBookID.Text);
+            String name, quantity;
+            Add_IssueBook addIssueBook = new Add_IssueBook();
+            addIssueBook.FlpIB = flpListIssueBook;
+            addIssueBook.ShowDialog();
+            name = addIssueBook.BookName;
+            quantity = addIssueBook.BookQuantity;
+            if (name != "" && quantity != "0")
+            {
+                IssueBookUC ib = new IssueBookUC(name, quantity);
+                flpListIssueBook.Controls.Add(ib);
+            }
         }
     }
 }
