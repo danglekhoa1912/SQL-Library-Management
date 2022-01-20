@@ -33,6 +33,7 @@ namespace Library_Management.src.ui
             // Them check du lieu
             return true;
         }
+        //update information user
         public SignUp(dynamic user)
         {
             this.InitializeComponent();
@@ -77,6 +78,7 @@ namespace Library_Management.src.ui
                 }
             });
         }
+        // Sign up for new user
         public SignUp()
         {
             InitializeComponent();
@@ -116,6 +118,8 @@ namespace Library_Management.src.ui
                     {
                         MessageBox.Show("Sign up sucessfully! You can use account for sign in");
                         this.Close();
+                        Login login = new Login();
+                        login.Show();
                     }
                     else
                     {

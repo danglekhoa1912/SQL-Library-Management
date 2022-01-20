@@ -87,6 +87,30 @@ namespace Library_Management.src.services
                 MessageBox.Show(ex.Message);    
             }
         }
+        public dynamic searchBook(String book)
+        {
+            book = book.ToUpper();
+            try
+            {
+                using (libraryEntities db = new libraryEntities())
+                {
+                    dynamic ds;
+                    ds = db.SACHes.Where(b=> b.MaSach.ToUpper().IndexOf(book)!=-1 || b.TenSach.ToUpper().IndexOf(book)!=-1 || b.NamXuatBan.ToString().IndexOf(book)!=-1|| b.NhaXuatBan.ToUpper().IndexOf(book)!=-1).Select(b=> new
+                    {
+                        b.MaSach,
+                        b.TenSach,
+                        b.SoLuong,
+                        b.TacGia,
+                        b.NamXuatBan,
+                        b.NhaXuatBan
+                    }).ToList();
+                    return ds;
+                }
+            }catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 
 }

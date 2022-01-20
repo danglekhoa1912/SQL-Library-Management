@@ -13,10 +13,14 @@ namespace Library_Management.src.ui
     public partial class Main : MetroFramework.Forms.MetroForm
     {
         String t;
+        private String id;
         int choice=0;
         BookServices bs;
         UserServices us;
         IssueBookServices iss;
+
+        public string Id { get => id; set => id = value; }
+
         public Main()
         {
             bs = new BookServices();
@@ -27,17 +31,12 @@ namespace Library_Management.src.ui
             btnUser.Click += new EventHandler(delegate (object sender, EventArgs e)
               {
                   initUserTable();
-                  lblManage.Text=btnUser.Text;
-                  btnUser.BackColor = Color.DodgerBlue;
-                  btnUser.ForeColor = Color.Black;
-                  btnBook.BackColor = Color.White;
-                  btnBook.ForeColor = Color.DarkGreen;
-                  btnIssueBook.BackColor = Color.White;
-                  btnIssueBook.ForeColor = Color.DarkGreen;
+                  
               });
             btnBook.Click += new EventHandler(delegate (object sender, EventArgs e)
             {
                 initBookTable();
+                dataGridView.Focus();
                 lblManage.Text=btnBook.Text;
                 btnUser.BackColor = Color.White;
                 btnUser.ForeColor= Color.DarkGreen;
@@ -49,6 +48,7 @@ namespace Library_Management.src.ui
             btnIssueBook.Click += new EventHandler(delegate (Object sender, EventArgs e)
               {
                   initBookIssue();
+                  dataGridView.Focus();
                   lblManage.Text= btnIssueBook.Text;
                   btnUser.BackColor = Color.White;
                   btnUser.ForeColor = Color.DarkGreen;
@@ -125,6 +125,10 @@ namespace Library_Management.src.ui
                           break;
                   }
               });
+            btnDelete.Click += new EventHandler(delegate (object sender, EventArgs e)
+              {
+
+              });
         }
         private void edit()
         {
@@ -161,7 +165,7 @@ namespace Library_Management.src.ui
                     break;
                 case 1:
                     dataGridView.DataSource= null;
-
+                    dataGridView.DataSource=s!=""?bs.searchBook(s) : bs.getListBook();
                     break;
                 case 2:
 
@@ -172,14 +176,24 @@ namespace Library_Management.src.ui
         private void Main_Load(object sender, EventArgs e)
         {
             initUserTable();
+            btnUser.Focus();
+            dataGridView.Focus();
         }
         private void initUserTable()
         {
             choice=0;
+            lblManage.Text = btnUser.Text;
+            btnUser.BackColor = Color.DodgerBlue;
+            btnUser.ForeColor = Color.Black;
+            btnBook.BackColor = Color.White;
+            btnBook.ForeColor = Color.DarkGreen;
+            btnIssueBook.BackColor = Color.White;
+            btnIssueBook.ForeColor = Color.DarkGreen;
             // Đổ dữ liệu vào grid view
             dataGridView.DataSource = null;
             dataGridView.DataSource = us.getListUser();
             initTable();
+            dataGridView.Focus();
         }
         private void initBookTable()
         {

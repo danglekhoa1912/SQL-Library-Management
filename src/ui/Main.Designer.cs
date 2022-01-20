@@ -35,18 +35,18 @@
             this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.lblManage = new System.Windows.Forms.Label();
-            this.MENU = new System.Windows.Forms.MenuStrip();
-            this.mtsMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmAccount = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtsLanguage = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmsLogOut = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tsmAccount = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtsLanguage = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmsLogOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtsMenu = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.MENU.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,7 +109,7 @@
             this.txtSearchBox.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtSearchBox.Location = new System.Drawing.Point(71, 87);
             this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.Size = new System.Drawing.Size(803, 30);
+            this.txtSearchBox.Size = new System.Drawing.Size(706, 30);
             this.txtSearchBox.TabIndex = 4;
             // 
             // dataGridView
@@ -133,64 +133,12 @@
             this.lblManage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblManage.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManage.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblManage.Location = new System.Drawing.Point(340, 131);
+            this.lblManage.Location = new System.Drawing.Point(342, 131);
             this.lblManage.Name = "lblManage";
             this.lblManage.Size = new System.Drawing.Size(508, 46);
             this.lblManage.TabIndex = 7;
             this.lblManage.Text = "lblManage";
             this.lblManage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // MENU
-            // 
-            this.MENU.AutoSize = false;
-            this.MENU.Dock = System.Windows.Forms.DockStyle.None;
-            this.MENU.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.MENU.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mtsMenu});
-            this.MENU.Location = new System.Drawing.Point(1075, 34);
-            this.MENU.Name = "MENU";
-            this.MENU.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.MENU.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.MENU.Size = new System.Drawing.Size(160, 32);
-            this.MENU.TabIndex = 8;
-            this.MENU.Text = "msMenu";
-            // 
-            // mtsMenu
-            // 
-            this.mtsMenu.CheckOnClick = true;
-            this.mtsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmAccount,
-            this.mtsLanguage,
-            this.tmsLogOut,
-            this.aboutProgramToolStripMenuItem});
-            this.mtsMenu.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.mtsMenu.Name = "mtsMenu";
-            this.mtsMenu.Size = new System.Drawing.Size(65, 28);
-            this.mtsMenu.Text = "MENU";
-            // 
-            // tsmAccount
-            // 
-            this.tsmAccount.Name = "tsmAccount";
-            this.tsmAccount.Size = new System.Drawing.Size(224, 26);
-            this.tsmAccount.Text = "Acount Info";
-            // 
-            // mtsLanguage
-            // 
-            this.mtsLanguage.Name = "mtsLanguage";
-            this.mtsLanguage.Size = new System.Drawing.Size(224, 26);
-            this.mtsLanguage.Text = "Language";
-            // 
-            // tmsLogOut
-            // 
-            this.tmsLogOut.Name = "tmsLogOut";
-            this.tmsLogOut.Size = new System.Drawing.Size(224, 26);
-            this.tmsLogOut.Text = "Log Out";
-            // 
-            // aboutProgramToolStripMenuItem
-            // 
-            this.aboutProgramToolStripMenuItem.Name = "aboutProgramToolStripMenuItem";
-            this.aboutProgramToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.aboutProgramToolStripMenuItem.Text = "About Program";
             // 
             // btnAdd
             // 
@@ -200,7 +148,7 @@
             this.btnAdd.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(890, 79);
+            this.btnAdd.Location = new System.Drawing.Point(783, 79);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(91, 45);
             this.btnAdd.TabIndex = 9;
@@ -216,7 +164,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(987, 79);
+            this.btnDelete.Location = new System.Drawing.Point(880, 79);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(109, 45);
             this.btnDelete.TabIndex = 10;
@@ -232,7 +180,7 @@
             this.button1.ForeColor = System.Drawing.Color.DarkGreen;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1105, 79);
+            this.button1.Location = new System.Drawing.Point(1092, 79);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 45);
             this.button1.TabIndex = 11;
@@ -252,11 +200,86 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Historic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(995, 79);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(91, 45);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Edit";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // tsmAccount
+            // 
+            this.tsmAccount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmAccount.Image = ((System.Drawing.Image)(resources.GetObject("tsmAccount.Image")));
+            this.tsmAccount.Name = "tsmAccount";
+            this.tsmAccount.Size = new System.Drawing.Size(224, 26);
+            this.tsmAccount.Text = "Acount Info";
+            // 
+            // mtsLanguage
+            // 
+            this.mtsLanguage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtsLanguage.Image = ((System.Drawing.Image)(resources.GetObject("mtsLanguage.Image")));
+            this.mtsLanguage.Name = "mtsLanguage";
+            this.mtsLanguage.Size = new System.Drawing.Size(224, 26);
+            this.mtsLanguage.Text = "Language";
+            // 
+            // tmsLogOut
+            // 
+            this.tmsLogOut.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tmsLogOut.Image = ((System.Drawing.Image)(resources.GetObject("tmsLogOut.Image")));
+            this.tmsLogOut.Name = "tmsLogOut";
+            this.tmsLogOut.Size = new System.Drawing.Size(224, 26);
+            this.tmsLogOut.Text = "Log Out";
+            // 
+            // aboutProgramToolStripMenuItem
+            // 
+            this.aboutProgramToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aboutProgramToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutProgramToolStripMenuItem.Image")));
+            this.aboutProgramToolStripMenuItem.Name = "aboutProgramToolStripMenuItem";
+            this.aboutProgramToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aboutProgramToolStripMenuItem.Text = "About Program";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
+            // mtsMenu
+            // 
+            this.mtsMenu.CheckOnClick = true;
+            this.mtsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmAccount,
+            this.mtsLanguage,
+            this.tmsLogOut,
+            this.aboutProgramToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.mtsMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtsMenu.Image = ((System.Drawing.Image)(resources.GetObject("mtsMenu.Image")));
+            this.mtsMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mtsMenu.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.mtsMenu.Name = "mtsMenu";
+            this.mtsMenu.ShowShortcutKeys = false;
+            this.mtsMenu.Size = new System.Drawing.Size(103, 51);
+            this.mtsMenu.Text = "MENU";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 800);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
@@ -267,17 +290,15 @@
             this.Controls.Add(this.btnIssueBook);
             this.Controls.Add(this.btnBook);
             this.Controls.Add(this.btnUser);
-            this.Controls.Add(this.MENU);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main";
             this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
+            this.Resizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.MENU.ResumeLayout(false);
-            this.MENU.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -291,15 +312,16 @@
         private System.Windows.Forms.TextBox txtSearchBox;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label lblManage;
-        private System.Windows.Forms.MenuStrip MENU;
-        private System.Windows.Forms.ToolStripMenuItem mtsMenu;
-        private System.Windows.Forms.ToolStripMenuItem tsmAccount;
-        private System.Windows.Forms.ToolStripMenuItem mtsLanguage;
-        private System.Windows.Forms.ToolStripMenuItem tmsLogOut;
-        private System.Windows.Forms.ToolStripMenuItem aboutProgramToolStripMenuItem;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolStripMenuItem tsmAccount;
+        private System.Windows.Forms.ToolStripMenuItem mtsLanguage;
+        private System.Windows.Forms.ToolStripMenuItem tmsLogOut;
+        private System.Windows.Forms.ToolStripMenuItem aboutProgramToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mtsMenu;
     }
 }

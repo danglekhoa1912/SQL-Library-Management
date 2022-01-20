@@ -91,7 +91,6 @@ namespace Library_Management.src.services
             var ds = db.TAIKHOANDOCGIAs.Select(s => new
             {
                 s.TaiKhoan,
-                //s.MatKhau,
                 s.MaDocGia,
                 s.DOCGIA.TenDocGia
             }).ToList();
