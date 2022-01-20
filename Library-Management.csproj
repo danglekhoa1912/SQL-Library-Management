@@ -206,7 +206,9 @@
     <Compile Include="src\services\AdminServices.cs" />
     <Compile Include="src\services\BookServices.cs" />
     <Compile Include="src\services\isInvalidInput.cs" />
+    <Compile Include="src\services\IssueBook.cs" />
     <Compile Include="src\services\IssueBookServices.cs" />
+    <Compile Include="src\services\IssueDetail.cs" />
     <Compile Include="src\services\UserServices.cs" />
     <Compile Include="src\ui\Acount_Info.cs">
       <SubType>Form</SubType>
@@ -226,6 +228,12 @@
     <Compile Include="src\ui\Add_Issue.Designer.cs">
       <DependentUpon>Add_Issue.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\ui\Add_IssueBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\ui\Add_IssueBook.Designer.cs">
+      <DependentUpon>Add_IssueBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\ui\Book_Return.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +245,12 @@
     </Compile>
     <Compile Include="src\ui\Change_Password.Designer.cs">
       <DependentUpon>Change_Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\ui\IssueBookUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\ui\IssueBookUC.Designer.cs">
+      <DependentUpon>IssueBookUC.cs</DependentUpon>
     </Compile>
     <Compile Include="src\ui\Librarian\User.cs">
       <SubType>Form</SubType>
@@ -293,11 +307,17 @@
     <EmbeddedResource Include="src\ui\Add_Issue.resx">
       <DependentUpon>Add_Issue.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\ui\Add_IssueBook.resx">
+      <DependentUpon>Add_IssueBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\ui\Book_Return.resx">
       <DependentUpon>Book_Return.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\ui\Change_Password.resx">
       <DependentUpon>Change_Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\ui\IssueBookUC.resx">
+      <DependentUpon>IssueBookUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\ui\Librarian\User.resx">
       <DependentUpon>User.cs</DependentUpon>
