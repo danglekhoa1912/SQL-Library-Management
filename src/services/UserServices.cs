@@ -115,7 +115,6 @@ namespace Library_Management.src.services
         public TAIKHOANDOCGIA checkUser(String id)
         {
             return db.TAIKHOANDOCGIAs.Where(s => s.MaDocGia == id).FirstOrDefault<TAIKHOANDOCGIA>();
-
         }
 
         public void updateUser(dynamic user)
@@ -124,7 +123,8 @@ namespace Library_Management.src.services
             {
                 using (libraryEntities db = new libraryEntities())
                 {
-                    var b = db.DOCGIAs.Find(user.MaDocGia);
+                    String id = user.MaDocGia;
+                    var b = db.DOCGIAs.FirstOrDefault(u=>u.MaDocGia==id);
                     if (b != null)
                     {                        
                         b.TenDocGia = user.TenDocGia;
@@ -143,6 +143,28 @@ namespace Library_Management.src.services
             }
         }
 
+        public bool changePassword(dynamic u)
+        {
+            try
+            {
+                using (libraryEntities db = new libraryEntities())
+                {
+                    String id=u.MaDocGia;
+                    var b = db.TAIKHOANDOCGIAs.FirstOrDefault(s => s.MaDocGia == id);
+                    if (b != null)
+                    {
+                        b.MatKhau = u.MatKhau;
+                        db.SaveChanges();
+                        return true;
+                    }
+                    else return false;
+                }
+            }catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
 
         public dynamic searchUser(String s)
         {
@@ -161,7 +183,7 @@ namespace Library_Management.src.services
             try { 
                 using (libraryEntities db=new libraryEntities())
                 {
-                    var p = db.DOCGIAs.Find(id);
+                    var p = db.DOCGIAs.FirstOrDefault(u=>u.MaDocGia==id);
                     if (p != null)
                     {
                         return p;
@@ -171,8 +193,30 @@ namespace Library_Management.src.services
                 } 
             }catch (Exception ex)
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Error 1");
                 return null;
+            }
+        }
+   
+        public void deleteUser(String id)
+        {
+            try
+            {
+                dynamic dg = db.DOCGIAs.FirstOrDefault(s => s.MaDocGia == id);
+                dynamic tk = db.TAIKHOANDOCGIAs.FirstOrDefault(s=>s.MaDocGia == id);
+                if (dg != null)
+                {
+                    db.TAIKHOANDOCGIAs.Attach(tk);
+                    db.TAIKHOANDOCGIAs.Remove(tk);
+                    db.DOCGIAs.Attach(dg);
+                    db.DOCGIAs.Remove(dg);
+                    db.SaveChanges();
+                    MessageBox.Show("Succesfully!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
     }

@@ -37,7 +37,7 @@
             this.lblManage = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRefesh = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.tsmAccount = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,11 +48,11 @@
             this.mtsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsMenu = new System.Windows.Forms.MenuStrip();
             this.MenuToool = new System.Windows.Forms.ToolStripMenuItem();
-            this.accountInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLanguage = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLogOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mnsMenu.SuspendLayout();
@@ -180,21 +180,21 @@
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnRefesh
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Historic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1092, 79);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 45);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Refesh";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnRefesh.BackColor = System.Drawing.Color.White;
+            this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefesh.Font = new System.Drawing.Font("Segoe UI Historic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefesh.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnRefesh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefesh.Image")));
+            this.btnRefesh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefesh.Location = new System.Drawing.Point(1092, 79);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(112, 45);
+            this.btnRefesh.TabIndex = 11;
+            this.btnRefesh.Text = "Refesh";
+            this.btnRefesh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRefesh.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -284,6 +284,8 @@
             // 
             // mnsMenu
             // 
+            this.mnsMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mnsMenu.AutoSize = false;
             this.mnsMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.mnsMenu.Dock = System.Windows.Forms.DockStyle.None;
@@ -291,64 +293,64 @@
             this.mnsMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuToool});
-            this.mnsMenu.Location = new System.Drawing.Point(1085, 32);
+            this.mnsMenu.Location = new System.Drawing.Point(1092, 25);
             this.mnsMenu.Name = "mnsMenu";
-            this.mnsMenu.Size = new System.Drawing.Size(119, 34);
+            this.mnsMenu.Size = new System.Drawing.Size(128, 44);
             this.mnsMenu.TabIndex = 13;
             this.mnsMenu.Text = "Menu";
             // 
             // MenuToool
             // 
             this.MenuToool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.accountInfoToolStripMenuItem,
-            this.languageToolStripMenuItem,
-            this.logOutToolStripMenuItem,
-            this.aboutToolStripMenuItem,
-            this.exitToolStripMenuItem1});
+            this.btnInfo,
+            this.btnLanguage,
+            this.btnLogOut,
+            this.btnAbout,
+            this.btnExit});
             this.MenuToool.Image = ((System.Drawing.Image)(resources.GetObject("MenuToool.Image")));
             this.MenuToool.Name = "MenuToool";
-            this.MenuToool.Size = new System.Drawing.Size(103, 30);
+            this.MenuToool.Size = new System.Drawing.Size(121, 32);
             this.MenuToool.Text = "MENU";
             // 
-            // accountInfoToolStripMenuItem
+            // btnInfo
             // 
-            this.accountInfoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accountInfoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("accountInfoToolStripMenuItem.Image")));
-            this.accountInfoToolStripMenuItem.Name = "accountInfoToolStripMenuItem";
-            this.accountInfoToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
-            this.accountInfoToolStripMenuItem.Text = "Account Info";
+            this.btnInfo.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(224, 28);
+            this.btnInfo.Text = "Account Info";
             // 
-            // languageToolStripMenuItem
+            // btnLanguage
             // 
-            this.languageToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.languageToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("languageToolStripMenuItem.Image")));
-            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-            this.languageToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
-            this.languageToolStripMenuItem.Text = "Language";
+            this.btnLanguage.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLanguage.Image = ((System.Drawing.Image)(resources.GetObject("btnLanguage.Image")));
+            this.btnLanguage.Name = "btnLanguage";
+            this.btnLanguage.Size = new System.Drawing.Size(224, 28);
+            this.btnLanguage.Text = "Language";
             // 
-            // logOutToolStripMenuItem
+            // btnLogOut
             // 
-            this.logOutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logOutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("logOutToolStripMenuItem.Image")));
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
-            this.logOutToolStripMenuItem.Text = "Log out";
+            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(224, 28);
+            this.btnLogOut.Text = "Log out";
             // 
-            // aboutToolStripMenuItem
+            // btnAbout
             // 
-            this.aboutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.btnAbout.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbout.Image = ((System.Drawing.Image)(resources.GetObject("btnAbout.Image")));
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(224, 28);
+            this.btnAbout.Text = "About";
             // 
-            // exitToolStripMenuItem1
+            // btnExit
             // 
-            this.exitToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem1.Image")));
-            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(224, 28);
-            this.exitToolStripMenuItem1.Text = "Exit";
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(224, 28);
+            this.btnExit.Text = "Exit";
             // 
             // Main
             // 
@@ -356,7 +358,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 800);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRefesh);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblManage);
@@ -375,6 +377,7 @@
             this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
             this.Resizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "s";
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -394,7 +397,7 @@
         private System.Windows.Forms.Label lblManage;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRefesh;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.ToolStripMenuItem tsmAccount;
@@ -404,11 +407,11 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mtsMenu;
         private System.Windows.Forms.MenuStrip mnsMenu;
-        private System.Windows.Forms.ToolStripMenuItem accountInfoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem btnInfo;
+        private System.Windows.Forms.ToolStripMenuItem btnLanguage;
+        private System.Windows.Forms.ToolStripMenuItem btnLogOut;
+        private System.Windows.Forms.ToolStripMenuItem btnAbout;
+        private System.Windows.Forms.ToolStripMenuItem btnExit;
         private System.Windows.Forms.ToolStripMenuItem MenuToool;
     }
 }

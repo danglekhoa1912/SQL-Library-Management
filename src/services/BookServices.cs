@@ -16,7 +16,18 @@ namespace Library_Management.src.services
             db = new libraryEntities();
         }
 
-
+        public bool addBook(String masach, String ten,int soluong,String tacgia, int namxb,String nhaxb)
+        {
+            try
+            {
+                db.pr_ThemSach(masach, ten, soluong, tacgia, namxb, nhaxb);
+                return true;
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
         public dynamic getListBook()
         {
             var ds = db.SACHes.Select(s => new
@@ -34,7 +45,7 @@ namespace Library_Management.src.services
 
         public String getBookName(String id)
         {
-            var p = db.SACHes.Find(id);
+            var p = db.SACHes.FirstOrDefault(b=>b.MaSach==id);
             if (p != null)
             {
                 return p.TenSach;
@@ -49,7 +60,7 @@ namespace Library_Management.src.services
             {
                 using (libraryEntities db = new libraryEntities())
                 {
-                    var sp = db.SACHes.Find(bookId);
+                    var sp = db.SACHes.FirstOrDefault(b => b.MaSach==bookId);
                     if (sp != null)
                     {
                         return sp;
@@ -69,7 +80,8 @@ namespace Library_Management.src.services
             {
                 using (libraryEntities db = new libraryEntities())
                 {
-                    var b = db.SACHes.Find(book.MaSach);
+                    String t=book.MaSach;
+                    var b = db.SACHes.FirstOrDefault(s=>s.MaSach==t);
                     if (b != null)
                     {
                         b.MaSach = book.MaSach;
@@ -109,6 +121,22 @@ namespace Library_Management.src.services
             }catch (Exception ex)
             {
                 return null;
+            }
+        }
+        public void deleteBook(String id)
+        {
+            try
+            {
+                using (libraryEntities db = new libraryEntities())
+                {
+                    var book=db.SACHes.FirstOrDefault(b=>b.MaSach==id);
+                    db.SACHes.Remove(book);
+                    db.SaveChanges();
+                    MessageBox.Show("Succesfully!");
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error");
             }
         }
     }

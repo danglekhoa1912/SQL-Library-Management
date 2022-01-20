@@ -103,6 +103,7 @@ namespace Library_Management.src.ui
             txtSearchBox.TextChanged += new EventHandler(delegate (object sender, EventArgs e)
               {
                   search();
+                  initTable();
               });
             btnAdd.Click += new EventHandler(delegate (object sender, EventArgs e)
               {
@@ -127,7 +128,23 @@ namespace Library_Management.src.ui
               });
             btnDelete.Click += new EventHandler(delegate (object sender, EventArgs e)
               {
-
+                  try
+                  {
+                      switch (choice)
+                      {
+                          case 0:
+                              us.deleteUser(t);
+                              initUserTable();
+                              break;
+                          case 1:
+                              bs.deleteBook(t);
+                              initBookTable();
+                              break;
+                      }
+                  }catch (Exception ex)
+                  {
+                      MessageBox.Show("Check your choice ");
+                  }
               });
             btnEdit.Click += new EventHandler(delegate (object sender, EventArgs e)
              {
@@ -139,6 +156,30 @@ namespace Library_Management.src.ui
                      MessageBox.Show("Check your choice !");
                  }
              });
+            btnRefesh.Click += new EventHandler(delegate (object sender, EventArgs e) { 
+                refesh();
+                txtSearchBox.Text =String.Empty;
+            });
+            btnInfo.Click += new EventHandler(delegate (object sender, EventArgs e)
+              {
+                  Acount_Info acount = new Acount_Info(id);
+                  acount.ShowDialog();
+              });
+            btnLogOut.Click += new EventHandler(delegate (object sender, EventArgs e) 
+            {
+                Login login = new Login();
+                this.Hide();
+                login.ShowDialog();
+                this.Close();
+            });
+            btnExit.Click += new EventHandler(delegate (object sender, EventArgs e)
+            {
+                this.Close();
+            });
+            btnLanguage.Click += new EventHandler(delegate (object sender, EventArgs e)
+            {
+                MessageBox.Show("The function is developing, please wait for the next update ");
+            });
         }
         private void edit()
         {
@@ -164,7 +205,23 @@ namespace Library_Management.src.ui
                     break;
             }
         }
-        private void search()
+
+        protected void refesh()
+        {
+            switch (choice)
+            {
+                case 0:
+                    initUserTable();
+                    break;
+                case 1:
+                    initBookTable();
+                    break;
+                case 2:
+                    initBookIssue();
+                    break;
+            }
+        }
+        protected void search()
         {
             String s=txtSearchBox.Text;
             switch (choice)
@@ -183,13 +240,13 @@ namespace Library_Management.src.ui
             }
         }
 
-        private void Main_Load(object sender, EventArgs e)
+        protected void Main_Load(object sender, EventArgs e)
         {
             initUserTable();
             btnUser.Focus();
             dataGridView.Focus();
         }
-        private void initUserTable()
+        protected void initUserTable()
         {
             choice=0;
             lblManage.Text = btnUser.Text;
@@ -205,14 +262,14 @@ namespace Library_Management.src.ui
             initTable();
             dataGridView.Focus();
         }
-        private void initBookTable()
+        protected void initBookTable()
         {
             choice = 1;
             dataGridView.DataSource = null;
             dataGridView.DataSource = bs.getListBook();
             initTable();
         }
-        private void initBookIssue()
+        protected void initBookIssue()
         {
             choice = 2;
             dataGridView.DataSource = null;
@@ -220,7 +277,7 @@ namespace Library_Management.src.ui
             initTable();
             // Đổ dữ liệu vào grid view
         }
-        private void initTable()
+        protected void initTable()
         {
             for (int i = 0; i < dataGridView.Columns.Count - 1; i++)
             {

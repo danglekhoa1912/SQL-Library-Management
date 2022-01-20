@@ -45,44 +45,46 @@ namespace Library_Management.src.ui
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(37, 60);
+            this.lblPassword.Location = new System.Drawing.Point(37, 56);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(104, 17);
+            this.lblPassword.Size = new System.Drawing.Size(139, 23);
             this.lblPassword.TabIndex = 0;
             this.lblPassword.Text = "Current Password";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(26, 80);
+            this.txtPassword.Location = new System.Drawing.Point(26, 79);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(336, 25);
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(336, 29);
             this.txtPassword.TabIndex = 1;
             // 
             // lblErrorPassword
             // 
             this.lblErrorPassword.AutoSize = true;
-            this.lblErrorPassword.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorPassword.Location = new System.Drawing.Point(37, 108);
+            this.lblErrorPassword.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPassword.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorPassword.Location = new System.Drawing.Point(37, 107);
             this.lblErrorPassword.Name = "lblErrorPassword";
-            this.lblErrorPassword.Size = new System.Drawing.Size(67, 15);
+            this.lblErrorPassword.Size = new System.Drawing.Size(0, 20);
             this.lblErrorPassword.TabIndex = 2;
-            this.lblErrorPassword.Text = "aaaaaaaaaa";
             // 
             // lblErrorNewPassword
             // 
             this.lblErrorNewPassword.AutoSize = true;
-            this.lblErrorNewPassword.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorNewPassword.Location = new System.Drawing.Point(37, 171);
+            this.lblErrorNewPassword.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorNewPassword.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorNewPassword.Location = new System.Drawing.Point(37, 176);
             this.lblErrorNewPassword.Name = "lblErrorNewPassword";
-            this.lblErrorNewPassword.Size = new System.Drawing.Size(67, 15);
+            this.lblErrorNewPassword.Size = new System.Drawing.Size(0, 20);
             this.lblErrorNewPassword.TabIndex = 5;
-            this.lblErrorNewPassword.Text = "aaaaaaaaaa";
             // 
             // txtNewPassword
             // 
-            this.txtNewPassword.Location = new System.Drawing.Point(26, 143);
+            this.txtNewPassword.Location = new System.Drawing.Point(26, 146);
             this.txtNewPassword.Name = "txtNewPassword";
-            this.txtNewPassword.Size = new System.Drawing.Size(336, 25);
+            this.txtNewPassword.PasswordChar = '*';
+            this.txtNewPassword.Size = new System.Drawing.Size(336, 29);
             this.txtNewPassword.TabIndex = 4;
             // 
             // lblNewPassword
@@ -90,39 +92,40 @@ namespace Library_Management.src.ui
             this.lblNewPassword.AutoSize = true;
             this.lblNewPassword.Location = new System.Drawing.Point(37, 123);
             this.lblNewPassword.Name = "lblNewPassword";
-            this.lblNewPassword.Size = new System.Drawing.Size(88, 17);
+            this.lblNewPassword.Size = new System.Drawing.Size(117, 23);
             this.lblNewPassword.TabIndex = 3;
             this.lblNewPassword.Text = "New Password";
             // 
             // lblErrorRePassword
             // 
             this.lblErrorRePassword.AutoSize = true;
-            this.lblErrorRePassword.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorRePassword.Location = new System.Drawing.Point(37, 239);
+            this.lblErrorRePassword.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorRePassword.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorRePassword.Location = new System.Drawing.Point(37, 248);
             this.lblErrorRePassword.Name = "lblErrorRePassword";
-            this.lblErrorRePassword.Size = new System.Drawing.Size(67, 15);
+            this.lblErrorRePassword.Size = new System.Drawing.Size(0, 20);
             this.lblErrorRePassword.TabIndex = 11;
-            this.lblErrorRePassword.Text = "aaaaaaaaaa";
             // 
             // txtRePassword
             // 
-            this.txtRePassword.Location = new System.Drawing.Point(26, 211);
+            this.txtRePassword.Location = new System.Drawing.Point(26, 219);
             this.txtRePassword.Name = "txtRePassword";
-            this.txtRePassword.Size = new System.Drawing.Size(336, 25);
+            this.txtRePassword.PasswordChar = '*';
+            this.txtRePassword.Size = new System.Drawing.Size(336, 29);
             this.txtRePassword.TabIndex = 10;
             // 
             // lblRePassword
             // 
             this.lblRePassword.AutoSize = true;
-            this.lblRePassword.Location = new System.Drawing.Point(37, 191);
+            this.lblRePassword.Location = new System.Drawing.Point(37, 195);
             this.lblRePassword.Name = "lblRePassword";
-            this.lblRePassword.Size = new System.Drawing.Size(140, 17);
+            this.lblRePassword.Size = new System.Drawing.Size(186, 23);
             this.lblRePassword.TabIndex = 9;
             this.lblRePassword.Text = "Re-enter New Password";
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(91, 268);
+            this.btnSave.Location = new System.Drawing.Point(91, 283);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(86, 34);
             this.btnSave.TabIndex = 12;
@@ -131,7 +134,7 @@ namespace Library_Management.src.ui
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(198, 268);
+            this.btnCancel.Location = new System.Drawing.Point(198, 283);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(86, 34);
             this.btnCancel.TabIndex = 13;
@@ -140,9 +143,9 @@ namespace Library_Management.src.ui
             // 
             // Change_Password
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 319);
+            this.ClientSize = new System.Drawing.Size(388, 348);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblErrorRePassword);

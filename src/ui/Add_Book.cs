@@ -45,9 +45,14 @@ namespace Library_Management.src.ui
             {
                 if (validAddBook())
                 {
-                    //call add book in db
-                    MessageBox.Show("Succesfully!");
-                    this.Close();
+                    if (bs.addBook(txtBookID.Text, txtBookTitle.Text, Int32.Parse(txtAmount.Text), txtBookAuthor.Text, Int32.Parse(txtPublisherYear.Text), txtPublisher.Text))
+                    {
+                        //call add book in db
+                        MessageBox.Show("Succesfully!");
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Invalid input !");
                 }
                 else MessageBox.Show("Invalid input !");
             });
@@ -86,6 +91,15 @@ namespace Library_Management.src.ui
         }
         private void addBook()
         {
+            txtBookID.TextChanged += new EventHandler(delegate (object sender, EventArgs e)
+              {
+                  String s=txtBookID.Text;
+                  if (bs.getBookName(s) != null) {
+                      lblErrorBookID.Text = "Book already exists !";
+                  }
+                  else
+                    lblErrorBookID.Text= valid.isValidUserName(s) && s != "" ? "Invalid Book Id !" : (s == "" ? "You must enter this infomation!" : "");
+              });
             txtBookTitle.Leave += new EventHandler(delegate (object sender, EventArgs e)
             {
                 String s = txtBookTitle.Text;
@@ -99,7 +113,7 @@ namespace Library_Management.src.ui
             txtBookAuthor.TextChanged += new EventHandler(delegate (object sender, EventArgs e)
             {
                 String s = txtBookAuthor.Text;
-                lblErrorAuthor.Text = valid.isValidName(s) && s != "" ? "Invalid full name !" : (s == "" ? "You must enter this information!" : "");
+                lblErrorAuthor.Text = valid.isValidName(s) && s != "" ? "Invalid full name !" : (s == "" ? "You must enter this infomation!" : "");
             });
             txtBookAuthor.Leave += new EventHandler(delegate (object sender, EventArgs e)
             {
