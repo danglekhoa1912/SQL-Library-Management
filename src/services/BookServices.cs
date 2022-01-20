@@ -43,17 +43,25 @@ namespace Library_Management.src.services
                 return null;
         }
 
-
-
-
         public dynamic bookInfo(String bookId) 
         {
-            var sp = db.SACHes.Find(bookId);
-            if (sp != null)
+            try
             {
-                return sp;
+                using (libraryEntities db = new libraryEntities())
+                {
+                    var sp = db.SACHes.Find(bookId);
+                    if (sp != null)
+                    {
+                        return sp;
+                    }
+                    else return null;
+                }
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
             }
-            else return null;
+            
         }
         public void updateBook(dynamic book)
         {

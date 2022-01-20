@@ -238,12 +238,6 @@
     <Compile Include="src\ui\Change_Password.Designer.cs">
       <DependentUpon>Change_Password.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\ui\Librarian\User.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\ui\Librarian\User.Designer.cs">
-      <DependentUpon>User.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\ui\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,9 +293,6 @@
     <EmbeddedResource Include="src\ui\Change_Password.resx">
       <DependentUpon>Change_Password.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\ui\Librarian\User.resx">
-      <DependentUpon>User.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="src\ui\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,9 +321,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\ui\Students\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

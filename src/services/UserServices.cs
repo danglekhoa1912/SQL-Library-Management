@@ -12,9 +12,11 @@ namespace Library_Management.src.services
     class UserServices
     {
         libraryEntities db;
+        isValidInput valid;
         public UserServices()
         {
             db= new libraryEntities();
+            valid= new isValidInput();
         }
         public bool addUser(String UserName,DateTime BirthDay,String PhoneNumber,String Email,String StudentId,String account,String pass)
         {
@@ -89,7 +91,7 @@ namespace Library_Management.src.services
             var ds = db.TAIKHOANDOCGIAs.Select(s => new
             {
                 s.TaiKhoan,
-                s.MatKhau,
+                //s.MatKhau,
                 s.MaDocGia,
                 s.DOCGIA.TenDocGia
             }).ToList();
@@ -130,19 +132,39 @@ namespace Library_Management.src.services
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
+
+        public dynamic searchUser(String s)
+        {
+            dynamic ds;
+            //s=valid.unAccent(s).ToUpper();
+            ds = db.TAIKHOANDOCGIAs.Where(us => us.MaDocGia.ToUpper().IndexOf(s)!=-1 || us.TaiKhoan.ToUpper().IndexOf(s)!=-1 ||us.DOCGIA.TenDocGia.ToUpper().IndexOf(s)!=-1).Select(us => new
+            {
+                us.TaiKhoan,
+                us.MaDocGia,
+                us.DOCGIA.TenDocGia
+            }).ToList();
+            return ds;
+        } 
 
         public DOCGIA getUser(String id)
         {
-            var p = db.DOCGIAs.Find(id);
-            if (p != null)
+            try { 
+                using (libraryEntities db=new libraryEntities())
+                {
+                    var p = db.DOCGIAs.Find(id);
+                    if (p != null)
+                    {
+                        return p;
+                    }
+                    else
+                        return null;
+                } 
+            }catch (Exception ex)
             {
-                return p;
-            }
-            else
+                MessageBox.Show("Error");
                 return null;
+            }
         }
-
     }
 }

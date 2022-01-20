@@ -28,30 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.btnUser = new MetroFramework.Controls.MetroButton();
             this.btnBook = new MetroFramework.Controls.MetroButton();
             this.btnIssueBook = new MetroFramework.Controls.MetroButton();
             this.txtSearchBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.lblManage = new System.Windows.Forms.Label();
             this.MENU = new System.Windows.Forms.MenuStrip();
+            this.mtsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.mtsLanguage = new System.Windows.Forms.ToolStripMenuItem();
             this.tmsLogOut = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mtsMenu = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.MENU.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnUser
             // 
             this.btnUser.BackColor = System.Drawing.Color.White;
             this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.btnUser.ForeColor = System.Drawing.Color.Green;
+            this.btnUser.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnUser.Highlight = true;
             this.btnUser.Location = new System.Drawing.Point(20, 32);
             this.btnUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -68,8 +71,7 @@
             // btnBook
             // 
             this.btnBook.BackColor = System.Drawing.Color.White;
-            this.btnBook.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.btnBook.ForeColor = System.Drawing.Color.Green;
+            this.btnBook.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnBook.Highlight = true;
             this.btnBook.Location = new System.Drawing.Point(371, 32);
             this.btnBook.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
@@ -86,8 +88,7 @@
             // btnIssueBook
             // 
             this.btnIssueBook.BackColor = System.Drawing.Color.White;
-            this.btnIssueBook.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.btnIssueBook.ForeColor = System.Drawing.Color.Green;
+            this.btnIssueBook.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnIssueBook.Highlight = true;
             this.btnIssueBook.Location = new System.Drawing.Point(722, 32);
             this.btnIssueBook.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
@@ -103,24 +104,13 @@
             // 
             // txtSearchBox
             // 
-            this.txtSearchBox.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearchBox.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchBox.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtSearchBox.Location = new System.Drawing.Point(71, 87);
             this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.Size = new System.Drawing.Size(803, 34);
+            this.txtSearchBox.Size = new System.Drawing.Size(803, 30);
             this.txtSearchBox.TabIndex = 4;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = global::Library_Management.Properties.Resources._5613;
-            this.pictureBox1.Location = new System.Drawing.Point(31, 87);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // dataGridView
             // 
@@ -143,7 +133,7 @@
             this.lblManage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblManage.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManage.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblManage.Location = new System.Drawing.Point(334, 131);
+            this.lblManage.Location = new System.Drawing.Point(340, 131);
             this.lblManage.Name = "lblManage";
             this.lblManage.Size = new System.Drawing.Size(508, 46);
             this.lblManage.TabIndex = 7;
@@ -164,6 +154,19 @@
             this.MENU.Size = new System.Drawing.Size(160, 32);
             this.MENU.TabIndex = 8;
             this.MENU.Text = "msMenu";
+            // 
+            // mtsMenu
+            // 
+            this.mtsMenu.CheckOnClick = true;
+            this.mtsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmAccount,
+            this.mtsLanguage,
+            this.tmsLogOut,
+            this.aboutProgramToolStripMenuItem});
+            this.mtsMenu.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.mtsMenu.Name = "mtsMenu";
+            this.mtsMenu.Size = new System.Drawing.Size(65, 28);
+            this.mtsMenu.Text = "MENU";
             // 
             // tsmAccount
             // 
@@ -189,24 +192,74 @@
             this.aboutProgramToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.aboutProgramToolStripMenuItem.Text = "About Program";
             // 
-            // mtsMenu
+            // btnAdd
             // 
-            this.mtsMenu.CheckOnClick = true;
-            this.mtsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmAccount,
-            this.mtsLanguage,
-            this.tmsLogOut,
-            this.aboutProgramToolStripMenuItem});
-            this.mtsMenu.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.mtsMenu.Name = "mtsMenu";
-            this.mtsMenu.Size = new System.Drawing.Size(65, 28);
-            this.mtsMenu.Text = "MENU";
+            this.btnAdd.BackColor = System.Drawing.Color.White;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI Historic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(890, 79);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(91, 45);
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.White;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI Historic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(987, 79);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(109, 45);
+            this.btnDelete.TabIndex = 10;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Historic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1105, 79);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 45);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Refesh";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(23, 81);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 800);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblManage);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.pictureBox1);
@@ -222,10 +275,10 @@
             this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.Main_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.MENU.ResumeLayout(false);
             this.MENU.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,7 +289,6 @@
         private MetroFramework.Controls.MetroButton btnBook;
         private MetroFramework.Controls.MetroButton btnIssueBook;
         private System.Windows.Forms.TextBox txtSearchBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label lblManage;
         private System.Windows.Forms.MenuStrip MENU;
@@ -245,5 +297,9 @@
         private System.Windows.Forms.ToolStripMenuItem mtsLanguage;
         private System.Windows.Forms.ToolStripMenuItem tmsLogOut;
         private System.Windows.Forms.ToolStripMenuItem aboutProgramToolStripMenuItem;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

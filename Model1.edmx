@@ -224,9 +224,6 @@
         <Function Name="pr_XoaTKThuThu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ten" Type="varchar" Mode="In" />
         </Function>
-        <Function Name="pr_XoaTT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="ma" Type="varchar" Mode="In" />
-        </Function>
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -714,7 +711,6 @@
           <FunctionImportMapping FunctionImportName="pr_XoaSach" FunctionName="libraryModel.Store.pr_XoaSach" />
           <FunctionImportMapping FunctionImportName="pr_XoaTKDG" FunctionName="libraryModel.Store.pr_XoaTKDG" />
           <FunctionImportMapping FunctionImportName="pr_XoaTKThuThu" FunctionName="libraryModel.Store.pr_XoaTKThuThu" />
-          <FunctionImportMapping FunctionImportName="pr_XoaTT" FunctionName="libraryModel.Store.pr_XoaTT" />
           <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="libraryModel.Store.sp_alterdiagram" />
           <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="libraryModel.Store.sp_creatediagram" />
           <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="libraryModel.Store.sp_dropdiagram" />

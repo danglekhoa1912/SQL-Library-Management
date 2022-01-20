@@ -62,7 +62,7 @@ namespace Library_Management.src.services
         }
 
 
-        public static String unAccent(String s)
+        public String unAccent(String s)
         {
             Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
             string temp = s.Normalize(NormalizationForm.FormD);
