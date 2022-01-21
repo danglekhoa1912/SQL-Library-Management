@@ -47,7 +47,11 @@ namespace Library_Management.src.ui
             }
             if (us.checkUserAccount(txtAccount.Text, txtPassword.Text) != String.Empty)
             {
-                MessageBox.Show("User");
+                Main_User mainUser = new Main_User();
+                mainUser.Id = us.checkAccount(txtAccount.Text);
+                this.Hide();
+                mainUser.ShowDialog();
+                this.Close();
             }
             else if (ads.checkAdmin(txtAccount.Text, txtPassword.Text) != String.Empty)
             {

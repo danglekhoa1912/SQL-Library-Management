@@ -52,26 +52,18 @@ namespace Library_Management.src.services
             }
         }
 
-        public int getQuantityBookUserIssueDetail(String issueId)
+        public dynamic getListIssueDetail(String issueId)
         {
-            int quantity = 0;
-            try
-            {
-                var p = db.CHITIETPHIEUMUONs.Where(s => s.MaPhieuMuon == issueId);
-                if (p != null)
-                {
-                    foreach (var i in p)
-                    {
-                        quantity += i.SoLuong;
-                    }
-                }
-            }
-            catch(SqlException e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return quantity;
+            var ds = db.CHITIETPHIEUMUONs.Where(s => s.MaPhieuMuon == issueId).Select(s => new { 
+            s.MaSach,
+            s.NgayTra,
+            s.TienPhat,
+            s.TinhTrang,
+            s.SoLuong
+            }).ToList();
+            return ds;
         }
+
 
     }
 }

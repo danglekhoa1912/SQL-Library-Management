@@ -18,6 +18,7 @@ namespace Library_Management.src.ui
         BookServices bs;
         UserServices us;
         IssueBookServices iss;
+        IssueDetailServices ids;
 
         public string Id { get => id; set => id = value; }
 
@@ -26,6 +27,7 @@ namespace Library_Management.src.ui
             bs = new BookServices();
             us = new UserServices();
             iss= new IssueBookServices();
+            ids = new IssueDetailServices();
             InitializeComponent();
             lblManage.Text = btnUser.Text;
             btnUser.Click += new EventHandler(delegate (object sender, EventArgs e)
@@ -205,6 +207,10 @@ namespace Library_Management.src.ui
                     initBookTable();
                     break;
                 case 2:
+                    EditIssueBook issue = new EditIssueBook(t);
+                    issue.Text = "Edit Issue Book";
+                    issue.ShowDialog();
+                    initBookIssue();
                     break;
             }
         }

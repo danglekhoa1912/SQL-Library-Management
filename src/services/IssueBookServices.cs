@@ -72,26 +72,7 @@ namespace Library_Management.src.services
             return quanlity;
         }
 
-        public int getQuantityBookUserIssue(String account)
-        {
-            int quantity = 0;
-            try
-            {
-                var p = db.PHIEUMUONs.Where(s => s.TaiKhoanDocGia == account);
-                if (p != null)
-                {
-                    foreach(var i in p)
-                    {
-                        quantity+=ids.getQuantityBookUserIssueDetail(i.MaPhieuMuon);
-                    }
-                }
-            }catch(SqlException e)
-            {
-                MessageBox.Show(e.Message);
-            }
 
-            return quantity;
-        }
         public dynamic getUserBook(string tk)
         {
             var ds = (from p in db.CHITIETPHIEUMUONs
@@ -110,5 +91,33 @@ namespace Library_Management.src.services
                       }).ToList();
             return ds;
         }
+
+        public int getQuantityBookUserIssue(String account)
+        {
+            int quantity = 0;
+            try
+            {
+                var p = (db.PHIEUMUONs.Join(db.CHITIETPHIEUMUONs, i => i.MaPhieuMuon, id => id.MaPhieuMuon, (i, id) => new
+                {
+                    i.TaiKhoanDocGia,
+                    i.TrangThai,
+                    id.SoLuong
+                })).Where(s=>s.TaiKhoanDocGia==account&&s.TrangThai==false);
+                if (p != null)
+                {
+                    foreach (var i in p)
+                    {
+                        quantity += i.SoLuong ;
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+            return quantity;
+        }
+        
     }
 }
