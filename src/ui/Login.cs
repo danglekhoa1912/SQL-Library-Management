@@ -26,9 +26,7 @@ namespace Library_Management.src.ui
             btnSignUp.Click += new EventHandler(delegate (object sender, EventArgs e)
               {
                   SignUp signUp = new SignUp();
-                  this.Hide();
-                  signUp.ShowDialog();
-                  this.Close();
+                  signUp.Show();
               });
         }
         private void loginHandle()

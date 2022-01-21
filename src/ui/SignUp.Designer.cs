@@ -288,7 +288,7 @@
             this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpBirthday.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dtpBirthday.Location = new System.Drawing.Point(21, 367);
-            this.dtpBirthday.MaxDate = new System.DateTime(2004, 12, 31, 0, 0, 0, 0);
+            this.dtpBirthday.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
             this.dtpBirthday.MinDate = new System.DateTime(1922, 1, 1, 0, 0, 0, 0);
             this.dtpBirthday.Name = "dtpBirthday";
             this.dtpBirthday.Size = new System.Drawing.Size(149, 30);
