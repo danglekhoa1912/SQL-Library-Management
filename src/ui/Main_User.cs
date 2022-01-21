@@ -13,7 +13,7 @@ namespace Library_Management.src.ui
     {
         private String id;
         String t;
-        int choice;
+        int choice, count, tienphat;
         src.services.UserServices us;
         src.services.BookServices bs;
         src.services.IssueBookServices iss;
@@ -33,6 +33,9 @@ namespace Library_Management.src.ui
             us=new src.services.UserServices();
             bs=new src.services.BookServices();
             iss=new src.services.IssueBookServices();
+            this.Id = "T6";
+            count = us.getSachChuaTra(Id);
+            lblUser.Text = String.Format("Borrowed books:{0}\nRemaining:{1}", count,5-count);
             ds = bs.getListBook();
             carts = new List<cart>();
             initBookTable();
@@ -105,6 +108,7 @@ namespace Library_Management.src.ui
                   }
               });
         }
+
 
         private void addToCart()
         {

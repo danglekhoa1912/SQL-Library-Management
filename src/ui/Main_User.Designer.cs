@@ -53,6 +53,7 @@
             this.btnAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblUser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.mnsMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -141,7 +142,7 @@
             this.lblManage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblManage.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManage.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblManage.Location = new System.Drawing.Point(342, 131);
+            this.lblManage.Location = new System.Drawing.Point(412, 130);
             this.lblManage.Name = "lblManage";
             this.lblManage.Size = new System.Drawing.Size(508, 46);
             this.lblManage.TabIndex = 7;
@@ -336,11 +337,23 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // lblUser
+            // 
+            this.lblUser.Font = new System.Drawing.Font("Segoe UI Historic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblUser.Location = new System.Drawing.Point(31, 130);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(271, 46);
+            this.lblUser.TabIndex = 14;
+            this.lblUser.Text = "sach\r\ntra\r\n";
+            this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Main_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 800);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnRefesh);
             this.Controls.Add(this.btnDelete);
@@ -396,5 +409,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnAbout;
         private System.Windows.Forms.ToolStripMenuItem btnExit;
         private System.Windows.Forms.ToolStripMenuItem MenuToool;
+        private System.Windows.Forms.Label lblUser;
     }
 }

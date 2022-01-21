@@ -233,6 +233,12 @@
     <Compile Include="src\ui\Add_IssueBook.Designer.cs">
       <DependentUpon>Add_IssueBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\ui\Alert_Lock_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\ui\Alert_Lock_Control.Designer.cs">
+      <DependentUpon>Alert_Lock_Control.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\ui\Book_Return.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\ui\Add_IssueBook.resx">
       <DependentUpon>Add_IssueBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\ui\Alert_Lock_Control.resx">
+      <DependentUpon>Alert_Lock_Control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\ui\Book_Return.resx">
       <DependentUpon>Book_Return.cs</DependentUpon>
