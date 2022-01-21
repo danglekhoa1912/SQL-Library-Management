@@ -13,11 +13,12 @@ namespace Library_Management.src.ui
     {
         private String id;
         String t;
+        dynamic u;
         int choice, count, tienphat;
         src.services.UserServices us;
         src.services.BookServices bs;
         src.services.IssueBookServices iss;
-        dynamic ds;
+        //dynamic ds;
         struct cart
         {
             public String MaSach;
@@ -33,12 +34,11 @@ namespace Library_Management.src.ui
             us=new src.services.UserServices();
             bs=new src.services.BookServices();
             iss=new src.services.IssueBookServices();
-            this.Id = "T6";
-            count = us.getSachChuaTra(Id);
-            lblUser.Text = String.Format("Borrowed books:{0}\nRemaining:{1}", count,5-count);
-            ds = bs.getListBook();
-            carts = new List<cart>();
-            initBookTable();
+            this.id = "N4";
+            u = us.getAccountUser(id);
+            count = us.getSachChuaTra(u.TaiKhoan);
+            lblUser.Text = String.Format("Borrowed books:{0}\nRemaining:{1}", count,5-count);            carts = new List<cart>();
+            initIssueBook();
             btnBook.Click += new EventHandler(delegate (object sender, EventArgs e)
             {
                 initBookTable();
@@ -47,6 +47,8 @@ namespace Library_Management.src.ui
             {
                 initIssueBook();
                 dataGridView.Focus();
+                btnAdd.Visible = false;
+                btnDelete.Visible = false;
                 lblManage.Text = btnIssueBook.Text;
                 btnCart.BackColor = Color.White;
                 btnCart.ForeColor = Color.DarkGreen;
@@ -67,6 +69,7 @@ namespace Library_Management.src.ui
                 btnIssueBook.BackColor = Color.White;
                 btnIssueBook.ForeColor = Color.DarkGreen;
                 btnDelete.Visible = true;
+                btnAdd.Text = "Save Issue";
             });
             dataGridView.CellClick += new DataGridViewCellEventHandler(delegate (object sender, DataGridViewCellEventArgs e)
               {
@@ -80,9 +83,9 @@ namespace Library_Management.src.ui
                           case 1:
                               t = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
                               break;
-                        /*  case 2:
+                          case 2:
                               t = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
-                              break;*/
+                              break;
                       }
                       //MessageBox.Show(t);
                   }
@@ -100,6 +103,10 @@ namespace Library_Management.src.ui
                           case 1:
                               addToCart();
                               break;
+                          case 2:
+                              //Add issue
+                              break;
+
                       }
                   }
                   catch(Exception ex)
@@ -107,6 +114,32 @@ namespace Library_Management.src.ui
 
                   }
               });
+            btnDelete.Click += new EventHandler(delegate (Object sender, EventArgs e)
+              {
+                  if (choice ==2)
+                  {
+                      try
+                      {
+                          int vt = carts.FindIndex(s => s.MaSach == t);
+                          carts.RemoveAt(vt);
+                          MessageBox.Show("Succesfully!!");
+                          initCartTable();
+                      } catch (Exception ex)
+                      {
+                          MessageBox.Show("Please check you choice !!");
+                      }
+                  }
+              });
+            btnInfo.Click += new EventHandler(delegate (Object sender, EventArgs e)
+              {
+                  Acount_Info acount_Info = new Acount_Info(id);
+                  acount_Info.ShowDialog();
+              });
+            btnExit.Click += new EventHandler(delegate (Object sender, EventArgs e)
+            {
+                this.id = null;
+                this.Close();
+            });
         }
 
 
@@ -115,7 +148,7 @@ namespace Library_Management.src.ui
             try
             {
                 dynamic sach = bs.bookInfo(t);
-                if (sach.SoLuong>0)
+                if (sach.SoLuong>0 && carts.Count<(5-count))
                 {
                     cart c;
                     c.MaSach=sach.MaSach;
@@ -149,8 +182,7 @@ namespace Library_Management.src.ui
             dataGridView.DataSource = bs.getListBook();
             dataGridView.Focus();
             btnDelete.Visible = false;
-            btnEdit.Visible = false;
-            btnRefesh.Visible = false;
+            btnAdd.Text = "Add to cart";
             lblManage.Text = btnBook.Text;
             btnCart.BackColor = Color.White;
             btnCart.ForeColor = Color.DarkGreen;
@@ -164,9 +196,8 @@ namespace Library_Management.src.ui
         private void initIssueBook()
         {
             choice = 0;
-            this.id = "T6";
             dataGridView.DataSource = null;
-            dataGridView.DataSource = iss.getUserBook(this.id);
+            dataGridView.DataSource = iss.getUserBook(u.TaiKhoan);
             initTable();
         }
 

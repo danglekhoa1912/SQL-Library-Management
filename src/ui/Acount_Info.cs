@@ -53,7 +53,7 @@ namespace Library_Management.src.ui
             dtpNamSinh.Value = user.NamSinh;
             txtEmail.Text = user.Email;
             txtMobile.Text = user.SoDienThoai;
-            txtStudentID.Text = type ==0?user.StudentID:"ADMIN ACCOUNT !";
+            txtStudentID.Text = type ==0?user.MSSV:"ADMIN ACCOUNT !";
             txtStudentID.Enabled=type==0?true:false;
             txtName.TextChanged += new EventHandler(delegate (object sender, EventArgs e)
             {

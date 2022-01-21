@@ -37,8 +37,6 @@
             this.lblManage = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnRefesh = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.tsmAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.mtsLanguage = new System.Windows.Forms.ToolStripMenuItem();
             this.tmsLogOut = new System.Windows.Forms.ToolStripMenuItem();
@@ -155,10 +153,11 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI Historic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(783, 79);
+            this.btnAdd.Location = new System.Drawing.Point(798, 77);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(91, 45);
+            this.btnAdd.Size = new System.Drawing.Size(137, 50);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Add";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -170,44 +169,15 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Historic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(880, 79);
+            this.btnDelete.Location = new System.Drawing.Point(964, 77);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(109, 45);
+            this.btnDelete.Size = new System.Drawing.Size(113, 50);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnRefesh
-            // 
-            this.btnRefesh.BackColor = System.Drawing.Color.White;
-            this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefesh.Font = new System.Drawing.Font("Segoe UI Historic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefesh.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btnRefesh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefesh.Location = new System.Drawing.Point(1092, 79);
-            this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(112, 45);
-            this.btnRefesh.TabIndex = 11;
-            this.btnRefesh.Text = "Refesh";
-            this.btnRefesh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRefesh.UseVisualStyleBackColor = false;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.White;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI Historic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(995, 79);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(91, 45);
-            this.btnEdit.TabIndex = 12;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEdit.UseVisualStyleBackColor = false;
             // 
             // tsmAccount
             // 
@@ -286,43 +256,49 @@
             this.btnLogOut,
             this.btnAbout,
             this.btnExit});
+            this.MenuToool.Image = ((System.Drawing.Image)(resources.GetObject("MenuToool.Image")));
             this.MenuToool.Name = "MenuToool";
-            this.MenuToool.Size = new System.Drawing.Size(83, 40);
+            this.MenuToool.Size = new System.Drawing.Size(103, 40);
             this.MenuToool.Text = "MENU";
             // 
             // btnInfo
             // 
             this.btnInfo.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(194, 28);
+            this.btnInfo.Size = new System.Drawing.Size(224, 28);
             this.btnInfo.Text = "Account Info";
             // 
             // btnLanguage
             // 
             this.btnLanguage.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLanguage.Image = ((System.Drawing.Image)(resources.GetObject("btnLanguage.Image")));
             this.btnLanguage.Name = "btnLanguage";
-            this.btnLanguage.Size = new System.Drawing.Size(194, 28);
+            this.btnLanguage.Size = new System.Drawing.Size(224, 28);
             this.btnLanguage.Text = "Language";
             // 
             // btnLogOut
             // 
             this.btnLogOut.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(194, 28);
+            this.btnLogOut.Size = new System.Drawing.Size(224, 28);
             this.btnLogOut.Text = "Log out";
             // 
             // btnAbout
             // 
             this.btnAbout.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbout.Image = ((System.Drawing.Image)(resources.GetObject("btnAbout.Image")));
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(194, 28);
+            this.btnAbout.Size = new System.Drawing.Size(224, 28);
             this.btnAbout.Text = "About";
             // 
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(194, 28);
+            this.btnExit.Size = new System.Drawing.Size(224, 28);
             this.btnExit.Text = "Exit";
             // 
             // pictureBox1
@@ -354,8 +330,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 800);
             this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnRefesh);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblManage);
@@ -393,9 +367,7 @@
         private System.Windows.Forms.Label lblManage;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnRefesh;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.ToolStripMenuItem tsmAccount;
         private System.Windows.Forms.ToolStripMenuItem mtsLanguage;
         private System.Windows.Forms.ToolStripMenuItem tmsLogOut;
