@@ -14,9 +14,11 @@ namespace Library_Management.src.ui
     {
         String id;
         IssueDetailServices ids;
+        IssueBookServices ibs;
         public ListIssueBook(String issueId)
         {
             ids = new IssueDetailServices();
+            ibs = new IssueBookServices();
             InitializeComponent();
             initIssueDetailTable(issueId);
             lblIssueId.Text = issueId;
@@ -33,7 +35,7 @@ namespace Library_Management.src.ui
                 try
                 {                    
                     id = dgvIssueDetail.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    edit();
+                    edit( issueId);
                 }
                 catch (Exception ex)
                 {
@@ -42,12 +44,13 @@ namespace Library_Management.src.ui
             });
         }
 
-        private void edit()
+        private void edit(String issueId)
         {
            EditIssueBook issue = new EditIssueBook(id);
            issue.Text = "Edit Issue Book";
            issue.ShowDialog();
-            initTable();
+            initIssueDetailTable(issueId);
+            ibs.updateIssue(issueId);
         }
 
 

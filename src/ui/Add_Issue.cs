@@ -45,6 +45,7 @@ namespace Library_Management.src.ui
                         String name = bs.getBookId(i.Controls[1].Controls[0].Text).MaSach;
                         int quantity = int.Parse(i.Controls[1].Controls[2].Text);
                         ids.addIssueDetail(name, "PM" + ibs.getQuantityIssue(), quantity);
+                        bs.updateQuantity(name, quantity);
                     }
                     MessageBox.Show("Thêm phiếu mượn thành công");
                     this.Close();

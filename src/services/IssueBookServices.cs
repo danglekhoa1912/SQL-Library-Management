@@ -118,6 +118,61 @@ namespace Library_Management.src.services
 
             return quantity;
         }
-        
+        public int getTongTienPhat(string maPhieuMuon)//Hàm này sẽ cho phiếu mượn cập nhật lại tổng tiền phạt
+        {
+            int count = 0;
+            using (libraryEntities lb = new libraryEntities())
+            {
+                var p = lb.PHIEUMUONs.FirstOrDefault(s => s.MaPhieuMuon == maPhieuMuon);
+                count = lb.CHITIETPHIEUMUONs.Where(s => s.MaPhieuMuon == maPhieuMuon).Select(s => s.TienPhat).Sum();
+                if (p != null && count != 0)
+                {
+                    p.TongTienPhat = count;
+                    lb.SaveChanges();
+                }
+            }
+            return count;
+        }
+
+        public void updateIssue(String issueId)
+        {
+            int tongTien = 0;
+            bool status=true;
+            try
+            {
+                var p1 = db.PHIEUMUONs.Find(issueId);
+                var p = db.PHIEUMUONs.Join(db.CHITIETPHIEUMUONs, i => i.MaPhieuMuon, id => id.MaPhieuMuon, (i, id) => new
+                {
+                    i.MaPhieuMuon,
+                    i.TongTienPhat,
+                    i.TrangThai,
+                    id.TienPhat,
+                    id.TinhTrang,
+                    id.MaSach,id.SoLuong
+                }).Where(s=>s.MaPhieuMuon==issueId);
+                if (p != null&&p1!=null)
+                {
+                    foreach(var isb in p)
+                    {
+                        tongTien += isb.TienPhat;
+                        if (isb.TinhTrang == "")
+                            status = false;
+                        else
+                        {
+                            var book = db.SACHes.Find(isb.MaSach);
+                            book.SoLuong = book.SoLuong + isb.SoLuong;
+                        }
+                    }
+
+                    p1.TongTienPhat = tongTien;
+                    p1.TrangThai = status;
+                    db.SaveChanges();
+                }
+            }catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
     }
 }

@@ -150,6 +150,22 @@ namespace Library_Management.src.services
             else
                 return null;
         }
+
+        public void updateQuantity(String id,int quantity)
+        {
+            try
+            {
+                var p = db.SACHes.Find(id);
+                if (p != null)
+                {
+                    p.SoLuong = p.SoLuong - quantity;
+                    db.SaveChanges();
+                }
+            }catch(Exception e)
+            {
+                MessageBox.Show("Cập nhật số lượng sách thất bại");
+            }
+        }
     }
 
 }

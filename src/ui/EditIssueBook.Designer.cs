@@ -132,6 +132,7 @@ namespace Library_Management.src.ui
             this.dtpReturnDate.Name = "dtpReturnDate";
             this.dtpReturnDate.Size = new System.Drawing.Size(200, 22);
             this.dtpReturnDate.TabIndex = 2;
+            this.dtpReturnDate.ValueChanged += new System.EventHandler(this.dtpReturnDate_ValueChanged);
             // 
             // cbReturned
             // 

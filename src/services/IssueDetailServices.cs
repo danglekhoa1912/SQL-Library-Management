@@ -78,7 +78,46 @@ namespace Library_Management.src.services
             }
             return null;
         }
+        public int getTienPhat(int issueDetailId,DateTime returnDate)
+        {
+            try
+            {
+                var p = db.PHIEUMUONs.Join(db.CHITIETPHIEUMUONs, i => i.MaPhieuMuon, id => id.MaPhieuMuon, (i, id) => new
+                {
+                    id.MaChiTietPhieuMuon,
+                    i.HanTra,
+                }).Where(s=>s.MaChiTietPhieuMuon==issueDetailId).FirstOrDefault();
+                if (p != null)
+                {
+                    TimeSpan t = p.HanTra - returnDate;
+                    if(t.Days<0)
+                        return t.Days;
+                }
 
+            }catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return 0;
+        }
+
+        public void updateIssueDetai(String issueDetailId,DateTime returnDate,String status,int penalty)
+        {
+            try
+            {
+                var p = db.CHITIETPHIEUMUONs.Find(int.Parse(issueDetailId));
+                if(p!=null)
+                {
+                    p.NgayTra = returnDate;
+                    p.TinhTrang = status;
+                    p.TienPhat = penalty;
+                    db.SaveChanges();
+                }
+            }catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
 
     }
 }
