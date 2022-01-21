@@ -18,6 +18,8 @@ namespace Library_Management.src.ui
         src.services.UserServices us;
         src.services.BookServices bs;
         src.services.IssueBookServices iss;
+
+        public string Id { get => id; set => id = value; }
         //dynamic ds;
         struct cart
         {
@@ -34,7 +36,7 @@ namespace Library_Management.src.ui
             us=new src.services.UserServices();
             bs=new src.services.BookServices();
             iss=new src.services.IssueBookServices();
-            this.id = "N4";
+            MessageBox.Show(id);
             u = us.getAccountUser(id);
             count = us.getSachChuaTra(u.TaiKhoan);
             lblUser.Text = String.Format("Borrowed books:{0}\nRemaining:{1}", count,5-count);            carts = new List<cart>();
@@ -69,6 +71,7 @@ namespace Library_Management.src.ui
                 btnIssueBook.BackColor = Color.White;
                 btnIssueBook.ForeColor = Color.DarkGreen;
                 btnDelete.Visible = true;
+                btnAdd.Visible = true;
                 btnAdd.Text = "Save Issue";
             });
             dataGridView.CellClick += new DataGridViewCellEventHandler(delegate (object sender, DataGridViewCellEventArgs e)
@@ -111,7 +114,7 @@ namespace Library_Management.src.ui
                   }
                   catch(Exception ex)
                   {
-
+                      MessageBox.Show(ex.Message);
                   }
               });
             btnDelete.Click += new EventHandler(delegate (Object sender, EventArgs e)
@@ -140,6 +143,25 @@ namespace Library_Management.src.ui
                 this.id = null;
                 this.Close();
             });
+            btnLogOut.Click += new EventHandler(delegate (Object sender, EventArgs e) 
+            {
+                this.id = null;
+                Login login=new Login();
+                this.Hide();
+                login.ShowDialog();
+                this.Close();
+            });
+            txtSearchBox.TextChanged += new EventHandler(delegate (object sender, EventArgs e)
+              {
+                  String s=txtSearchBox.Text;
+                  switch (choice)
+                  {
+                      case 1:
+                          dataGridView.DataSource = null;
+                          dataGridView.DataSource = s != "" ? bs.searchBook(s) : bs.getListBook();
+                          break;
+                  }
+              });
         }
 
 
@@ -181,6 +203,7 @@ namespace Library_Management.src.ui
             dataGridView.DataSource = null;
             dataGridView.DataSource = bs.getListBook();
             dataGridView.Focus();
+            btnAdd.Visible = true;
             btnDelete.Visible = false;
             btnAdd.Text = "Add to cart";
             lblManage.Text = btnBook.Text;
@@ -240,6 +263,5 @@ namespace Library_Management.src.ui
             }
         }
 
-        public string Id { get => id; set => id = value; }
     }
 }
