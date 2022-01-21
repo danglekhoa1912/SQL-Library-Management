@@ -53,6 +53,7 @@ namespace Library_Management.src.ui
             // lblBookID
             // 
             this.lblBookID.AutoSize = true;
+            this.lblBookID.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblBookID.Location = new System.Drawing.Point(26, 60);
             this.lblBookID.Name = "lblBookID";
             this.lblBookID.Size = new System.Drawing.Size(68, 23);
@@ -88,6 +89,7 @@ namespace Library_Management.src.ui
             // lblBookTitle
             // 
             this.lblBookTitle.AutoSize = true;
+            this.lblBookTitle.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblBookTitle.Location = new System.Drawing.Point(26, 125);
             this.lblBookTitle.Name = "lblBookTitle";
             this.lblBookTitle.Size = new System.Drawing.Size(83, 23);
@@ -115,6 +117,7 @@ namespace Library_Management.src.ui
             // lblAuthor
             // 
             this.lblAuthor.AutoSize = true;
+            this.lblAuthor.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblAuthor.Location = new System.Drawing.Point(25, 190);
             this.lblAuthor.Name = "lblAuthor";
             this.lblAuthor.Size = new System.Drawing.Size(102, 23);
@@ -142,6 +145,7 @@ namespace Library_Management.src.ui
             // lblPulisher
             // 
             this.lblPulisher.AutoSize = true;
+            this.lblPulisher.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblPulisher.Location = new System.Drawing.Point(25, 266);
             this.lblPulisher.Name = "lblPulisher";
             this.lblPulisher.Size = new System.Drawing.Size(77, 23);
@@ -169,6 +173,7 @@ namespace Library_Management.src.ui
             // lblPublisherYear
             // 
             this.lblPublisherYear.AutoSize = true;
+            this.lblPublisherYear.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblPublisherYear.Location = new System.Drawing.Point(26, 331);
             this.lblPublisherYear.Name = "lblPublisherYear";
             this.lblPublisherYear.Size = new System.Drawing.Size(114, 23);
@@ -196,6 +201,7 @@ namespace Library_Management.src.ui
             // lblAmount
             // 
             this.lblAmount.AutoSize = true;
+            this.lblAmount.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblAmount.Location = new System.Drawing.Point(25, 396);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.Size = new System.Drawing.Size(68, 23);
@@ -204,21 +210,23 @@ namespace Library_Management.src.ui
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.SeaShell;
             this.btnSave.Location = new System.Drawing.Point(56, 464);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(112, 50);
             this.btnSave.TabIndex = 24;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // btnClear
             // 
+            this.btnClear.BackColor = System.Drawing.Color.SeaShell;
             this.btnClear.Location = new System.Drawing.Point(174, 464);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(112, 50);
             this.btnClear.TabIndex = 25;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             // 
             // Add_Book
             // 

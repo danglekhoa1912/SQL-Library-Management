@@ -29,6 +29,7 @@ namespace Library_Management.src.ui
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Issue));
             this.lblUserID = new System.Windows.Forms.Label();
             this.lblErrorUserID = new System.Windows.Forms.Label();
             this.txtUserID = new System.Windows.Forms.TextBox();
@@ -49,7 +50,8 @@ namespace Library_Management.src.ui
             // lblUserID
             // 
             this.lblUserID.AutoSize = true;
-            this.lblUserID.Location = new System.Drawing.Point(50, 33);
+            this.lblUserID.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblUserID.Location = new System.Drawing.Point(50, 27);
             this.lblUserID.Name = "lblUserID";
             this.lblUserID.Size = new System.Drawing.Size(64, 23);
             this.lblUserID.TabIndex = 0;
@@ -68,17 +70,20 @@ namespace Library_Management.src.ui
             // 
             this.txtUserID.Location = new System.Drawing.Point(43, 53);
             this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(348, 29);
+            this.txtUserID.Size = new System.Drawing.Size(202, 29);
             this.txtUserID.TabIndex = 2;
             // 
             // btnCheckUser
             // 
+            this.btnCheckUser.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.btnCheckUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckUser.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnCheckUser.Location = new System.Drawing.Point(43, 96);
             this.btnCheckUser.Name = "btnCheckUser";
             this.btnCheckUser.Size = new System.Drawing.Size(109, 35);
             this.btnCheckUser.TabIndex = 3;
             this.btnCheckUser.Text = "Check User";
-            this.btnCheckUser.UseVisualStyleBackColor = true;
+            this.btnCheckUser.UseVisualStyleBackColor = false;
             this.btnCheckUser.Click += new System.EventHandler(this.btnCheckUser_Click);
             // 
             // lblErrorIssueDate
@@ -93,6 +98,7 @@ namespace Library_Management.src.ui
             // lblIssueDate
             // 
             this.lblIssueDate.AutoSize = true;
+            this.lblIssueDate.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblIssueDate.Location = new System.Drawing.Point(50, 134);
             this.lblIssueDate.Name = "lblIssueDate";
             this.lblIssueDate.Size = new System.Drawing.Size(86, 23);
@@ -111,6 +117,7 @@ namespace Library_Management.src.ui
             // lblReturnDueDate
             // 
             this.lblReturnDueDate.AutoSize = true;
+            this.lblReturnDueDate.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblReturnDueDate.Location = new System.Drawing.Point(50, 197);
             this.lblReturnDueDate.Name = "lblReturnDueDate";
             this.lblReturnDueDate.Size = new System.Drawing.Size(133, 23);
@@ -119,37 +126,44 @@ namespace Library_Management.src.ui
             // 
             // btnDone
             // 
-            this.btnDone.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDone.BackColor = System.Drawing.Color.Linen;
+            this.btnDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDone.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnDone.Location = new System.Drawing.Point(162, 457);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(110, 40);
             this.btnDone.TabIndex = 18;
             this.btnDone.Text = "Done";
-            this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.UseVisualStyleBackColor = false;
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // dpIssueDate
             // 
-            this.dpIssueDate.Location = new System.Drawing.Point(54, 160);
+            this.dpIssueDate.Location = new System.Drawing.Point(45, 160);
             this.dpIssueDate.Name = "dpIssueDate";
             this.dpIssueDate.Size = new System.Drawing.Size(200, 29);
             this.dpIssueDate.TabIndex = 20;
             // 
             // dpReturnDueDate
             // 
-            this.dpReturnDueDate.Location = new System.Drawing.Point(54, 223);
+            this.dpReturnDueDate.Location = new System.Drawing.Point(45, 223);
             this.dpReturnDueDate.Name = "dpReturnDueDate";
             this.dpReturnDueDate.Size = new System.Drawing.Size(200, 29);
             this.dpReturnDueDate.TabIndex = 20;
             // 
             // btAddIssueBook
             // 
-            this.btAddIssueBook.Location = new System.Drawing.Point(101, 395);
+            this.btAddIssueBook.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.btAddIssueBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAddIssueBook.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btAddIssueBook.Image = ((System.Drawing.Image)(resources.GetObject("btAddIssueBook.Image")));
+            this.btAddIssueBook.Location = new System.Drawing.Point(54, 393);
             this.btAddIssueBook.Name = "btAddIssueBook";
-            this.btAddIssueBook.Size = new System.Drawing.Size(232, 42);
+            this.btAddIssueBook.Size = new System.Drawing.Size(171, 38);
             this.btAddIssueBook.TabIndex = 21;
-            this.btAddIssueBook.Text = "add Book";
-            this.btAddIssueBook.UseVisualStyleBackColor = true;
+            this.btAddIssueBook.Text = "Add Book";
+            this.btAddIssueBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btAddIssueBook.UseVisualStyleBackColor = false;
             this.btAddIssueBook.Click += new System.EventHandler(this.btAddIssueBook_Click);
             // 
             // flpListIssueBook
@@ -163,6 +177,7 @@ namespace Library_Management.src.ui
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label1.Location = new System.Drawing.Point(27, 273);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 23);
@@ -172,6 +187,7 @@ namespace Library_Management.src.ui
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label2.Location = new System.Drawing.Point(313, 270);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 23);
@@ -200,8 +216,11 @@ namespace Library_Management.src.ui
             this.Controls.Add(this.lblUserID);
             this.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Add_Issue";
             this.Padding = new System.Windows.Forms.Padding(23, 78, 23, 26);
+            this.Resizable = false;
             this.ResumeLayout(false);
             this.PerformLayout();
 

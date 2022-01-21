@@ -29,6 +29,7 @@ namespace Library_Management.src.ui
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_IssueBook));
             this.flpnBookQuantity = new System.Windows.Forms.FlowLayoutPanel();
             this.lblErrorBookID = new System.Windows.Forms.Label();
             this.lblBookID = new System.Windows.Forms.Label();
@@ -36,10 +37,10 @@ namespace Library_Management.src.ui
             this.lbBookName = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lbBookQuantity = new System.Windows.Forms.Label();
-            this.btDone = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
+            this.lbBookQuantity = new System.Windows.Forms.Label();
             this.btnMinus = new System.Windows.Forms.Button();
+            this.btDone = new System.Windows.Forms.Button();
             this.flpnBookQuantity.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +68,7 @@ namespace Library_Management.src.ui
             // 
             // lblBookID
             // 
-            this.lblBookID.AutoSize = true;
+            this.lblBookID.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblBookID.Location = new System.Drawing.Point(9, 0);
             this.lblBookID.Name = "lblBookID";
             this.lblBookID.Size = new System.Drawing.Size(55, 16);
@@ -93,6 +94,7 @@ namespace Library_Management.src.ui
             // label
             // 
             this.label.AutoSize = true;
+            this.label.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label.Location = new System.Drawing.Point(3, 0);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(90, 16);
@@ -110,52 +112,63 @@ namespace Library_Management.src.ui
             this.flowLayoutPanel1.Size = new System.Drawing.Size(351, 38);
             this.flowLayoutPanel1.TabIndex = 26;
             // 
+            // btnPlus
+            // 
+            this.btnPlus.BackColor = System.Drawing.Color.White;
+            this.btnPlus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlus.ForeColor = System.Drawing.Color.White;
+            this.btnPlus.Image = ((System.Drawing.Image)(resources.GetObject("btnPlus.Image")));
+            this.btnPlus.Location = new System.Drawing.Point(99, 3);
+            this.btnPlus.Name = "btnPlus";
+            this.btnPlus.Size = new System.Drawing.Size(27, 28);
+            this.btnPlus.TabIndex = 21;
+            this.btnPlus.UseVisualStyleBackColor = false;
+            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
+            // 
             // lbBookQuantity
             // 
             this.lbBookQuantity.AutoSize = true;
-            this.lbBookQuantity.Location = new System.Drawing.Point(132, 0);
+            this.lbBookQuantity.Location = new System.Drawing.Point(132, 10);
+            this.lbBookQuantity.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.lbBookQuantity.Name = "lbBookQuantity";
             this.lbBookQuantity.Size = new System.Drawing.Size(14, 16);
             this.lbBookQuantity.TabIndex = 26;
             this.lbBookQuantity.Text = "0";
             // 
-            // btDone
-            // 
-            this.btDone.Location = new System.Drawing.Point(128, 190);
-            this.btDone.Name = "btDone";
-            this.btDone.Size = new System.Drawing.Size(109, 23);
-            this.btDone.TabIndex = 27;
-            this.btDone.Text = "Done";
-            this.btDone.UseVisualStyleBackColor = true;
-            this.btDone.Click += new System.EventHandler(this.btDone_Click);
-            // 
-            // btnPlus
-            // 
-            this.btnPlus.BackgroundImage = global::Library_Management.Properties.Resources.download_removebg_preview;
-            this.btnPlus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPlus.Location = new System.Drawing.Point(99, 3);
-            this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(27, 25);
-            this.btnPlus.TabIndex = 21;
-            this.btnPlus.UseVisualStyleBackColor = true;
-            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
-            // 
             // btnMinus
             // 
-            this.btnMinus.BackgroundImage = global::Library_Management.Properties.Resources._261368_200;
             this.btnMinus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinus.ForeColor = System.Drawing.Color.White;
+            this.btnMinus.Image = ((System.Drawing.Image)(resources.GetObject("btnMinus.Image")));
             this.btnMinus.Location = new System.Drawing.Point(152, 3);
             this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(27, 25);
+            this.btnMinus.Size = new System.Drawing.Size(29, 28);
             this.btnMinus.TabIndex = 22;
             this.btnMinus.UseVisualStyleBackColor = true;
             this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
+            // 
+            // btDone
+            // 
+            this.btDone.BackColor = System.Drawing.Color.SeaShell;
+            this.btDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDone.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btDone.Image = ((System.Drawing.Image)(resources.GetObject("btDone.Image")));
+            this.btDone.Location = new System.Drawing.Point(128, 190);
+            this.btDone.Name = "btDone";
+            this.btDone.Size = new System.Drawing.Size(109, 36);
+            this.btDone.TabIndex = 27;
+            this.btDone.Text = "Done";
+            this.btDone.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btDone.UseVisualStyleBackColor = false;
+            this.btDone.Click += new System.EventHandler(this.btDone_Click);
             // 
             // Add_IssueBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 223);
+            this.ClientSize = new System.Drawing.Size(365, 233);
             this.Controls.Add(this.btDone);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flpnBookQuantity);

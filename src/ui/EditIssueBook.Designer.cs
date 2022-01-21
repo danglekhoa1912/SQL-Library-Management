@@ -49,7 +49,7 @@ namespace Library_Management.src.ui
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(10, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 24);
+            this.label2.Size = new System.Drawing.Size(70, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Book Id";
             // 
@@ -59,7 +59,7 @@ namespace Library_Management.src.ui
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(10, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 24);
+            this.label3.Size = new System.Drawing.Size(107, 22);
             this.label3.TabIndex = 0;
             this.label3.Text = "Return Date";
             // 
@@ -69,7 +69,7 @@ namespace Library_Management.src.ui
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(10, 244);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 24);
+            this.label4.Size = new System.Drawing.Size(70, 22);
             this.label4.TabIndex = 0;
             this.label4.Text = "Penalty";
             // 
@@ -79,7 +79,7 @@ namespace Library_Management.src.ui
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(10, 304);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 24);
+            this.label5.Size = new System.Drawing.Size(61, 22);
             this.label5.TabIndex = 0;
             this.label5.Text = "Status";
             // 
@@ -89,7 +89,7 @@ namespace Library_Management.src.ui
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(10, 363);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 24);
+            this.label6.Size = new System.Drawing.Size(77, 22);
             this.label6.TabIndex = 0;
             this.label6.Text = "Quantity";
             // 
@@ -99,7 +99,7 @@ namespace Library_Management.src.ui
             this.lblBookId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBookId.Location = new System.Drawing.Point(146, 109);
             this.lblBookId.Name = "lblBookId";
-            this.lblBookId.Size = new System.Drawing.Size(0, 24);
+            this.lblBookId.Size = new System.Drawing.Size(0, 22);
             this.lblBookId.TabIndex = 0;
             // 
             // lblQuantity
@@ -108,7 +108,7 @@ namespace Library_Management.src.ui
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.Location = new System.Drawing.Point(146, 363);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(0, 24);
+            this.lblQuantity.Size = new System.Drawing.Size(0, 22);
             this.lblQuantity.TabIndex = 0;
             // 
             // txtStatus
@@ -136,7 +136,7 @@ namespace Library_Management.src.ui
             // cbReturned
             // 
             this.cbReturned.AutoSize = true;
-            this.cbReturned.Location = new System.Drawing.Point(357, 178);
+            this.cbReturned.Location = new System.Drawing.Point(357, 184);
             this.cbReturned.Name = "cbReturned";
             this.cbReturned.Size = new System.Drawing.Size(18, 17);
             this.cbReturned.TabIndex = 3;

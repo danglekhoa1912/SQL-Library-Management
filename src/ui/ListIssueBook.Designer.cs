@@ -48,20 +48,21 @@ namespace Library_Management.src.ui
             // 
             this.lblIssueId.AutoSize = true;
             this.lblIssueId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIssueId.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblIssueId.Location = new System.Drawing.Point(512, 34);
             this.lblIssueId.Name = "lblIssueId";
             this.lblIssueId.Size = new System.Drawing.Size(79, 29);
             this.lblIssueId.TabIndex = 1;
             this.lblIssueId.Text = "label1";
             // 
-            // EditIssueBook
+            // ListIssueBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 450);
             this.Controls.Add(this.lblIssueId);
             this.Controls.Add(this.dgvIssueDetail);
-            this.Name = "EditIssueBook";
+            this.Name = "ListIssueBook";
             ((System.ComponentModel.ISupportInitialize)(this.dgvIssueDetail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

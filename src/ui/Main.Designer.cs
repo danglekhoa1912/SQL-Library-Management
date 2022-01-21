@@ -117,7 +117,7 @@
             this.txtSearchBox.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.txtSearchBox.Location = new System.Drawing.Point(71, 87);
             this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.Size = new System.Drawing.Size(706, 30);
+            this.txtSearchBox.Size = new System.Drawing.Size(630, 30);
             this.txtSearchBox.TabIndex = 4;
             // 
             // dataGridView
@@ -141,7 +141,7 @@
             this.lblManage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblManage.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManage.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblManage.Location = new System.Drawing.Point(342, 131);
+            this.lblManage.Location = new System.Drawing.Point(342, 137);
             this.lblManage.Name = "lblManage";
             this.lblManage.Size = new System.Drawing.Size(508, 46);
             this.lblManage.TabIndex = 7;
@@ -156,9 +156,9 @@
             this.btnAdd.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(783, 79);
+            this.btnAdd.Location = new System.Drawing.Point(707, 78);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(91, 45);
+            this.btnAdd.Size = new System.Drawing.Size(123, 45);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Add";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -172,9 +172,9 @@
             this.btnDelete.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(880, 79);
+            this.btnDelete.Location = new System.Drawing.Point(836, 78);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(109, 45);
+            this.btnDelete.Size = new System.Drawing.Size(123, 45);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -188,9 +188,9 @@
             this.btnRefesh.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnRefesh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefesh.Image")));
             this.btnRefesh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefesh.Location = new System.Drawing.Point(1092, 79);
+            this.btnRefesh.Location = new System.Drawing.Point(1094, 78);
             this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(112, 45);
+            this.btnRefesh.Size = new System.Drawing.Size(123, 45);
             this.btnRefesh.TabIndex = 11;
             this.btnRefesh.Text = "Refesh";
             this.btnRefesh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -216,9 +216,9 @@
             this.btnEdit.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(995, 79);
+            this.btnEdit.Location = new System.Drawing.Point(965, 78);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(91, 45);
+            this.btnEdit.Size = new System.Drawing.Size(123, 45);
             this.btnEdit.TabIndex = 12;
             this.btnEdit.Text = "Edit";
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -309,7 +309,7 @@
             this.btnExit});
             this.MenuToool.Image = ((System.Drawing.Image)(resources.GetObject("MenuToool.Image")));
             this.MenuToool.Name = "MenuToool";
-            this.MenuToool.Size = new System.Drawing.Size(121, 32);
+            this.MenuToool.Size = new System.Drawing.Size(103, 40);
             this.MenuToool.Text = "MENU";
             // 
             // btnInfo
@@ -317,7 +317,7 @@
             this.btnInfo.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(224, 28);
+            this.btnInfo.Size = new System.Drawing.Size(194, 28);
             this.btnInfo.Text = "Account Info";
             // 
             // btnLanguage
@@ -325,7 +325,7 @@
             this.btnLanguage.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLanguage.Image = ((System.Drawing.Image)(resources.GetObject("btnLanguage.Image")));
             this.btnLanguage.Name = "btnLanguage";
-            this.btnLanguage.Size = new System.Drawing.Size(224, 28);
+            this.btnLanguage.Size = new System.Drawing.Size(194, 28);
             this.btnLanguage.Text = "Language";
             // 
             // btnLogOut
@@ -333,7 +333,7 @@
             this.btnLogOut.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(224, 28);
+            this.btnLogOut.Size = new System.Drawing.Size(194, 28);
             this.btnLogOut.Text = "Log out";
             // 
             // btnAbout
@@ -341,7 +341,7 @@
             this.btnAbout.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbout.Image = ((System.Drawing.Image)(resources.GetObject("btnAbout.Image")));
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(224, 28);
+            this.btnAbout.Size = new System.Drawing.Size(194, 28);
             this.btnAbout.Text = "About";
             // 
             // btnExit
@@ -349,7 +349,7 @@
             this.btnExit.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(224, 28);
+            this.btnExit.Size = new System.Drawing.Size(194, 28);
             this.btnExit.Text = "Exit";
             // 
             // Main

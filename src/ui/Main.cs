@@ -145,6 +145,9 @@ namespace Library_Management.src.ui
                               bs.deleteBook(t);
                               initBookTable();
                               break;
+                          case 2:
+                              MessageBox.Show("Can't delete issua book!");
+                              break;
                       }
                   }catch (Exception ex)
                   {

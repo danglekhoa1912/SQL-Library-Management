@@ -54,6 +54,7 @@ namespace Library_Management.src.ui
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblName.Location = new System.Drawing.Point(25, 69);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(84, 23);
@@ -80,12 +81,14 @@ namespace Library_Management.src.ui
             // 
             // btnChangePassword
             // 
-            this.btnChangePassword.Location = new System.Drawing.Point(25, 455);
+            this.btnChangePassword.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnChangePassword.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnChangePassword.Location = new System.Drawing.Point(25, 449);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(175, 31);
             this.btnChangePassword.TabIndex = 6;
             this.btnChangePassword.Text = "Change Password";
-            this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.UseVisualStyleBackColor = false;
             // 
             // lblErrorBirthday
             // 
@@ -100,6 +103,7 @@ namespace Library_Management.src.ui
             // lblBirthday
             // 
             this.lblBirthday.AutoSize = true;
+            this.lblBirthday.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblBirthday.Location = new System.Drawing.Point(25, 145);
             this.lblBirthday.Name = "lblBirthday";
             this.lblBirthday.Size = new System.Drawing.Size(108, 23);
@@ -127,6 +131,7 @@ namespace Library_Management.src.ui
             // lblStudentID
             // 
             this.lblStudentID.AutoSize = true;
+            this.lblStudentID.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblStudentID.Location = new System.Drawing.Point(25, 232);
             this.lblStudentID.Name = "lblStudentID";
             this.lblStudentID.Size = new System.Drawing.Size(86, 23);
@@ -154,6 +159,7 @@ namespace Library_Management.src.ui
             // lblMobile
             // 
             this.lblMobile.AutoSize = true;
+            this.lblMobile.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblMobile.Location = new System.Drawing.Point(60, 301);
             this.lblMobile.Name = "lblMobile";
             this.lblMobile.Size = new System.Drawing.Size(62, 23);
@@ -191,6 +197,7 @@ namespace Library_Management.src.ui
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblEmail.Location = new System.Drawing.Point(25, 369);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(50, 23);
@@ -199,21 +206,25 @@ namespace Library_Management.src.ui
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSave.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnSave.Location = new System.Drawing.Point(42, 517);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(112, 43);
             this.btnSave.TabIndex = 20;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCancel.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnCancel.Location = new System.Drawing.Point(160, 517);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(112, 43);
             this.btnCancel.TabIndex = 21;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // dtpNamSinh
             // 
@@ -249,6 +260,7 @@ namespace Library_Management.src.ui
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
             this.Font = new System.Drawing.Font("Segoe UI Semilight", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Acount_Info";
             this.Padding = new System.Windows.Forms.Padding(22, 86, 22, 29);
