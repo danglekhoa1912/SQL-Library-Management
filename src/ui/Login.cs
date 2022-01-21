@@ -51,10 +51,8 @@ namespace Library_Management.src.ui
             }
             else if (ads.checkAdmin(txtAccount.Text, txtPassword.Text) != String.Empty)
             {
-                //MessageBox.Show("Admin");
                 Main main = new Main();
                 main.Id = ads.checkAdmin(txtAccount.Text, txtPassword.Text);
-                //MessageBox.Show(main.Id);
                 this.Hide();
                 main.ShowDialog();
                 this.Close();

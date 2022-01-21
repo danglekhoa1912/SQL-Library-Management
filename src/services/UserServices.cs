@@ -230,5 +230,20 @@ namespace Library_Management.src.services
             else
                 return null;
         }
+        public int getSachChuaTra(string account)
+        {
+            int count = 0;
+            DateTime date = new DateTime(1999, 1, 1);
+            string formatted = date.ToString("dd/M/yyyy");
+            using (libraryEntities lb = new libraryEntities())
+            {
+                count = (from p in lb.CHITIETPHIEUMUONs
+                         join m in lb.PHIEUMUONs on p.MaPhieuMuon equals m.MaPhieuMuon
+                         where m.TaiKhoanDocGia == account && p.NgayTra == date
+                         select p.MaSach).Count();
+
+            }
+            return count;
+        }
     }
 }

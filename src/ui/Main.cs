@@ -85,7 +85,7 @@ namespace Library_Management.src.ui
                      switch (choice)
                      {
                          case 0:
-                             t = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                             t = dataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
                              break;
                          case 1:
                              t = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
