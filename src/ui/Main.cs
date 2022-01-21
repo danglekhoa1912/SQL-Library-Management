@@ -125,7 +125,6 @@ namespace Library_Management.src.ui
                           break;
                       case 2:
                           Add_Issue formIssue = new Add_Issue();
-                          formIssue.Text = "Add Issue Book";
                           formIssue.ShowDialog();
                           initBookIssue();
                           break;
