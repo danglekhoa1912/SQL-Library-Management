@@ -10,6 +10,7 @@ namespace Library_Management.src.services
     class IssueBookServices
     {
         libraryEntities db;
+        IssueDetailServices ids = new IssueDetailServices();
         public IssueBookServices()
         {
             db = new libraryEntities();
@@ -69,6 +70,27 @@ namespace Library_Management.src.services
                 MessageBox.Show(ex.Message);
             }
             return quanlity;
+        }
+
+        public int getQuantityBookUserIssue(String account)
+        {
+            int quantity = 0;
+            try
+            {
+                var p = db.PHIEUMUONs.Where(s => s.TaiKhoanDocGia == account);
+                if (p != null)
+                {
+                    foreach(var i in p)
+                    {
+                        quantity+=ids.getQuantityBookUserIssueDetail(i.MaPhieuMuon);
+                    }
+                }
+            }catch(SqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+            return quantity;
         }
     }
 }

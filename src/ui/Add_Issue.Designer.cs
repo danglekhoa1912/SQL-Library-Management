@@ -61,9 +61,8 @@ namespace Library_Management.src.ui
             this.lblErrorUserID.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorUserID.Location = new System.Drawing.Point(50, 78);
             this.lblErrorUserID.Name = "lblErrorUserID";
-            this.lblErrorUserID.Size = new System.Drawing.Size(153, 20);
+            this.lblErrorUserID.Size = new System.Drawing.Size(0, 20);
             this.lblErrorUserID.TabIndex = 1;
-            this.lblErrorUserID.Text = "aaaaaaaaaaaaaaaaaa";
             // 
             // txtUserID
             // 
@@ -88,9 +87,8 @@ namespace Library_Management.src.ui
             this.lblErrorIssueDate.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorIssueDate.Location = new System.Drawing.Point(50, 182);
             this.lblErrorIssueDate.Name = "lblErrorIssueDate";
-            this.lblErrorIssueDate.Size = new System.Drawing.Size(153, 20);
+            this.lblErrorIssueDate.Size = new System.Drawing.Size(0, 20);
             this.lblErrorIssueDate.TabIndex = 5;
-            this.lblErrorIssueDate.Text = "aaaaaaaaaaaaaaaaaa";
             // 
             // lblIssueDate
             // 
@@ -107,9 +105,8 @@ namespace Library_Management.src.ui
             this.lblErrorReturnDueDate.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorReturnDueDate.Location = new System.Drawing.Point(50, 245);
             this.lblErrorReturnDueDate.Name = "lblErrorReturnDueDate";
-            this.lblErrorReturnDueDate.Size = new System.Drawing.Size(153, 20);
+            this.lblErrorReturnDueDate.Size = new System.Drawing.Size(0, 20);
             this.lblErrorReturnDueDate.TabIndex = 8;
-            this.lblErrorReturnDueDate.Text = "aaaaaaaaaaaaaaaaaa";
             // 
             // lblReturnDueDate
             // 

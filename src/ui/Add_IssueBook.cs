@@ -27,7 +27,7 @@ namespace Library_Management.src.ui
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            if (int.Parse(lbBookQuantity.Text) <= 3)
+            if (int.Parse(lbBookQuantity.Text) <1)
                 lbBookQuantity.Text = (int.Parse(lbBookQuantity.Text) + 1).ToString();
         }
 
@@ -41,24 +41,34 @@ namespace Library_Management.src.ui
         {
             String name = bs.getBookName(txtBookID.Text);
             if (name != null)
-                lbBookName.Text = name;
+            {
+                    lbBookName.Text = name;
+
+            }
             else
                 lbBookName.Text = "Sách không tồn tại";
         }
 
         private void btDone_Click(object sender, EventArgs e)
         {
-            foreach (Control i in flpIB.Controls)
+            if (bs.getBookId(bs.getBookName(txtBookID.Text)).SoLuong >= int.Parse(lbBookQuantity.Text))
             {
-                if (i.Controls[0].Controls[0].Text == lbBookName.Text)
+                foreach (Control i in flpIB.Controls)
                 {
-                    MessageBox.Show("Bạn đã mượn cuốn này");
-                    return;
+                    if (i.Controls[1].Controls[0].Text == lbBookName.Text)
+                    {
+                        MessageBox.Show("Bạn đã mượn cuốn này");
+                        return;
+                    }
                 }
+                this.bookName = lbBookName.Text == "Sách không tồn tại" ? "" : lbBookName.Text;
+                this.bookQuantity = lbBookQuantity.Text;
+                this.Close();
             }
-            this.bookName = lbBookName.Text == "Sách không tồn tại" ? "" : lbBookName.Text;
-            this.bookQuantity = lbBookQuantity.Text;
-            this.Close();
+            else
+                lbBookName.Text = "Sách bạn cần mượn đã hết";
+
+
         }
     }
 }

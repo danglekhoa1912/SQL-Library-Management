@@ -306,6 +306,9 @@
     <EmbeddedResource Include="src\ui\Change_Password.resx">
       <DependentUpon>Change_Password.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\ui\IssueBookUC.resx">
+      <DependentUpon>IssueBookUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\ui\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
