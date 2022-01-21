@@ -35,11 +35,11 @@ namespace Library_Management.src.ui
             this.txtBookID = new System.Windows.Forms.TextBox();
             this.lbBookName = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
-            this.btnMinus = new System.Windows.Forms.Button();
-            this.btnPlus = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lbBookQuantity = new System.Windows.Forms.Label();
             this.btDone = new System.Windows.Forms.Button();
+            this.btnPlus = new System.Windows.Forms.Button();
+            this.btnMinus = new System.Windows.Forms.Button();
             this.flpnBookQuantity.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -70,7 +70,7 @@ namespace Library_Management.src.ui
             this.lblBookID.AutoSize = true;
             this.lblBookID.Location = new System.Drawing.Point(9, 0);
             this.lblBookID.Name = "lblBookID";
-            this.lblBookID.Size = new System.Drawing.Size(57, 17);
+            this.lblBookID.Size = new System.Drawing.Size(55, 16);
             this.lblBookID.TabIndex = 19;
             this.lblBookID.Text = "Book ID";
             // 
@@ -87,7 +87,7 @@ namespace Library_Management.src.ui
             this.lbBookName.AutoSize = true;
             this.lbBookName.Location = new System.Drawing.Point(3, 48);
             this.lbBookName.Name = "lbBookName";
-            this.lbBookName.Size = new System.Drawing.Size(0, 17);
+            this.lbBookName.Size = new System.Drawing.Size(0, 16);
             this.lbBookName.TabIndex = 21;
             // 
             // label
@@ -95,31 +95,9 @@ namespace Library_Management.src.ui
             this.label.AutoSize = true;
             this.label.Location = new System.Drawing.Point(3, 0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(97, 17);
+            this.label.Size = new System.Drawing.Size(90, 16);
             this.label.TabIndex = 25;
             this.label.Text = "Book Quantity";
-            // 
-            // btnMinus
-            // 
-            this.btnMinus.BackgroundImage = global::Library_Management.Properties.Resources._261368_200;
-            this.btnMinus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMinus.Location = new System.Drawing.Point(161, 3);
-            this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(27, 25);
-            this.btnMinus.TabIndex = 22;
-            this.btnMinus.UseVisualStyleBackColor = true;
-            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
-            // 
-            // btnPlus
-            // 
-            this.btnPlus.BackgroundImage = global::Library_Management.Properties.Resources.download_removebg_preview;
-            this.btnPlus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPlus.Location = new System.Drawing.Point(106, 3);
-            this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(27, 25);
-            this.btnPlus.TabIndex = 21;
-            this.btnPlus.UseVisualStyleBackColor = true;
-            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -135,9 +113,9 @@ namespace Library_Management.src.ui
             // lbBookQuantity
             // 
             this.lbBookQuantity.AutoSize = true;
-            this.lbBookQuantity.Location = new System.Drawing.Point(139, 0);
+            this.lbBookQuantity.Location = new System.Drawing.Point(132, 0);
             this.lbBookQuantity.Name = "lbBookQuantity";
-            this.lbBookQuantity.Size = new System.Drawing.Size(16, 17);
+            this.lbBookQuantity.Size = new System.Drawing.Size(14, 16);
             this.lbBookQuantity.TabIndex = 26;
             this.lbBookQuantity.Text = "0";
             // 
@@ -150,6 +128,28 @@ namespace Library_Management.src.ui
             this.btDone.Text = "Done";
             this.btDone.UseVisualStyleBackColor = true;
             this.btDone.Click += new System.EventHandler(this.btDone_Click);
+            // 
+            // btnPlus
+            // 
+            this.btnPlus.BackgroundImage = global::Library_Management.Properties.Resources.download_removebg_preview;
+            this.btnPlus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPlus.Location = new System.Drawing.Point(99, 3);
+            this.btnPlus.Name = "btnPlus";
+            this.btnPlus.Size = new System.Drawing.Size(27, 25);
+            this.btnPlus.TabIndex = 21;
+            this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
+            // 
+            // btnMinus
+            // 
+            this.btnMinus.BackgroundImage = global::Library_Management.Properties.Resources._261368_200;
+            this.btnMinus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMinus.Location = new System.Drawing.Point(152, 3);
+            this.btnMinus.Name = "btnMinus";
+            this.btnMinus.Size = new System.Drawing.Size(27, 25);
+            this.btnMinus.TabIndex = 22;
+            this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
             // Add_IssueBook
             // 

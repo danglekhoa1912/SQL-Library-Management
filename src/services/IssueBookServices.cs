@@ -70,5 +70,23 @@ namespace Library_Management.src.services
             }
             return quanlity;
         }
+        public dynamic getUserBook(string tk)
+        {
+            var ds = (from p in db.CHITIETPHIEUMUONs
+                      join t in db.PHIEUMUONs on p.MaPhieuMuon equals t.MaPhieuMuon
+                      where t.TaiKhoanDocGia == tk
+                      select new
+                      {
+                          p.MaChiTietPhieuMuon,
+                          p.MaSach,
+                          p.SACH.TenSach,
+                          p.MaPhieuMuon,
+                          p.NgayTra,
+                          p.TienPhat,
+                          p.TinhTrang,
+                          p.SoLuong
+                      }).ToList();
+            return ds;
+        }
     }
 }

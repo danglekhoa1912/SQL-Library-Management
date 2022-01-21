@@ -263,6 +263,12 @@
     <Compile Include="src\ui\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\ui\Main_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\ui\Main_User.Designer.cs">
+      <DependentUpon>Main_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\ui\SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,6 +306,9 @@
     <EmbeddedResource Include="src\ui\Add_Issue.resx">
       <DependentUpon>Add_Issue.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\ui\Add_IssueBook.resx">
+      <DependentUpon>Add_IssueBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\ui\Book_Return.resx">
       <DependentUpon>Book_Return.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\ui\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\ui\Main_User.resx">
+      <DependentUpon>Main_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\ui\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>

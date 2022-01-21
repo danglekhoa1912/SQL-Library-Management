@@ -45,7 +45,7 @@ namespace Library_Management.src.ui
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(37, 56);
+            this.lblPassword.Location = new System.Drawing.Point(28, 56);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(139, 23);
             this.lblPassword.TabIndex = 0;
@@ -90,7 +90,7 @@ namespace Library_Management.src.ui
             // lblNewPassword
             // 
             this.lblNewPassword.AutoSize = true;
-            this.lblNewPassword.Location = new System.Drawing.Point(37, 123);
+            this.lblNewPassword.Location = new System.Drawing.Point(29, 123);
             this.lblNewPassword.Name = "lblNewPassword";
             this.lblNewPassword.Size = new System.Drawing.Size(117, 23);
             this.lblNewPassword.TabIndex = 3;
@@ -117,7 +117,7 @@ namespace Library_Management.src.ui
             // lblRePassword
             // 
             this.lblRePassword.AutoSize = true;
-            this.lblRePassword.Location = new System.Drawing.Point(37, 195);
+            this.lblRePassword.Location = new System.Drawing.Point(29, 195);
             this.lblRePassword.Name = "lblRePassword";
             this.lblRePassword.Size = new System.Drawing.Size(186, 23);
             this.lblRePassword.TabIndex = 9;
