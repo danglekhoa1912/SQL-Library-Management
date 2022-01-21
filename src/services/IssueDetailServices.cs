@@ -55,6 +55,7 @@ namespace Library_Management.src.services
         public dynamic getListIssueDetail(String issueId)
         {
             var ds = db.CHITIETPHIEUMUONs.Where(s => s.MaPhieuMuon == issueId).Select(s => new { 
+            s.MaChiTietPhieuMuon,
             s.MaSach,
             s.NgayTra,
             s.TienPhat,
@@ -62,6 +63,20 @@ namespace Library_Management.src.services
             s.SoLuong
             }).ToList();
             return ds;
+        }
+
+        public dynamic getInforIssueDetail(String issueDetailId)
+        {
+            try
+            {
+            var ds = db.CHITIETPHIEUMUONs.Find(int.Parse(issueDetailId));
+                if (ds != null)
+                    return ds;
+            }catch(SqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return null;
         }
 
 

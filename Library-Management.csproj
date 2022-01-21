@@ -257,6 +257,12 @@
     <Compile Include="src\ui\EditIssueBook.Designer.cs">
       <DependentUpon>EditIssueBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\ui\ListIssueBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\ui\ListIssueBook.Designer.cs">
+      <DependentUpon>ListIssueBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\ui\IssueBookUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -332,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\ui\EditIssueBook.resx">
       <DependentUpon>EditIssueBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\ui\ListIssueBook.resx">
+      <DependentUpon>ListIssueBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\ui\IssueBookUC.resx">
       <DependentUpon>IssueBookUC.cs</DependentUpon>

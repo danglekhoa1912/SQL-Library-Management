@@ -12,36 +12,28 @@ namespace Library_Management.src.ui
 {
     public partial class EditIssueBook : MetroFramework.Forms.MetroForm
     {
-        IssueDetailServices ids;
-        public EditIssueBook(String issueId)
+        IssueDetailServices ids ;
+        dynamic issueDetail ;
+        public EditIssueBook(String id)
         {
             ids = new IssueDetailServices();
             InitializeComponent();
-            initIssueDetailTable(issueId);
-            lblIssueId.Text = issueId;
+            issueDetail = ids.getInforIssueDetail(id);
+            lblBookId.Text = issueDetail.MaSach;
+            lblQuantity.Text = issueDetail.SoLuong.ToString();
+            dtpReturnDate.Enabled = cbReturned.Checked;
         }
 
-        public void initIssueDetailTable(String issueId)
+        private void cbReturned_CheckedChanged(object sender, EventArgs e)
         {
-            dgvIssueDetail.DataSource = null;
-            dgvIssueDetail.DataSource = ids.getListIssueDetail(issueId);
-            dgvIssueDetail.Focus();
-            initTable();
+            dtpReturnDate.Enabled = cbReturned.Checked;
         }
 
-        protected void initTable()
+        private void btnDone_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dgvIssueDetail.Columns.Count - 1; i++)
+            if (cbReturned.Checked)
             {
-                dgvIssueDetail.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            }
-            dgvIssueDetail.Columns[dgvIssueDetail.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-            for (int i = 0; i < dgvIssueDetail.Columns.Count; i++)
-            {
-                int colw = dgvIssueDetail.Columns[i].Width;
-                dgvIssueDetail.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                dgvIssueDetail.Columns[i].Width = colw;
             }
         }
     }

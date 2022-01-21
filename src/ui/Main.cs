@@ -207,8 +207,7 @@ namespace Library_Management.src.ui
                     initBookTable();
                     break;
                 case 2:
-                    EditIssueBook issue = new EditIssueBook(t);
-                    issue.Text = "Edit Issue Book";
+                    ListIssueBook issue = new ListIssueBook(t);
                     issue.ShowDialog();
                     initBookIssue();
                     break;
