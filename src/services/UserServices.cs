@@ -104,7 +104,6 @@ namespace Library_Management.src.services
                 try
                 {
                     var u = db.TAIKHOANDOCGIAs.Where(s => s.TaiKhoan == account && s.MatKhau == password).FirstOrDefault<TAIKHOANDOCGIA>();
-                    MessageBox.Show(u.MaDocGia);
                     return u != null ? u.MaDocGia : String.Empty;
                 }
                 catch (Exception e)

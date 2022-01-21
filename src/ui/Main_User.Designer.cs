@@ -266,7 +266,7 @@
             this.btnInfo.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(224, 28);
+            this.btnInfo.Size = new System.Drawing.Size(194, 28);
             this.btnInfo.Text = "Account Info";
             // 
             // btnLanguage
@@ -274,7 +274,7 @@
             this.btnLanguage.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLanguage.Image = ((System.Drawing.Image)(resources.GetObject("btnLanguage.Image")));
             this.btnLanguage.Name = "btnLanguage";
-            this.btnLanguage.Size = new System.Drawing.Size(224, 28);
+            this.btnLanguage.Size = new System.Drawing.Size(194, 28);
             this.btnLanguage.Text = "Language";
             // 
             // btnLogOut
@@ -282,7 +282,7 @@
             this.btnLogOut.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(224, 28);
+            this.btnLogOut.Size = new System.Drawing.Size(194, 28);
             this.btnLogOut.Text = "Log out";
             // 
             // btnAbout
@@ -290,7 +290,7 @@
             this.btnAbout.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbout.Image = ((System.Drawing.Image)(resources.GetObject("btnAbout.Image")));
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(224, 28);
+            this.btnAbout.Size = new System.Drawing.Size(194, 28);
             this.btnAbout.Text = "About";
             // 
             // btnExit
@@ -298,7 +298,7 @@
             this.btnExit.Font = new System.Drawing.Font("Segoe UI Historic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(224, 28);
+            this.btnExit.Size = new System.Drawing.Size(194, 28);
             this.btnExit.Text = "Exit";
             // 
             // pictureBox1
@@ -349,6 +349,7 @@
             this.Resizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "s";
+            this.Load += new System.EventHandler(this.Main_User_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.mnsMenu.ResumeLayout(false);
             this.mnsMenu.PerformLayout();

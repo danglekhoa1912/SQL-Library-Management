@@ -36,11 +36,6 @@ namespace Library_Management.src.ui
             us=new src.services.UserServices();
             bs=new src.services.BookServices();
             iss=new src.services.IssueBookServices();
-            MessageBox.Show(id);
-            u = us.getAccountUser(id);
-            count = us.getSachChuaTra(u.TaiKhoan);
-            lblUser.Text = String.Format("Borrowed books:{0}\nRemaining:{1}", count,5-count);            carts = new List<cart>();
-            initIssueBook();
             btnBook.Click += new EventHandler(delegate (object sender, EventArgs e)
             {
                 initBookTable();
@@ -222,6 +217,14 @@ namespace Library_Management.src.ui
             dataGridView.DataSource = null;
             dataGridView.DataSource = iss.getUserBook(u.TaiKhoan);
             initTable();
+        }
+
+        private void Main_User_Load(object sender, EventArgs e)
+        {
+            u = us.getAccountUser(id);
+            count = us.getSachChuaTra(u.TaiKhoan);
+            lblUser.Text = String.Format("Borrowed books:{0}\nRemaining:{1}", count, 5 - count); carts = new List<cart>();
+            initBookTable();
         }
 
         private void initCartTable()
