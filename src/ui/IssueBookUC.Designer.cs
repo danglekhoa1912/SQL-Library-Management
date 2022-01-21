@@ -32,8 +32,9 @@ namespace Library_Management.src.ui
             this.flpnBookQuantity = new System.Windows.Forms.FlowLayoutPanel();
             this.lbBookName = new System.Windows.Forms.Label();
             this.lblBookName = new System.Windows.Forms.Label();
-            this.lblErrorBookID = new System.Windows.Forms.Label();
             this.lbQuantityBook = new System.Windows.Forms.Label();
+            this.lblErrorBookID = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.flpnBookQuantity.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,15 +68,6 @@ namespace Library_Management.src.ui
             this.lblBookName.Size = new System.Drawing.Size(0, 17);
             this.lblBookName.TabIndex = 22;
             // 
-            // lblErrorBookID
-            // 
-            this.lblErrorBookID.AutoSize = true;
-            this.lblErrorBookID.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorBookID.Location = new System.Drawing.Point(318, 17);
-            this.lblErrorBookID.Name = "lblErrorBookID";
-            this.lblErrorBookID.Size = new System.Drawing.Size(0, 20);
-            this.lblErrorBookID.TabIndex = 20;
-            // 
             // lbQuantityBook
             // 
             this.lbQuantityBook.AutoSize = true;
@@ -85,13 +77,33 @@ namespace Library_Management.src.ui
             this.lbQuantityBook.Size = new System.Drawing.Size(0, 17);
             this.lbQuantityBook.TabIndex = 22;
             // 
+            // lblErrorBookID
+            // 
+            this.lblErrorBookID.AutoSize = true;
+            this.lblErrorBookID.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorBookID.Location = new System.Drawing.Point(318, 17);
+            this.lblErrorBookID.Name = "lblErrorBookID";
+            this.lblErrorBookID.Size = new System.Drawing.Size(0, 20);
+            this.lblErrorBookID.TabIndex = 20;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(362, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(49, 23);
+            this.btnDelete.TabIndex = 22;
+            this.btnDelete.Text = "xóa";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // IssueBookUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.flpnBookQuantity);
             this.Name = "IssueBookUC";
-            this.Size = new System.Drawing.Size(402, 58);
+            this.Size = new System.Drawing.Size(411, 58);
             this.flpnBookQuantity.ResumeLayout(false);
             this.flpnBookQuantity.PerformLayout();
             this.ResumeLayout(false);
@@ -105,5 +117,6 @@ namespace Library_Management.src.ui
         private System.Windows.Forms.Label lbBookName;
         private System.Windows.Forms.Label lbQuantityBook;
         private System.Windows.Forms.Label lblBookName;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
