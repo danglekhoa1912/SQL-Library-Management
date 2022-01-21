@@ -53,7 +53,7 @@ namespace Library_Management.src.services
             String userId = "";
             try
             {
-                var p = db.TAIKHOANDOCGIAs.Find(account);
+                var p = db.TAIKHOANDOCGIAs.FirstOrDefault(s => s.TaiKhoan == account);
                 if (p != null)
                     userId = p.MaDocGia;
             }
@@ -99,17 +99,20 @@ namespace Library_Management.src.services
 
         public String checkUserAccount(String account, String password)
         {
-            try
+            using (libraryEntities db=new libraryEntities())
             {
-                var us = db.TAIKHOANDOCGIAs.Where(s => s.TaiKhoan == account && s.MatKhau == password).FirstOrDefault<TAIKHOANDOCGIA>();
-                if (us != null)
-                    return us.MaDocGia;
+                try
+                {
+                    var u = db.TAIKHOANDOCGIAs.Where(s => s.TaiKhoan == account && s.MatKhau == password).FirstOrDefault<TAIKHOANDOCGIA>();
+                    MessageBox.Show(u.MaDocGia);
+                    return u != null ? u.MaDocGia : String.Empty;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                    return String.Empty;
+                }
             }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return String.Empty;
         }
 
         public TAIKHOANDOCGIA checkUser(String id)

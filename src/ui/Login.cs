@@ -48,6 +48,7 @@ namespace Library_Management.src.ui
             if (us.checkUserAccount(txtAccount.Text, txtPassword.Text) != String.Empty)
             {
                 Main_User mainUser = new Main_User();
+                MessageBox.Show(us.checkUserAccount(txtAccount.Text, txtPassword.Text));
                 mainUser.Id = us.checkAccount(txtAccount.Text);
                 this.Hide();
                 mainUser.ShowDialog();
